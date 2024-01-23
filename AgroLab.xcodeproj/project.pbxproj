@@ -13,6 +13,16 @@
 		F105DB412B6015A800851FBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F105DB3F2B6015A800851FBE /* Main.storyboard */; };
 		F105DB432B6015A900851FBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F105DB422B6015A900851FBE /* Assets.xcassets */; };
 		F105DB462B6015A900851FBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F105DB442B6015A900851FBE /* LaunchScreen.storyboard */; };
+		F105DB512B6019D900851FBE /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = F105DB502B6019D900851FBE /* Swinject */; };
+		F105DB532B6019D900851FBE /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F105DB522B6019D900851FBE /* Swinject-Dynamic */; };
+		F105DB562B601A1600851FBE /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = F105DB552B601A1600851FBE /* SwinjectAutoregistration */; };
+		F105DB582B601A1600851FBE /* SwinjectAutoregistration-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F105DB572B601A1600851FBE /* SwinjectAutoregistration-Dynamic */; };
+		F105DB5B2B601A7E00851FBE /* XCoordinator in Frameworks */ = {isa = PBXBuildFile; productRef = F105DB5A2B601A7E00851FBE /* XCoordinator */; };
+		F105DB5D2B601A7E00851FBE /* XCoordinatorCombine in Frameworks */ = {isa = PBXBuildFile; productRef = F105DB5C2B601A7E00851FBE /* XCoordinatorCombine */; };
+		F105DB5F2B601A7E00851FBE /* XCoordinatorRx in Frameworks */ = {isa = PBXBuildFile; productRef = F105DB5E2B601A7E00851FBE /* XCoordinatorRx */; };
+		F105DB622B601A9800851FBE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F105DB612B601A9800851FBE /* Alamofire */; };
+		F105DB652B601AB300851FBE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F105DB642B601AB300851FBE /* SnapKit */; };
+		F105DB672B601AB300851FBE /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F105DB662B601AB300851FBE /* SnapKit-Dynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +41,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F105DB5F2B601A7E00851FBE /* XCoordinatorRx in Frameworks */,
+				F105DB622B601A9800851FBE /* Alamofire in Frameworks */,
+				F105DB5D2B601A7E00851FBE /* XCoordinatorCombine in Frameworks */,
+				F105DB512B6019D900851FBE /* Swinject in Frameworks */,
+				F105DB532B6019D900851FBE /* Swinject-Dynamic in Frameworks */,
+				F105DB672B601AB300851FBE /* SnapKit-Dynamic in Frameworks */,
+				F105DB582B601A1600851FBE /* SwinjectAutoregistration-Dynamic in Frameworks */,
+				F105DB652B601AB300851FBE /* SnapKit in Frameworks */,
+				F105DB562B601A1600851FBE /* SwinjectAutoregistration in Frameworks */,
+				F105DB5B2B601A7E00851FBE /* XCoordinator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +103,18 @@
 			dependencies = (
 			);
 			name = AgroLab;
+			packageProductDependencies = (
+				F105DB502B6019D900851FBE /* Swinject */,
+				F105DB522B6019D900851FBE /* Swinject-Dynamic */,
+				F105DB552B601A1600851FBE /* SwinjectAutoregistration */,
+				F105DB572B601A1600851FBE /* SwinjectAutoregistration-Dynamic */,
+				F105DB5A2B601A7E00851FBE /* XCoordinator */,
+				F105DB5C2B601A7E00851FBE /* XCoordinatorCombine */,
+				F105DB5E2B601A7E00851FBE /* XCoordinatorRx */,
+				F105DB612B601A9800851FBE /* Alamofire */,
+				F105DB642B601AB300851FBE /* SnapKit */,
+				F105DB662B601AB300851FBE /* SnapKit-Dynamic */,
+			);
 			productName = AgroLab;
 			productReference = F105DB362B6015A800851FBE /* AgroLab.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +143,13 @@
 				Base,
 			);
 			mainGroup = F105DB2D2B6015A800851FBE;
+			packageReferences = (
+				F105DB4F2B6019D900851FBE /* XCRemoteSwiftPackageReference "Swinject" */,
+				F105DB542B601A1600851FBE /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
+				F105DB592B601A7E00851FBE /* XCRemoteSwiftPackageReference "XCoordinator" */,
+				F105DB602B601A9800851FBE /* XCRemoteSwiftPackageReference "Alamofire" */,
+				F105DB632B601AB300851FBE /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = F105DB372B6015A800851FBE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -363,6 +402,102 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F105DB4F2B6019D900851FBE /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		F105DB542B601A1600851FBE /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/SwinjectAutoregistration.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		F105DB592B601A7E00851FBE /* XCRemoteSwiftPackageReference "XCoordinator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/QuickBirdEng/XCoordinator.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		F105DB602B601A9800851FBE /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
+		F105DB632B601AB300851FBE /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F105DB502B6019D900851FBE /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F105DB4F2B6019D900851FBE /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		F105DB522B6019D900851FBE /* Swinject-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F105DB4F2B6019D900851FBE /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = "Swinject-Dynamic";
+		};
+		F105DB552B601A1600851FBE /* SwinjectAutoregistration */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F105DB542B601A1600851FBE /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
+			productName = SwinjectAutoregistration;
+		};
+		F105DB572B601A1600851FBE /* SwinjectAutoregistration-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F105DB542B601A1600851FBE /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
+			productName = "SwinjectAutoregistration-Dynamic";
+		};
+		F105DB5A2B601A7E00851FBE /* XCoordinator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F105DB592B601A7E00851FBE /* XCRemoteSwiftPackageReference "XCoordinator" */;
+			productName = XCoordinator;
+		};
+		F105DB5C2B601A7E00851FBE /* XCoordinatorCombine */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F105DB592B601A7E00851FBE /* XCRemoteSwiftPackageReference "XCoordinator" */;
+			productName = XCoordinatorCombine;
+		};
+		F105DB5E2B601A7E00851FBE /* XCoordinatorRx */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F105DB592B601A7E00851FBE /* XCRemoteSwiftPackageReference "XCoordinator" */;
+			productName = XCoordinatorRx;
+		};
+		F105DB612B601A9800851FBE /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F105DB602B601A9800851FBE /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		F105DB642B601AB300851FBE /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F105DB632B601AB300851FBE /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		F105DB662B601AB300851FBE /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F105DB632B601AB300851FBE /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F105DB2E2B6015A800851FBE /* Project object */;
 }
