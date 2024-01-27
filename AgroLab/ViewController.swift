@@ -9,11 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // swiftlint:disable unneeded_override
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
+    // swiftlint:enable unneeded_override
 }
-

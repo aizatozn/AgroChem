@@ -101,6 +101,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				F1A6F55C2B6552C400C316F9 /* PBXTargetDependency */,
 			);
 			name = AgroLab;
 			packageProductDependencies = (
@@ -149,6 +150,7 @@
 				F105DB592B601A7E00851FBE /* XCRemoteSwiftPackageReference "XCoordinator" */,
 				F105DB602B601A9800851FBE /* XCRemoteSwiftPackageReference "Alamofire" */,
 				F105DB632B601AB300851FBE /* XCRemoteSwiftPackageReference "SnapKit" */,
+				F1A6F55A2B65529C00C316F9 /* XCRemoteSwiftPackageReference "SwiftLint" */,
 			);
 			productRefGroup = F105DB372B6015A800851FBE /* Products */;
 			projectDirPath = "";
@@ -184,6 +186,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F1A6F55C2B6552C400C316F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = F1A6F55B2B6552C400C316F9 /* SwiftLintPlugin */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F105DB3F2B6015A800851FBE /* Main.storyboard */ = {
@@ -444,6 +453,14 @@
 				minimumVersion = 5.7.0;
 			};
 		};
+		F1A6F55A2B65529C00C316F9 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.54.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -496,6 +513,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F105DB632B601AB300851FBE /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = "SnapKit-Dynamic";
+		};
+		F1A6F55B2B6552C400C316F9 /* SwiftLintPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1A6F55A2B65529C00C316F9 /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = "plugin:SwiftLintPlugin";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
