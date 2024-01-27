@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+enum UserDefaultsServiceKeys: String {
+    case userRole
+    case accessToken
+}

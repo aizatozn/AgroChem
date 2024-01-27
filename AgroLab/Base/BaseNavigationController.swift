@@ -5,4 +5,6 @@
 //  Created by Aizat Ozbekova on 27/1/24.
 //
 
-import Foundation
+import UIKit
+
+class BaseNavigationController: UINavigationController {}

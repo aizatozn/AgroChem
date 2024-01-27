@@ -5,4 +5,8 @@
 //  Created by Aizat Ozbekova on 27/1/24.
 //
 
-import Foundation
+import Alamofire
+import UIKit
+
+protocol NetworkManager {
+}
