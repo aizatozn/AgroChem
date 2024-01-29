@@ -13,7 +13,7 @@ enum GreetingRoute: Route {
     case next
 }
 
-class GreetingCoordinator: NavigationCoordinator<GreetingRoute> {
+final class GreetingCoordinator: NavigationCoordinator<GreetingRoute> {
 
     private let appRouter: UnownedRouter<AppRoute>
 
