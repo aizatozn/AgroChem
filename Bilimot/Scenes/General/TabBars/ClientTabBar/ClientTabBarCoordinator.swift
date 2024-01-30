@@ -10,19 +10,23 @@ import XCoordinator
 
 enum ClientTabBarRoute: Route {
     case home
-    case settings
+    case courses
+    case exams
+    case profile
 }
 
 final class ClientTabBarCoordinator: TabBarCoordinator<ClientTabBarRoute> {
 
     private let appRouter: UnownedRouter<AppRoute>
 
-    private let homeRouter: StrongRouter<GreetingRoute>
-    private let settingsRouter: StrongRouter<GreetingRoute>
+    private let homeRouter: StrongRouter<ClientHomeRoute>
+    private let coursesRouter: StrongRouter<ClientCoursesRoute>
+    private let examsRouter: StrongRouter<ClientExamsRoute>
+    private let profileRouter: StrongRouter<ClientProfileRoute>
 
     convenience init(appRouter: UnownedRouter<AppRoute>) {
 
-        let homeCoordinator = GreetingCoordinator(appRouter: appRouter)
+        let homeCoordinator = ClientHomeCoordinator(appRouter: appRouter)
 
         let homeButton = UITabBarItem(
         title: "Home",
@@ -31,34 +35,61 @@ final class ClientTabBarCoordinator: TabBarCoordinator<ClientTabBarRoute> {
 
         homeCoordinator.rootViewController.tabBarItem = homeButton
 
-        let settingsCoordinator = GreetingCoordinator(appRouter: appRouter)
+        let coursesCoordinator = ClientCoursesCoordinator(appRouter: appRouter)
 
-        let settingsButton = UITabBarItem(
-        title: "Settings",
-        image: UIImage(systemName: "gear"),
+        let coursesButton = UITabBarItem(
+        title: "Courses",
+        image: UIImage(systemName: "books.vertical"),
         tag: 0)
 
-        settingsCoordinator.rootViewController.tabBarItem = settingsButton
+        coursesCoordinator.rootViewController.tabBarItem = coursesButton
+
+        let examsCoordinator = ClientExamsCoordinator(appRouter: appRouter)
+
+        let examsButton = UITabBarItem(
+        title: "Exams",
+        image: UIImage(systemName: "graduationcap"),
+        tag: 0)
+
+        examsCoordinator.rootViewController.tabBarItem = examsButton
+
+        let profileCoordinator = ClientProfileCoordinator(appRouter: appRouter)
+
+        let profileButton = UITabBarItem(
+        title: "Profile",
+        image: UIImage(systemName: "person"),
+        tag: 0)
+
+        profileCoordinator.rootViewController.tabBarItem = profileButton
+
+        coursesCoordinator.rootViewController.tabBarItem = coursesButton
 
         self.init(
             homeRouter: homeCoordinator.strongRouter,
-            settingsRouter: settingsCoordinator.strongRouter,
+            coursesRouter: coursesCoordinator.strongRouter,
+            examsRouter: examsCoordinator.strongRouter,
+            profileRouter: profileCoordinator.strongRouter,
+
             appRouter: appRouter
         )
     }
 
     init(
-        homeRouter: StrongRouter<GreetingRoute>,
-        settingsRouter: StrongRouter<GreetingRoute>,
+        homeRouter: StrongRouter<ClientHomeRoute>,
+        coursesRouter: StrongRouter<ClientCoursesRoute>,
+        examsRouter: StrongRouter<ClientExamsRoute>,
+        profileRouter: StrongRouter<ClientProfileRoute>,
         appRouter: UnownedRouter<AppRoute>
     ) {
         self.homeRouter = homeRouter
-        self.settingsRouter = settingsRouter
+        self.coursesRouter = coursesRouter
+        self.examsRouter = examsRouter
+        self.profileRouter = profileRouter
         self.appRouter = appRouter
 
         super.init(
             rootViewController: ClientTabBarController(),
-            tabs: [homeRouter, settingsRouter],
+            tabs: [homeRouter, coursesRouter, examsRouter, profileRouter],
             select: homeRouter
         )
     }
@@ -69,8 +100,12 @@ final class ClientTabBarCoordinator: TabBarCoordinator<ClientTabBarRoute> {
         switch route {
         case .home:
             return .select(homeRouter)
-        case .settings:
-            return .select(settingsRouter)
+        case .courses:
+            return .select(coursesRouter)
+        case .exams:
+            return .select(examsRouter)
+        case .profile:
+            return .select(profileRouter)
         }
     }
 }

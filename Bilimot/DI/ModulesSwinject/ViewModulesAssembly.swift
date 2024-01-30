@@ -17,5 +17,29 @@ final class ViewModulesAssembly: Assembly {
                 networkManager: $0.resolve(NetworkManager.self)!
             )
         }
+
+        container.register((any ClientHomeViewModel).self) {
+            ClientHomeViewModelImpl.init(
+                networkManager: $0.resolve(NetworkManager.self)!
+            )
+        }
+
+        container.register((any ClientCoursesViewModel).self) {
+            ClientCoursesViewModelImpl.init(
+                networkManager: $0.resolve(NetworkManager.self)!
+            )
+        }
+
+        container.register((any ClientExamsViewModel).self) {
+            ClientExamsViewModelImpl.init(
+                networkManager: $0.resolve(NetworkManager.self)!
+            )
+        }
+
+        container.register((any ClientProfileViewModel).self) {
+            ClientProfileViewModelImpl.init(
+                networkManager: $0.resolve(NetworkManager.self)!
+            )
+        }
     }
 }

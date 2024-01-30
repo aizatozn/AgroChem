@@ -8,6 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		F1056E4A2B69154B00A98341 /* NetworkManager_Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1056E492B69154B00A98341 /* NetworkManager_Client.swift */; };
+		F1056E502B692F4F00A98341 /* ClientHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1056E4F2B692F4F00A98341 /* ClientHomeController.swift */; };
+		F1056E522B692F6200A98341 /* ClientHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1056E512B692F6200A98341 /* ClientHomeViewModel.swift */; };
+		F1056E542B692F7A00A98341 /* ClientHomePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1056E532B692F7A00A98341 /* ClientHomePresentable.swift */; };
+		F1056E562B692F8900A98341 /* ClientHomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1056E552B692F8900A98341 /* ClientHomeCoordinator.swift */; };
+		F1056E582B692FA300A98341 /* ClientCoursesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1056E572B692FA300A98341 /* ClientCoursesController.swift */; };
+		F1056E5A2B692FAE00A98341 /* ClientCoursesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1056E592B692FAE00A98341 /* ClientCoursesViewModel.swift */; };
+		F1056E5C2B692FBC00A98341 /* ClientCoursesPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1056E5B2B692FBC00A98341 /* ClientCoursesPresentable.swift */; };
+		F1056E5E2B692FCC00A98341 /* ClientCoursesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1056E5D2B692FCC00A98341 /* ClientCoursesCoordinator.swift */; };
+		F1056E602B692FE800A98341 /* ClientExamsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1056E5F2B692FE800A98341 /* ClientExamsController.swift */; };
+		F1056E622B692FF400A98341 /* ClientExamsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1056E612B692FF400A98341 /* ClientExamsViewModel.swift */; };
+		F1056E642B692FFE00A98341 /* ClientExamsPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1056E632B692FFE00A98341 /* ClientExamsPresentable.swift */; };
+		F1056E662B69300700A98341 /* ClientExamsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1056E652B69300700A98341 /* ClientExamsCoordinator.swift */; };
+		F1056E682B69301A00A98341 /* ClientProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1056E672B69301A00A98341 /* ClientProfileController.swift */; };
+		F1056E6A2B69302400A98341 /* ClientProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1056E692B69302400A98341 /* ClientProfileViewModel.swift */; };
+		F1056E6C2B69303100A98341 /* ClientProfilePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1056E6B2B69303100A98341 /* ClientProfilePresentable.swift */; };
+		F1056E6E2B69303F00A98341 /* ClientProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1056E6D2B69303F00A98341 /* ClientProfileCoordinator.swift */; };
 		F105DB3A2B6015A800851FBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F105DB392B6015A800851FBE /* AppDelegate.swift */; };
 		F105DB432B6015A900851FBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F105DB422B6015A900851FBE /* Assets.xcassets */; };
 		F105DB462B6015A900851FBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F105DB442B6015A900851FBE /* LaunchScreen.storyboard */; };
@@ -50,6 +66,22 @@
 
 /* Begin PBXFileReference section */
 		F1056E492B69154B00A98341 /* NetworkManager_Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager_Client.swift; sourceTree = "<group>"; };
+		F1056E4F2B692F4F00A98341 /* ClientHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHomeController.swift; sourceTree = "<group>"; };
+		F1056E512B692F6200A98341 /* ClientHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHomeViewModel.swift; sourceTree = "<group>"; };
+		F1056E532B692F7A00A98341 /* ClientHomePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHomePresentable.swift; sourceTree = "<group>"; };
+		F1056E552B692F8900A98341 /* ClientHomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHomeCoordinator.swift; sourceTree = "<group>"; };
+		F1056E572B692FA300A98341 /* ClientCoursesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCoursesController.swift; sourceTree = "<group>"; };
+		F1056E592B692FAE00A98341 /* ClientCoursesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCoursesViewModel.swift; sourceTree = "<group>"; };
+		F1056E5B2B692FBC00A98341 /* ClientCoursesPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCoursesPresentable.swift; sourceTree = "<group>"; };
+		F1056E5D2B692FCC00A98341 /* ClientCoursesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCoursesCoordinator.swift; sourceTree = "<group>"; };
+		F1056E5F2B692FE800A98341 /* ClientExamsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientExamsController.swift; sourceTree = "<group>"; };
+		F1056E612B692FF400A98341 /* ClientExamsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientExamsViewModel.swift; sourceTree = "<group>"; };
+		F1056E632B692FFE00A98341 /* ClientExamsPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientExamsPresentable.swift; sourceTree = "<group>"; };
+		F1056E652B69300700A98341 /* ClientExamsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientExamsCoordinator.swift; sourceTree = "<group>"; };
+		F1056E672B69301A00A98341 /* ClientProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientProfileController.swift; sourceTree = "<group>"; };
+		F1056E692B69302400A98341 /* ClientProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientProfileViewModel.swift; sourceTree = "<group>"; };
+		F1056E6B2B69303100A98341 /* ClientProfilePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientProfilePresentable.swift; sourceTree = "<group>"; };
+		F1056E6D2B69303F00A98341 /* ClientProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientProfileCoordinator.swift; sourceTree = "<group>"; };
 		F105DB362B6015A800851FBE /* Bilimot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bilimot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F105DB392B6015A800851FBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F105DB422B6015A900851FBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,6 +135,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F1056E4B2B6928CD00A98341 /* ClientHome */ = {
+			isa = PBXGroup;
+			children = (
+				F1056E4F2B692F4F00A98341 /* ClientHomeController.swift */,
+				F1056E512B692F6200A98341 /* ClientHomeViewModel.swift */,
+				F1056E532B692F7A00A98341 /* ClientHomePresentable.swift */,
+				F1056E552B692F8900A98341 /* ClientHomeCoordinator.swift */,
+			);
+			path = ClientHome;
+			sourceTree = "<group>";
+		};
+		F1056E4C2B692A0300A98341 /* ClientCourses */ = {
+			isa = PBXGroup;
+			children = (
+				F1056E572B692FA300A98341 /* ClientCoursesController.swift */,
+				F1056E592B692FAE00A98341 /* ClientCoursesViewModel.swift */,
+				F1056E5B2B692FBC00A98341 /* ClientCoursesPresentable.swift */,
+				F1056E5D2B692FCC00A98341 /* ClientCoursesCoordinator.swift */,
+			);
+			path = ClientCourses;
+			sourceTree = "<group>";
+		};
+		F1056E4D2B692A1000A98341 /* ClientExams */ = {
+			isa = PBXGroup;
+			children = (
+				F1056E5F2B692FE800A98341 /* ClientExamsController.swift */,
+				F1056E612B692FF400A98341 /* ClientExamsViewModel.swift */,
+				F1056E632B692FFE00A98341 /* ClientExamsPresentable.swift */,
+				F1056E652B69300700A98341 /* ClientExamsCoordinator.swift */,
+			);
+			path = ClientExams;
+			sourceTree = "<group>";
+		};
+		F1056E4E2B692B2E00A98341 /* ClientProfile */ = {
+			isa = PBXGroup;
+			children = (
+				F1056E672B69301A00A98341 /* ClientProfileController.swift */,
+				F1056E692B69302400A98341 /* ClientProfileViewModel.swift */,
+				F1056E6B2B69303100A98341 /* ClientProfilePresentable.swift */,
+				F1056E6D2B69303F00A98341 /* ClientProfileCoordinator.swift */,
+			);
+			path = ClientProfile;
+			sourceTree = "<group>";
+		};
 		F105DB2D2B6015A800851FBE = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +298,10 @@
 		F1C65B642B655AA200B49A91 /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				F1056E4E2B692B2E00A98341 /* ClientProfile */,
+				F1056E4D2B692A1000A98341 /* ClientExams */,
+				F1056E4C2B692A0300A98341 /* ClientCourses */,
+				F1056E4B2B6928CD00A98341 /* ClientHome */,
 				F1C65B672B655AC600B49A91 /* ClientGreeting */,
 			);
 			path = Client;
@@ -395,29 +475,45 @@
 				F1C65B702B655CF100B49A91 /* UIAlertController+Extension.swift in Sources */,
 				F1C65B782B655D9600B49A91 /* NetworkURLs.swift in Sources */,
 				F1C65B552B6558D600B49A91 /* BaseTVCell.swift in Sources */,
+				F1056E6C2B69303100A98341 /* ClientProfilePresentable.swift in Sources */,
 				F1C65B592B65592300B49A91 /* ReusableView.swift in Sources */,
 				F1C65B4A2B65577300B49A91 /* AppCoordinator.swift in Sources */,
+				F1056E5E2B692FCC00A98341 /* ClientCoursesCoordinator.swift in Sources */,
 				F1C65B6B2B655BB900B49A91 /* ClientGreetingPresentable.swift in Sources */,
+				F1056E542B692F7A00A98341 /* ClientHomePresentable.swift in Sources */,
+				F1056E622B692FF400A98341 /* ClientExamsViewModel.swift in Sources */,
 				F1C65B5F2B6559C400B49A91 /* ViewModulesAssembly.swift in Sources */,
 				F1C65B6E2B655CC000B49A91 /* UIView+Extensions.swift in Sources */,
 				F1C65B512B65588100B49A91 /* BaseNavigationController.swift in Sources */,
 				F1C65B842B655FA900B49A91 /* ClientGreetingCoordinator.swift in Sources */,
 				F1C65B822B655F1000B49A91 /* UserDefaultsServiceKeys.swift in Sources */,
+				F1056E6A2B69302400A98341 /* ClientProfileViewModel.swift in Sources */,
+				F1056E5A2B692FAE00A98341 /* ClientCoursesViewModel.swift in Sources */,
 				F1C65B7A2B655E2700B49A91 /* NetworkManagerImpl.swift in Sources */,
 				F1C65B532B65589500B49A91 /* BaseViewModel.swift in Sources */,
 				F1C65B802B655EF100B49A91 /* UserDefaultsService.swift in Sources */,
+				F1056E642B692FFE00A98341 /* ClientExamsPresentable.swift in Sources */,
+				F1056E682B69301A00A98341 /* ClientProfileController.swift in Sources */,
 				F1056E4A2B69154B00A98341 /* NetworkManager_Client.swift in Sources */,
 				F1C65B692B655B2A00B49A91 /* ClientGreetingViewModel.swift in Sources */,
 				F1362FF42B6566C0006D7E61 /* ClientTabBarController.swift in Sources */,
 				F1C65B4F2B65583400B49A91 /* BaseController.swift in Sources */,
 				F105DB3A2B6015A800851FBE /* AppDelegate.swift in Sources */,
+				F1056E562B692F8900A98341 /* ClientHomeCoordinator.swift in Sources */,
+				F1056E5C2B692FBC00A98341 /* ClientCoursesPresentable.swift in Sources */,
 				F1362FF22B6566A6006D7E61 /* ClientTabBarCoordinator.swift in Sources */,
+				F1056E502B692F4F00A98341 /* ClientHomeController.swift in Sources */,
 				F1C65B612B6559F300B49A91 /* ServicesAssembly.swift in Sources */,
 				F1C65B5D2B65598000B49A91 /* Swinjectable.swift in Sources */,
+				F1056E6E2B69303F00A98341 /* ClientProfileCoordinator.swift in Sources */,
 				F1C65B7D2B655EB600B49A91 /* SwinjectServices.swift in Sources */,
 				F1C65B4D2B65580C00B49A91 /* BaseView.swift in Sources */,
+				F1056E522B692F6200A98341 /* ClientHomeViewModel.swift in Sources */,
 				F1C65B572B65590500B49A91 /* BaseCVCell.swift in Sources */,
 				F1C65B662B655AC100B49A91 /* ClientGreetingController.swift in Sources */,
+				F1056E582B692FA300A98341 /* ClientCoursesController.swift in Sources */,
+				F1056E662B69300700A98341 /* ClientExamsCoordinator.swift in Sources */,
+				F1056E602B692FE800A98341 /* ClientExamsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
