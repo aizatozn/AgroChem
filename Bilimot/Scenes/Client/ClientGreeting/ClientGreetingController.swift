@@ -41,6 +41,5 @@ private extension GreetingController {
 
     @objc private func nextButtonAction() {
         viewModel.nextRoute.send()
-        tabBarController?.tabBar.isHidden = true
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F1056E4A2B69154B00A98341 /* NetworkManager_Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1056E492B69154B00A98341 /* NetworkManager_Client.swift */; };
 		F105DB3A2B6015A800851FBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F105DB392B6015A800851FBE /* AppDelegate.swift */; };
 		F105DB432B6015A900851FBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F105DB422B6015A900851FBE /* Assets.xcassets */; };
 		F105DB462B6015A900851FBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F105DB442B6015A900851FBE /* LaunchScreen.storyboard */; };
@@ -48,6 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F1056E492B69154B00A98341 /* NetworkManager_Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager_Client.swift; sourceTree = "<group>"; };
 		F105DB362B6015A800851FBE /* Bilimot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bilimot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F105DB392B6015A800851FBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F105DB422B6015A900851FBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 				F1C65B752B655D7000B49A91 /* NetworkManager.swift */,
 				F1C65B772B655D9600B49A91 /* NetworkURLs.swift */,
 				F1C65B792B655E2700B49A91 /* NetworkManagerImpl.swift */,
+				F1056E492B69154B00A98341 /* NetworkManager_Client.swift */,
 			);
 			path = NetworkService;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				F1C65B7A2B655E2700B49A91 /* NetworkManagerImpl.swift in Sources */,
 				F1C65B532B65589500B49A91 /* BaseViewModel.swift in Sources */,
 				F1C65B802B655EF100B49A91 /* UserDefaultsService.swift in Sources */,
+				F1056E4A2B69154B00A98341 /* NetworkManager_Client.swift in Sources */,
 				F1C65B692B655B2A00B49A91 /* ClientGreetingViewModel.swift in Sources */,
 				F1362FF42B6566C0006D7E61 /* ClientTabBarController.swift in Sources */,
 				F1C65B4F2B65583400B49A91 /* BaseController.swift in Sources */,

@@ -12,7 +12,7 @@ final class GreetingPresentable: BaseView {
 
     let greetingLabel: UILabel = {
         let label = UILabel()
-        label.text = "Hi Move Mates"
+        label.text = "0"
         label.font = .boldSystemFont(ofSize: 100)
         label.textColor = UIColor.red
         return label
@@ -43,7 +43,7 @@ final class GreetingPresentable: BaseView {
     override func onSetupConstraints() {
 
         greetingLabel.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
+            make.top.equalTo(100)
             make.centerX.equalToSuperview()
         }
 
