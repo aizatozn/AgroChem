@@ -48,7 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F105DB362B6015A800851FBE /* AgroLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgroLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F105DB362B6015A800851FBE /* Bilimot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bilimot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F105DB392B6015A800851FBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F105DB422B6015A900851FBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F105DB452B6015A900851FBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 		F105DB2D2B6015A800851FBE = {
 			isa = PBXGroup;
 			children = (
-				F105DB382B6015A800851FBE /* AgroLab */,
+				F105DB382B6015A800851FBE /* Bilimot */,
 				F105DB372B6015A800851FBE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,12 +112,12 @@
 		F105DB372B6015A800851FBE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F105DB362B6015A800851FBE /* AgroLab.app */,
+				F105DB362B6015A800851FBE /* Bilimot.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F105DB382B6015A800851FBE /* AgroLab */ = {
+		F105DB382B6015A800851FBE /* Bilimot */ = {
 			isa = PBXGroup;
 			children = (
 				F1C65B472B6556A500B49A91 /* Application */,
@@ -130,7 +130,7 @@
 				F1C65B482B6556B000B49A91 /* Resources */,
 				F105DB472B6015A900851FBE /* Info.plist */,
 			);
-			path = AgroLab;
+			path = Bilimot;
 			sourceTree = "<group>";
 		};
 		F1362FED2B656679006D7E61 /* TabBars */ = {
@@ -300,9 +300,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F105DB352B6015A800851FBE /* AgroLab */ = {
+		F105DB352B6015A800851FBE /* Bilimot */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F105DB4A2B6015A900851FBE /* Build configuration list for PBXNativeTarget "AgroLab" */;
+			buildConfigurationList = F105DB4A2B6015A900851FBE /* Build configuration list for PBXNativeTarget "Bilimot" */;
 			buildPhases = (
 				F105DB322B6015A800851FBE /* Sources */,
 				F105DB332B6015A800851FBE /* Frameworks */,
@@ -313,7 +313,7 @@
 			dependencies = (
 				F1A6F55C2B6552C400C316F9 /* PBXTargetDependency */,
 			);
-			name = AgroLab;
+			name = Bilimot;
 			packageProductDependencies = (
 				F105DB502B6019D900851FBE /* Swinject */,
 				F105DB522B6019D900851FBE /* Swinject-Dynamic */,
@@ -327,7 +327,7 @@
 				F105DB662B601AB300851FBE /* SnapKit-Dynamic */,
 			);
 			productName = AgroLab;
-			productReference = F105DB362B6015A800851FBE /* AgroLab.app */;
+			productReference = F105DB362B6015A800851FBE /* Bilimot.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -345,7 +345,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F105DB312B6015A800851FBE /* Build configuration list for PBXProject "AgroLab" */;
+			buildConfigurationList = F105DB312B6015A800851FBE /* Build configuration list for PBXProject "Bilimot" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -366,7 +366,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F105DB352B6015A800851FBE /* AgroLab */,
+				F105DB352B6015A800851FBE /* Bilimot */,
 			);
 		};
 /* End PBXProject section */
@@ -566,7 +566,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U53SQJ3W9A;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AgroLab/Info.plist;
+				INFOPLIST_FILE = Bilimot/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -593,7 +593,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U53SQJ3W9A;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AgroLab/Info.plist;
+				INFOPLIST_FILE = Bilimot/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -614,7 +614,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F105DB312B6015A800851FBE /* Build configuration list for PBXProject "AgroLab" */ = {
+		F105DB312B6015A800851FBE /* Build configuration list for PBXProject "Bilimot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F105DB482B6015A900851FBE /* Debug */,
@@ -623,7 +623,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F105DB4A2B6015A900851FBE /* Build configuration list for PBXNativeTarget "AgroLab" */ = {
+		F105DB4A2B6015A900851FBE /* Build configuration list for PBXNativeTarget "Bilimot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F105DB4B2B6015A900851FBE /* Debug */,
