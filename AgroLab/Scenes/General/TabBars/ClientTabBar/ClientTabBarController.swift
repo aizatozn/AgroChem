@@ -13,16 +13,13 @@ final class ClientTabBarController: UITabBarController {
         super.viewDidLoad()
         setTabBarAppearance()
         drawLineAtTopOfTabBar()
-
-        UITabBarItem.appearance().titlePositionAdjustment =
-        UIOffset(horizontal: 0, vertical: -5.5)
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
 
         var tabBarFrame = tabBar.frame
-        tabBarFrame.size.height = UIScreen.main.bounds.height * 0.12
+        tabBarFrame.size.height = UIScreen.main.bounds.height * 0.11
         tabBarFrame.origin.y = view.frame.size.height -
         UIScreen.main.bounds.height * 0.1
         tabBar.frame = tabBarFrame
