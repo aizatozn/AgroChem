@@ -35,7 +35,7 @@ final class ClientTabBarCoordinator: TabBarCoordinator<ClientTabBarRoute> {
 
         let settingsButton = UITabBarItem(
         title: "Settings",
-        image: UIImage(systemName: "geara"),
+        image: UIImage(systemName: "gear"),
         tag: 0)
 
         settingsCoordinator.rootViewController.tabBarItem = settingsButton

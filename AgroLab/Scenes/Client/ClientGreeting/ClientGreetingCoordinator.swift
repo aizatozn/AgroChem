@@ -22,19 +22,17 @@ final class GreetingCoordinator: NavigationCoordinator<GreetingRoute> {
         super.init(rootViewController: BaseNavigationController(), initialRoute: .home)
     }
 
-    // MARK: Overrides
-
     override func prepareTransition(for route: GreetingRoute) -> NavigationTransition {
         switch route {
 
         case .home:
             let controller = GreetingController()
             controller.viewModel.router = unownedRouter
-            return .set([viewController])
+            return .set([controller])
 
         case .next:
             let controller = GreetingController()
-            controller.viewModel.router = unownedRouter
+            controller.hidesBottomBarWhenPushed = true
             return .push(controller)
         }
     }
