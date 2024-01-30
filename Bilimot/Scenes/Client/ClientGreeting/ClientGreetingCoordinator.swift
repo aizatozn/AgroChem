@@ -22,7 +22,8 @@ final class GreetingCoordinator: NavigationCoordinator<GreetingRoute> {
         super.init(rootViewController: BaseNavigationController(), initialRoute: .home)
     }
 
-    override func prepareTransition(for route: GreetingRoute) -> NavigationTransition {
+    override func prepareTransition(for route: GreetingRoute)
+    -> NavigationTransition {
         switch route {
 
         case .home:
