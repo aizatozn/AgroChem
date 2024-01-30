@@ -19,7 +19,7 @@ final class GreetingCoordinator: NavigationCoordinator<GreetingRoute> {
 
     init(appRouter: UnownedRouter<AppRoute>) {
         self.appRouter = appRouter
-        super.init(initialRoute: .home)
+        super.init(rootViewController: BaseNavigationController(), initialRoute: .home)
     }
 
     // MARK: Overrides
