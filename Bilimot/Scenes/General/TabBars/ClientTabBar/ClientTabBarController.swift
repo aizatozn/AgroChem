@@ -20,8 +20,7 @@ final class ClientTabBarController: UITabBarController {
 
         var tabBarFrame = tabBar.frame
         tabBarFrame.size.height = UIScreen.main.bounds.height * 0.11
-        tabBarFrame.origin.y = view.frame.size.height -
-        UIScreen.main.bounds.height * 0.1
+        tabBarFrame.origin.y = view.frame.size.height - UIScreen.main.bounds.height * 0.1
         tabBar.frame = tabBarFrame
     }
 
@@ -33,25 +32,14 @@ final class ClientTabBarController: UITabBarController {
     }
 
     private func setTabBarAppearance() {
+        let tabBarAppearance = UITabBarAppearance()
 
-        let width = tabBar.bounds.width
-        let height = tabBar.bounds.height + tabBar.bounds.height
-        let roundLayer = CAShapeLayer()
-        let bezierPath = UIBezierPath(
-            roundedRect: CGRect(
-                x: 0,
-                y: 0,
-                width: width,
-                height: height
-            ),
-            cornerRadius: 0
-        )
+        tabBarAppearance.configureWithOpaqueBackground()
+        tabBarAppearance.backgroundColor = .systemBackground // Используйте .systemBackground для системного цвета фона
 
-        roundLayer.path = bezierPath.cgPath
-        tabBar.layer.insertSublayer(roundLayer, at: 0)
+        tabBar.standardAppearance = tabBarAppearance
         tabBar.itemSpacing = (UIScreen.main.bounds.width / 5.9) / 100
-        roundLayer.fillColor = UIColor.white.cgColor
-        tabBar.tintColor = .black
+        tabBar.tintColor = .systemBlue
         tabBar.unselectedItemTintColor = .lightGray
     }
 }

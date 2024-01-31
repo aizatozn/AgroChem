@@ -31,7 +31,7 @@ final class ClientTabBarCoordinator: TabBarCoordinator<ClientTabBarRoute> {
         let homeButton = UITabBarItem(
         title: "Home",
         image: UIImage(systemName: "house"),
-        tag: 0)
+        selectedImage: UIImage(systemName: "house.fill"))
 
         homeCoordinator.rootViewController.tabBarItem = homeButton
 
@@ -40,7 +40,7 @@ final class ClientTabBarCoordinator: TabBarCoordinator<ClientTabBarRoute> {
         let coursesButton = UITabBarItem(
         title: "Courses",
         image: UIImage(systemName: "books.vertical"),
-        tag: 0)
+        selectedImage: UIImage(systemName: "books.vertical.fill"))
 
         coursesCoordinator.rootViewController.tabBarItem = coursesButton
 
@@ -49,7 +49,7 @@ final class ClientTabBarCoordinator: TabBarCoordinator<ClientTabBarRoute> {
         let examsButton = UITabBarItem(
         title: "Exams",
         image: UIImage(systemName: "graduationcap"),
-        tag: 0)
+        selectedImage: UIImage(systemName: "graduationcap.fill"))
 
         examsCoordinator.rootViewController.tabBarItem = examsButton
 
@@ -57,8 +57,8 @@ final class ClientTabBarCoordinator: TabBarCoordinator<ClientTabBarRoute> {
 
         let profileButton = UITabBarItem(
         title: "Profile",
-        image: UIImage(systemName: "person"),
-        tag: 0)
+        image: UIImage(systemName: "gearshape"),
+        selectedImage: UIImage(systemName: "gearshape.fill"))
 
         profileCoordinator.rootViewController.tabBarItem = profileButton
 

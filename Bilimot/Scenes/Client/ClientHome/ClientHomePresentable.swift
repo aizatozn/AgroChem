@@ -33,7 +33,7 @@ final class ClientHomePresentable: BaseView {
     }()
 
     override func onConfigureView() {
-        backgroundColor = .brown
+        backgroundColor = .systemBackground
     }
 
     override func onAddSubviews() {
