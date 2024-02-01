@@ -62,6 +62,7 @@
 		F1C65B802B655EF100B49A91 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C65B7F2B655EF100B49A91 /* UserDefaultsService.swift */; };
 		F1C65B822B655F1000B49A91 /* UserDefaultsServiceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C65B812B655F1000B49A91 /* UserDefaultsServiceKeys.swift */; };
 		F1C65B842B655FA900B49A91 /* ClientGreetingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C65B832B655FA900B49A91 /* ClientGreetingCoordinator.swift */; };
+		F1EC76432B6B8E200017FCF5 /* ClientCoursesLessonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EC76422B6B8E200017FCF5 /* ClientCoursesLessonCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +113,7 @@
 		F1C65B7F2B655EF100B49A91 /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		F1C65B812B655F1000B49A91 /* UserDefaultsServiceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsServiceKeys.swift; sourceTree = "<group>"; };
 		F1C65B832B655FA900B49A91 /* ClientGreetingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientGreetingCoordinator.swift; sourceTree = "<group>"; };
+		F1EC76422B6B8E200017FCF5 /* ClientCoursesLessonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCoursesLessonCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 		F1056E4C2B692A0300A98341 /* ClientCourses */ = {
 			isa = PBXGroup;
 			children = (
+				F1EC76402B6B8DFD0017FCF5 /* Components */,
 				F1056E572B692FA300A98341 /* ClientCoursesController.swift */,
 				F1056E592B692FAE00A98341 /* ClientCoursesViewModel.swift */,
 				F1056E5B2B692FBC00A98341 /* ClientCoursesPresentable.swift */,
@@ -380,6 +383,22 @@
 			path = UserDefaultsService;
 			sourceTree = "<group>";
 		};
+		F1EC76402B6B8DFD0017FCF5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F1EC76412B6B8E020017FCF5 /* Cells */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F1EC76412B6B8E020017FCF5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F1EC76422B6B8E200017FCF5 /* ClientCoursesLessonCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -514,6 +533,7 @@
 				F1056E582B692FA300A98341 /* ClientCoursesController.swift in Sources */,
 				F1056E662B69300700A98341 /* ClientExamsCoordinator.swift in Sources */,
 				F1056E602B692FE800A98341 /* ClientExamsController.swift in Sources */,
+				F1EC76432B6B8E200017FCF5 /* ClientCoursesLessonCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

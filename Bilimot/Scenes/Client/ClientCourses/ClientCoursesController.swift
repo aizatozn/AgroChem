@@ -13,33 +13,13 @@ final class ClientCoursesController: VMController<ClientCoursesPresentable,
 
     override func onBindViewModel() {
 
-        viewModel.counter
+        content.pushToLesson
+            .dropFirst()
             .receive(on: DispatchQueue.main)
-            .sink { [weak self] value in
-            self?.content.clientCoursesLabel.text = "\(value)"
-        }.store(in: &viewModel.cancellables)
-    }
-
-    override func onConfigureActions() {
-
-        content.clientCoursesButton.addTarget(self,
-                                         action: #selector(clientCoursesButtonAction),
-                                         for: .touchDown)
-
-        content.nextButton.addTarget(self,
-                                     action: #selector(nextButtonAction),
-                                     for: .touchDown)
-    }
-}
-
-private extension ClientCoursesController {
-
-    @objc private func clientCoursesButtonAction() {
-        let count = viewModel.counter.value
-        viewModel.counter.send(count + 1)
-    }
-
-    @objc private func nextButtonAction() {
-        viewModel.nextRoute.send()
+            .sink { [weak self] name in
+                guard let self = self else { return }
+                self.viewModel.pushToLesson.send(name)
+            }
+            .store(in: &viewModel.cancellables)
     }
 }

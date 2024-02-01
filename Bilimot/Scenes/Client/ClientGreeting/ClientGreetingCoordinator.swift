@@ -28,7 +28,7 @@ final class GreetingCoordinator: NavigationCoordinator<GreetingRoute> {
 
         case .home:
             let controller = GreetingController()
-            controller.viewModel.router = unownedRouter
+//            controller.viewModel.router = unownedRouter
             return .set([controller])
 
         case .next:
