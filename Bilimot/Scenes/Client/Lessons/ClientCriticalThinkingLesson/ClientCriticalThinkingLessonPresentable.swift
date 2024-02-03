@@ -53,7 +53,7 @@ extension ClientCriticalThinkingLessonPresentable: UITableViewDelegate, UITableV
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell: ClientCoursesCell = tableView.dequeue(for: indexPath)
+        let cell: ClientCriticalThinkingLessonCell = tableView.dequeue(for: indexPath)
         cell.configure(name: lessons[indexPath.section])
 
         return cell
@@ -62,7 +62,6 @@ extension ClientCriticalThinkingLessonPresentable: UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         pushToLesson.send(lessons[indexPath.section])
-//        tableView.backgroundColor = .red
     }
 
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {

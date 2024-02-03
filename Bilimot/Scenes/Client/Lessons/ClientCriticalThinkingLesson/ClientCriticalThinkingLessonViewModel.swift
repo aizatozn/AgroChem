@@ -17,8 +17,9 @@ protocol ClientCriticalThinkingLessonViewModel: BaseVMProtocol {
     var pushToLesson: CurrentValueSubject<String, Never> { get set }
 }
 
-final class ClientCriticalThinkingLessonViewModelImpl: BaseVM<UnownedRouter<ClientCoursesRoute>>,
-                                                ClientCriticalThinkingLessonViewModel {
+final class ClientCriticalThinkingLessonViewModelImpl:
+                                                    BaseVM<UnownedRouter<ClientCoursesRoute>>,
+                                                    ClientCriticalThinkingLessonViewModel {
 
     var counter = CurrentValueSubject<Int, Never>(0)
     var nextRoute = PassthroughSubject<Void, Never>()
@@ -44,7 +45,7 @@ final class ClientCriticalThinkingLessonViewModelImpl: BaseVM<UnownedRouter<Clie
             .dropFirst()
             .receive(on: DispatchQueue.main)
             .sink { [weak self] name in
-                self?.router?.trigger(.subject(nameOfLesson: name))
+                self?.router?.trigger(.criticalThinking(nameOfLesson: name))
             }
             .store(in: &cancellables)
     }

@@ -53,7 +53,7 @@ extension ClientMathLessonPresentable: UITableViewDelegate, UITableViewDataSourc
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell: ClientCoursesCell = tableView.dequeue(for: indexPath)
+        let cell: ClientMathLessonCell = tableView.dequeue(for: indexPath)
         cell.configure(name: lessons[indexPath.section])
 
         return cell

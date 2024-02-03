@@ -1,5 +1,5 @@
 //
-//  ClientCoursesLessonCell.swift
+//  ClientCoursesCell.swift
 //  Bilimot
 //
 //  Created by Aizat Ozbekova on 1/2/24.

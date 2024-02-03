@@ -35,11 +35,10 @@ final class ClientTabBarController: UITabBarController {
         let tabBarAppearance = UITabBarAppearance()
 
         tabBarAppearance.configureWithOpaqueBackground()
-        tabBarAppearance.backgroundColor = .systemBackground // Используйте .systemBackground для системного цвета фона
-
+        tabBarAppearance.backgroundColor = .systemBackground
         tabBar.standardAppearance = tabBarAppearance
         tabBar.itemSpacing = (UIScreen.main.bounds.width / 5.9) / 100
-        tabBar.tintColor = .systemBlue
+        tabBar.tintColor = UIColor(red: 102/255, green: 80/255, blue: 180/255, alpha: 1.0)
         tabBar.unselectedItemTintColor = .lightGray
     }
 }

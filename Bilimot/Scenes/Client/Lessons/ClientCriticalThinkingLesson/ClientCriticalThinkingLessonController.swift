@@ -5,11 +5,11 @@
 //  Created by Aizat Ozbekova on 2/3/24.
 //
 
-import UIKit
-import Combine
+import Foundation
 
 final class ClientCriticalThinkingLessonController:
-            VMController<ClientCriticalThinkingLessonPresentable, ClientCriticalThinkingLessonViewModel> {
+                                  VMController<ClientCriticalThinkingLessonPresentable,
+                                  ClientCriticalThinkingLessonViewModel> {
 
     override func onBindViewModel() {
 

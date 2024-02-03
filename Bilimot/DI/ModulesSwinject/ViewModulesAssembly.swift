@@ -41,5 +41,35 @@ final class ViewModulesAssembly: Assembly {
                 networkManager: $0.resolve(NetworkManager.self)!
             )
         }
+
+        container.register((any ClientMathLessonViewModel).self) {
+            ClientMathLessonViewModelImpl.init(
+                networkManager: $0.resolve(NetworkManager.self)!
+            )
+        }
+
+        container.register((any ClientCriticalThinkingLessonViewModel).self) {
+            ClientCriticalThinkingLessonViewModelImpl.init(
+                networkManager: $0.resolve(NetworkManager.self)!
+            )
+        }
+
+        container.register((any ClientChemistryLessonViewModel).self) {
+            ClientChemistryLessonViewModelImpl.init(
+                networkManager: $0.resolve(NetworkManager.self)!
+            )
+        }
+
+        container.register((any ClientAdvisesLessonViewModel).self) {
+            ClientAdvisesLessonViewModelImpl.init(
+                networkManager: $0.resolve(NetworkManager.self)!
+            )
+        }
+
+        container.register((any ClientTestSolitionsLessonViewModel).self) {
+            ClientTestSolitionsLessonViewModelImpl.init(
+                networkManager: $0.resolve(NetworkManager.self)!
+            )
+        }
     }
 }

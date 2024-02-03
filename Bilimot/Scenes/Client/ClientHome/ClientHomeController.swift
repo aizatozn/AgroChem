@@ -11,6 +11,12 @@ import Combine
 final class ClientHomeController: VMController<ClientHomePresentable,
                                   ClientHomeViewModel> {
 
+//    private func configureNavbar() {
+//        var image = UIImage(named: "bilimotLogo")
+//        image = image?.withRenderingMode(.alwaysOriginal)
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .done, target: self, action: nil)
+//    }
+
     override func onBindViewModel() {
 
         viewModel.counter
@@ -30,6 +36,10 @@ final class ClientHomeController: VMController<ClientHomePresentable,
                                      action: #selector(nextButtonAction),
                                      for: .touchDown)
     }
+
+//    override func onConfigureController() {
+//        var image = UIImage(named: "bilimotLogo")
+//    }
 }
 
 private extension ClientHomeController {

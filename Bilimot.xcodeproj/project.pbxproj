@@ -39,6 +39,26 @@
 		F105DB672B601AB300851FBE /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F105DB662B601AB300851FBE /* SnapKit-Dynamic */; };
 		F1362FF22B6566A6006D7E61 /* ClientTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1362FF12B6566A6006D7E61 /* ClientTabBarCoordinator.swift */; };
 		F1362FF42B6566C0006D7E61 /* ClientTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1362FF32B6566C0006D7E61 /* ClientTabBarController.swift */; };
+		F181CDEE2B6E2E19005FFAB4 /* ClientMathLessonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F181CDED2B6E2E19005FFAB4 /* ClientMathLessonController.swift */; };
+		F181CDF02B6E2E24005FFAB4 /* ClientMathLessonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F181CDEF2B6E2E24005FFAB4 /* ClientMathLessonViewModel.swift */; };
+		F181CDF22B6E2E33005FFAB4 /* ClientMathLessonPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F181CDF12B6E2E33005FFAB4 /* ClientMathLessonPresentable.swift */; };
+		F181CDF72B6E4149005FFAB4 /* ClientCriticalThinkingLessonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F181CDF62B6E4149005FFAB4 /* ClientCriticalThinkingLessonController.swift */; };
+		F181CDF92B6E4155005FFAB4 /* ClientCriticalThinkingLessonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F181CDF82B6E4155005FFAB4 /* ClientCriticalThinkingLessonViewModel.swift */; };
+		F181CDFB2B6E4161005FFAB4 /* ClientCriticalThinkingLessonPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F181CDFA2B6E4161005FFAB4 /* ClientCriticalThinkingLessonPresentable.swift */; };
+		F181CDFE2B6E471C005FFAB4 /* ClientCriticalThinkingLessonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F181CDFD2B6E471C005FFAB4 /* ClientCriticalThinkingLessonCell.swift */; };
+		F181CE032B6E4846005FFAB4 /* ClientMathLessonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F181CE022B6E4846005FFAB4 /* ClientMathLessonCell.swift */; };
+		F181CE092B6E5494005FFAB4 /* ClientChemistryLessonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F181CE082B6E5494005FFAB4 /* ClientChemistryLessonController.swift */; };
+		F181CE0B2B6E54CB005FFAB4 /* ClientChemistryLessonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F181CE0A2B6E54CB005FFAB4 /* ClientChemistryLessonViewModel.swift */; };
+		F181CE0D2B6E54D7005FFAB4 /* ClientChemistryLessonPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F181CE0C2B6E54D7005FFAB4 /* ClientChemistryLessonPresentable.swift */; };
+		F181CE0F2B6E5500005FFAB4 /* ClientChemistryLessonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F181CE0E2B6E5500005FFAB4 /* ClientChemistryLessonCell.swift */; };
+		F181CE122B6E5874005FFAB4 /* ClientAdvisesLessonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F181CE112B6E5874005FFAB4 /* ClientAdvisesLessonController.swift */; };
+		F181CE142B6E587F005FFAB4 /* ClientAdvisesLessonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F181CE132B6E587F005FFAB4 /* ClientAdvisesLessonViewModel.swift */; };
+		F181CE162B6E588A005FFAB4 /* ClientAdvisesLessonPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F181CE152B6E588A005FFAB4 /* ClientAdvisesLessonPresentable.swift */; };
+		F181CE1A2B6E58A9005FFAB4 /* ClientAdvisesLessonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F181CE192B6E58A9005FFAB4 /* ClientAdvisesLessonCell.swift */; };
+		F181CE1D2B6E5A0C005FFAB4 /* ClientTestSolutionsLessonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F181CE1C2B6E5A0C005FFAB4 /* ClientTestSolutionsLessonController.swift */; };
+		F181CE1F2B6E5A17005FFAB4 /* ClientTestSolutionsLessonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F181CE1E2B6E5A17005FFAB4 /* ClientTestSolutionsLessonViewModel.swift */; };
+		F181CE212B6E5A47005FFAB4 /* ClientTestSolutionsLessonPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F181CE202B6E5A47005FFAB4 /* ClientTestSolutionsLessonPresentable.swift */; };
+		F181CE252B6E5AD8005FFAB4 /* ClientTestSolutionsLessonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F181CE242B6E5AD8005FFAB4 /* ClientTestSolutionsLessonCell.swift */; };
 		F1C65B4A2B65577300B49A91 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C65B492B65577300B49A91 /* AppCoordinator.swift */; };
 		F1C65B4D2B65580C00B49A91 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C65B4C2B65580C00B49A91 /* BaseView.swift */; };
 		F1C65B4F2B65583400B49A91 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C65B4E2B65583400B49A91 /* BaseController.swift */; };
@@ -62,7 +82,7 @@
 		F1C65B802B655EF100B49A91 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C65B7F2B655EF100B49A91 /* UserDefaultsService.swift */; };
 		F1C65B822B655F1000B49A91 /* UserDefaultsServiceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C65B812B655F1000B49A91 /* UserDefaultsServiceKeys.swift */; };
 		F1C65B842B655FA900B49A91 /* ClientGreetingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C65B832B655FA900B49A91 /* ClientGreetingCoordinator.swift */; };
-		F1EC76432B6B8E200017FCF5 /* ClientCoursesLessonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EC76422B6B8E200017FCF5 /* ClientCoursesLessonCell.swift */; };
+		F1EC76432B6B8E200017FCF5 /* ClientCoursesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EC76422B6B8E200017FCF5 /* ClientCoursesCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +110,26 @@
 		F105DB472B6015A900851FBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1362FF12B6566A6006D7E61 /* ClientTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientTabBarCoordinator.swift; sourceTree = "<group>"; };
 		F1362FF32B6566C0006D7E61 /* ClientTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientTabBarController.swift; sourceTree = "<group>"; };
+		F181CDED2B6E2E19005FFAB4 /* ClientMathLessonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientMathLessonController.swift; sourceTree = "<group>"; };
+		F181CDEF2B6E2E24005FFAB4 /* ClientMathLessonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientMathLessonViewModel.swift; sourceTree = "<group>"; };
+		F181CDF12B6E2E33005FFAB4 /* ClientMathLessonPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientMathLessonPresentable.swift; sourceTree = "<group>"; };
+		F181CDF62B6E4149005FFAB4 /* ClientCriticalThinkingLessonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCriticalThinkingLessonController.swift; sourceTree = "<group>"; };
+		F181CDF82B6E4155005FFAB4 /* ClientCriticalThinkingLessonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCriticalThinkingLessonViewModel.swift; sourceTree = "<group>"; };
+		F181CDFA2B6E4161005FFAB4 /* ClientCriticalThinkingLessonPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCriticalThinkingLessonPresentable.swift; sourceTree = "<group>"; };
+		F181CDFD2B6E471C005FFAB4 /* ClientCriticalThinkingLessonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCriticalThinkingLessonCell.swift; sourceTree = "<group>"; };
+		F181CE022B6E4846005FFAB4 /* ClientMathLessonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientMathLessonCell.swift; sourceTree = "<group>"; };
+		F181CE082B6E5494005FFAB4 /* ClientChemistryLessonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientChemistryLessonController.swift; sourceTree = "<group>"; };
+		F181CE0A2B6E54CB005FFAB4 /* ClientChemistryLessonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientChemistryLessonViewModel.swift; sourceTree = "<group>"; };
+		F181CE0C2B6E54D7005FFAB4 /* ClientChemistryLessonPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientChemistryLessonPresentable.swift; sourceTree = "<group>"; };
+		F181CE0E2B6E5500005FFAB4 /* ClientChemistryLessonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientChemistryLessonCell.swift; sourceTree = "<group>"; };
+		F181CE112B6E5874005FFAB4 /* ClientAdvisesLessonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientAdvisesLessonController.swift; sourceTree = "<group>"; };
+		F181CE132B6E587F005FFAB4 /* ClientAdvisesLessonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientAdvisesLessonViewModel.swift; sourceTree = "<group>"; };
+		F181CE152B6E588A005FFAB4 /* ClientAdvisesLessonPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientAdvisesLessonPresentable.swift; sourceTree = "<group>"; };
+		F181CE192B6E58A9005FFAB4 /* ClientAdvisesLessonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientAdvisesLessonCell.swift; sourceTree = "<group>"; };
+		F181CE1C2B6E5A0C005FFAB4 /* ClientTestSolutionsLessonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientTestSolutionsLessonController.swift; sourceTree = "<group>"; };
+		F181CE1E2B6E5A17005FFAB4 /* ClientTestSolutionsLessonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientTestSolutionsLessonViewModel.swift; sourceTree = "<group>"; };
+		F181CE202B6E5A47005FFAB4 /* ClientTestSolutionsLessonPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientTestSolutionsLessonPresentable.swift; sourceTree = "<group>"; };
+		F181CE242B6E5AD8005FFAB4 /* ClientTestSolutionsLessonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientTestSolutionsLessonCell.swift; sourceTree = "<group>"; };
 		F1C65B492B65577300B49A91 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		F1C65B4C2B65580C00B49A91 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		F1C65B4E2B65583400B49A91 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
@@ -113,7 +153,7 @@
 		F1C65B7F2B655EF100B49A91 /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		F1C65B812B655F1000B49A91 /* UserDefaultsServiceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsServiceKeys.swift; sourceTree = "<group>"; };
 		F1C65B832B655FA900B49A91 /* ClientGreetingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientGreetingCoordinator.swift; sourceTree = "<group>"; };
-		F1EC76422B6B8E200017FCF5 /* ClientCoursesLessonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCoursesLessonCell.swift; sourceTree = "<group>"; };
+		F1EC76422B6B8E200017FCF5 /* ClientCoursesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCoursesCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +271,153 @@
 			path = ClientTabBar;
 			sourceTree = "<group>";
 		};
+		F181CDEC2B6E2E01005FFAB4 /* ClientMathLesson */ = {
+			isa = PBXGroup;
+			children = (
+				F181CE002B6E4823005FFAB4 /* Components */,
+				F181CDED2B6E2E19005FFAB4 /* ClientMathLessonController.swift */,
+				F181CDEF2B6E2E24005FFAB4 /* ClientMathLessonViewModel.swift */,
+				F181CDF12B6E2E33005FFAB4 /* ClientMathLessonPresentable.swift */,
+			);
+			path = ClientMathLesson;
+			sourceTree = "<group>";
+		};
+		F181CDF52B6E409E005FFAB4 /* ClientCriticalThinkingLesson */ = {
+			isa = PBXGroup;
+			children = (
+				F181CDFF2B6E480C005FFAB4 /* Components */,
+				F181CDF62B6E4149005FFAB4 /* ClientCriticalThinkingLessonController.swift */,
+				F181CDF82B6E4155005FFAB4 /* ClientCriticalThinkingLessonViewModel.swift */,
+				F181CDFA2B6E4161005FFAB4 /* ClientCriticalThinkingLessonPresentable.swift */,
+			);
+			path = ClientCriticalThinkingLesson;
+			sourceTree = "<group>";
+		};
+		F181CDFC2B6E46DA005FFAB4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F181CDFD2B6E471C005FFAB4 /* ClientCriticalThinkingLessonCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F181CDFF2B6E480C005FFAB4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F181CDFC2B6E46DA005FFAB4 /* Cells */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F181CE002B6E4823005FFAB4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F181CE012B6E482B005FFAB4 /* Cells */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F181CE012B6E482B005FFAB4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F181CE022B6E4846005FFAB4 /* ClientMathLessonCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F181CE042B6E4876005FFAB4 /* Lessons */ = {
+			isa = PBXGroup;
+			children = (
+				F181CE1B2B6E59EE005FFAB4 /* ClientTestSolutionsLesson */,
+				F181CE102B6E5825005FFAB4 /* ClientAdvisesLesson */,
+				F181CE052B6E542D005FFAB4 /* ClientChemistryLesson */,
+				F181CDEC2B6E2E01005FFAB4 /* ClientMathLesson */,
+				F181CDF52B6E409E005FFAB4 /* ClientCriticalThinkingLesson */,
+			);
+			path = Lessons;
+			sourceTree = "<group>";
+		};
+		F181CE052B6E542D005FFAB4 /* ClientChemistryLesson */ = {
+			isa = PBXGroup;
+			children = (
+				F181CE062B6E5458005FFAB4 /* Components */,
+				F181CE082B6E5494005FFAB4 /* ClientChemistryLessonController.swift */,
+				F181CE0A2B6E54CB005FFAB4 /* ClientChemistryLessonViewModel.swift */,
+				F181CE0C2B6E54D7005FFAB4 /* ClientChemistryLessonPresentable.swift */,
+			);
+			path = ClientChemistryLesson;
+			sourceTree = "<group>";
+		};
+		F181CE062B6E5458005FFAB4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F181CE072B6E5466005FFAB4 /* Cells */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F181CE072B6E5466005FFAB4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F181CE0E2B6E5500005FFAB4 /* ClientChemistryLessonCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F181CE102B6E5825005FFAB4 /* ClientAdvisesLesson */ = {
+			isa = PBXGroup;
+			children = (
+				F181CE172B6E588D005FFAB4 /* Components */,
+				F181CE112B6E5874005FFAB4 /* ClientAdvisesLessonController.swift */,
+				F181CE132B6E587F005FFAB4 /* ClientAdvisesLessonViewModel.swift */,
+				F181CE152B6E588A005FFAB4 /* ClientAdvisesLessonPresentable.swift */,
+			);
+			path = ClientAdvisesLesson;
+			sourceTree = "<group>";
+		};
+		F181CE172B6E588D005FFAB4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F181CE182B6E5894005FFAB4 /* Cells */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F181CE182B6E5894005FFAB4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F181CE192B6E58A9005FFAB4 /* ClientAdvisesLessonCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F181CE1B2B6E59EE005FFAB4 /* ClientTestSolutionsLesson */ = {
+			isa = PBXGroup;
+			children = (
+				F181CE222B6E5A4F005FFAB4 /* Components */,
+				F181CE1C2B6E5A0C005FFAB4 /* ClientTestSolutionsLessonController.swift */,
+				F181CE1E2B6E5A17005FFAB4 /* ClientTestSolutionsLessonViewModel.swift */,
+				F181CE202B6E5A47005FFAB4 /* ClientTestSolutionsLessonPresentable.swift */,
+			);
+			path = ClientTestSolutionsLesson;
+			sourceTree = "<group>";
+		};
+		F181CE222B6E5A4F005FFAB4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F181CE232B6E5A54005FFAB4 /* Cells */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F181CE232B6E5A54005FFAB4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F181CE242B6E5AD8005FFAB4 /* ClientTestSolutionsLessonCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		F1C65B472B6556A500B49A91 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +488,7 @@
 		F1C65B642B655AA200B49A91 /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				F181CE042B6E4876005FFAB4 /* Lessons */,
 				F1056E4E2B692B2E00A98341 /* ClientProfile */,
 				F1056E4D2B692A1000A98341 /* ClientExams */,
 				F1056E4C2B692A0300A98341 /* ClientCourses */,
@@ -394,7 +582,7 @@
 		F1EC76412B6B8E020017FCF5 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				F1EC76422B6B8E200017FCF5 /* ClientCoursesLessonCell.swift */,
+				F1EC76422B6B8E200017FCF5 /* ClientCoursesCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -493,24 +681,39 @@
 				F1C65B762B655D7000B49A91 /* NetworkManager.swift in Sources */,
 				F1C65B702B655CF100B49A91 /* UIAlertController+Extension.swift in Sources */,
 				F1C65B782B655D9600B49A91 /* NetworkURLs.swift in Sources */,
+				F181CE1D2B6E5A0C005FFAB4 /* ClientTestSolutionsLessonController.swift in Sources */,
+				F181CDF02B6E2E24005FFAB4 /* ClientMathLessonViewModel.swift in Sources */,
+				F181CDFE2B6E471C005FFAB4 /* ClientCriticalThinkingLessonCell.swift in Sources */,
 				F1C65B552B6558D600B49A91 /* BaseTVCell.swift in Sources */,
+				F181CE032B6E4846005FFAB4 /* ClientMathLessonCell.swift in Sources */,
 				F1056E6C2B69303100A98341 /* ClientProfilePresentable.swift in Sources */,
+				F181CE252B6E5AD8005FFAB4 /* ClientTestSolutionsLessonCell.swift in Sources */,
 				F1C65B592B65592300B49A91 /* ReusableView.swift in Sources */,
 				F1C65B4A2B65577300B49A91 /* AppCoordinator.swift in Sources */,
+				F181CE212B6E5A47005FFAB4 /* ClientTestSolutionsLessonPresentable.swift in Sources */,
 				F1056E5E2B692FCC00A98341 /* ClientCoursesCoordinator.swift in Sources */,
+				F181CE162B6E588A005FFAB4 /* ClientAdvisesLessonPresentable.swift in Sources */,
 				F1C65B6B2B655BB900B49A91 /* ClientGreetingPresentable.swift in Sources */,
+				F181CDF72B6E4149005FFAB4 /* ClientCriticalThinkingLessonController.swift in Sources */,
 				F1056E542B692F7A00A98341 /* ClientHomePresentable.swift in Sources */,
 				F1056E622B692FF400A98341 /* ClientExamsViewModel.swift in Sources */,
 				F1C65B5F2B6559C400B49A91 /* ViewModulesAssembly.swift in Sources */,
 				F1C65B6E2B655CC000B49A91 /* UIView+Extensions.swift in Sources */,
 				F1C65B512B65588100B49A91 /* BaseNavigationController.swift in Sources */,
+				F181CE1F2B6E5A17005FFAB4 /* ClientTestSolutionsLessonViewModel.swift in Sources */,
 				F1C65B842B655FA900B49A91 /* ClientGreetingCoordinator.swift in Sources */,
 				F1C65B822B655F1000B49A91 /* UserDefaultsServiceKeys.swift in Sources */,
+				F181CE092B6E5494005FFAB4 /* ClientChemistryLessonController.swift in Sources */,
+				F181CE0F2B6E5500005FFAB4 /* ClientChemistryLessonCell.swift in Sources */,
 				F1056E6A2B69302400A98341 /* ClientProfileViewModel.swift in Sources */,
 				F1056E5A2B692FAE00A98341 /* ClientCoursesViewModel.swift in Sources */,
+				F181CE122B6E5874005FFAB4 /* ClientAdvisesLessonController.swift in Sources */,
 				F1C65B7A2B655E2700B49A91 /* NetworkManagerImpl.swift in Sources */,
 				F1C65B532B65589500B49A91 /* BaseViewModel.swift in Sources */,
+				F181CDF92B6E4155005FFAB4 /* ClientCriticalThinkingLessonViewModel.swift in Sources */,
 				F1C65B802B655EF100B49A91 /* UserDefaultsService.swift in Sources */,
+				F181CDF22B6E2E33005FFAB4 /* ClientMathLessonPresentable.swift in Sources */,
+				F181CE0B2B6E54CB005FFAB4 /* ClientChemistryLessonViewModel.swift in Sources */,
 				F1056E642B692FFE00A98341 /* ClientExamsPresentable.swift in Sources */,
 				F1056E682B69301A00A98341 /* ClientProfileController.swift in Sources */,
 				F1056E4A2B69154B00A98341 /* NetworkManager_Client.swift in Sources */,
@@ -525,15 +728,20 @@
 				F1C65B612B6559F300B49A91 /* ServicesAssembly.swift in Sources */,
 				F1C65B5D2B65598000B49A91 /* Swinjectable.swift in Sources */,
 				F1056E6E2B69303F00A98341 /* ClientProfileCoordinator.swift in Sources */,
+				F181CE1A2B6E58A9005FFAB4 /* ClientAdvisesLessonCell.swift in Sources */,
+				F181CE142B6E587F005FFAB4 /* ClientAdvisesLessonViewModel.swift in Sources */,
 				F1C65B7D2B655EB600B49A91 /* SwinjectServices.swift in Sources */,
 				F1C65B4D2B65580C00B49A91 /* BaseView.swift in Sources */,
 				F1056E522B692F6200A98341 /* ClientHomeViewModel.swift in Sources */,
+				F181CE0D2B6E54D7005FFAB4 /* ClientChemistryLessonPresentable.swift in Sources */,
 				F1C65B572B65590500B49A91 /* BaseCVCell.swift in Sources */,
+				F181CDEE2B6E2E19005FFAB4 /* ClientMathLessonController.swift in Sources */,
+				F181CDFB2B6E4161005FFAB4 /* ClientCriticalThinkingLessonPresentable.swift in Sources */,
 				F1C65B662B655AC100B49A91 /* ClientGreetingController.swift in Sources */,
 				F1056E582B692FA300A98341 /* ClientCoursesController.swift in Sources */,
 				F1056E662B69300700A98341 /* ClientExamsCoordinator.swift in Sources */,
 				F1056E602B692FE800A98341 /* ClientExamsController.swift in Sources */,
-				F1EC76432B6B8E200017FCF5 /* ClientCoursesLessonCell.swift in Sources */,
+				F1EC76432B6B8E200017FCF5 /* ClientCoursesCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

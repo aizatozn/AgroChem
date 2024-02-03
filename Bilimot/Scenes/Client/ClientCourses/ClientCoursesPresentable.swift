@@ -11,20 +11,21 @@ import Combine
 
 final class ClientCoursesPresentable: BaseView {
 
-    var pushToLesson = CurrentValueSubject<String, Never>("")
-    private var lessons: [String] = ["Математика", "Окуу жана түшүнүү", "Химия"]
+    var pushToLesson = CurrentValueSubject<Int, Never>(0)
+    private var lessons: [String] = ["Математика", "Окуу жана түшүнүү", "Химия", "Кеңештер", "Видео чыгарылыштар"]
 
     private lazy var tableView: UITableView = {
         let table = UITableView()
         table.delegate = self
         table.dataSource = self
         table.separatorStyle = .none
+
         return table
     }()
 
     override func onConfigureView() {
         backgroundColor = .systemBackground
-        
+
     }
 
     override func onAddSubviews() {
@@ -33,7 +34,9 @@ final class ClientCoursesPresentable: BaseView {
 
     override func onSetupConstraints() {
         tableView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.top.bottom.equalToSuperview()
+            make.leading.equalTo(15)
+            make.trailing.equalTo(-15)
         }
     }
 }
@@ -41,19 +44,32 @@ final class ClientCoursesPresentable: BaseView {
 extension ClientCoursesPresentable: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return lessons.count
+        1
+    }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        lessons.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell: ClientCoursesLessonCell = tableView.dequeue(for: indexPath)
-        cell.configure(name: lessons[indexPath.row])
+        let cell: ClientCoursesCell = tableView.dequeue(for: indexPath)
+        cell.configure(name: lessons[indexPath.section])
 
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        pushToLesson.send(lessons[indexPath.row])
+        pushToLesson.send(indexPath.section)
+    }
+
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 10))
+        return footerView
+    }
+
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 10
     }
 }

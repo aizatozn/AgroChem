@@ -44,7 +44,7 @@ final class ClientMathLessonViewModelImpl: BaseVM<UnownedRouter<ClientCoursesRou
             .dropFirst()
             .receive(on: DispatchQueue.main)
             .sink { [weak self] name in
-                self?.router?.trigger(.subject(nameOfLesson: name))
+                self?.router?.trigger(.math(nameOfLesson: name))
             }
             .store(in: &cancellables)
     }

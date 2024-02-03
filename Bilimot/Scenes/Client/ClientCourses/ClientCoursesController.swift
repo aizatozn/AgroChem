@@ -16,10 +16,14 @@ final class ClientCoursesController: VMController<ClientCoursesPresentable,
         content.pushToLesson
             .dropFirst()
             .receive(on: DispatchQueue.main)
-            .sink { [weak self] name in
+            .sink { [weak self] index in
                 guard let self = self else { return }
-                self.viewModel.pushToLesson.send(name)
+                self.viewModel.pushToLesson.send(index)
             }
             .store(in: &viewModel.cancellables)
+    }
+
+    override func onConfigureController() {
+        title = "Courses"
     }
 }
