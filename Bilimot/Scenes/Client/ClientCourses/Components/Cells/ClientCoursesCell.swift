@@ -8,23 +8,23 @@
 import UIKit
 import Combine
 
-final class ClientCoursesLessonCell: BaseTVCell {
+final class ClientCoursesCell: BaseTVCell {
 
     private let lessonLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
         return label
     }()
-    
+
     override func onCreate() {
-        layer.cornerRadius = 5
+        layer.cornerRadius = 10
         layer.borderWidth = 1
         layer.borderColor = UIColor.black.cgColor
-        
+
         onAddSubviews()
         onSetUpConstraints()
     }
-    
+
     private func onAddSubviews() {
         addSubview(lessonLabel)
     }
