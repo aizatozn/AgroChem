@@ -25,6 +25,11 @@ final class ClientHomeController: VMController<ClientHomePresentable,
             self?.content.clientHomeLabel.text = "\(value)"
         }.store(in: &viewModel.cancellables)
     }
+    override func onConfigureController() {
+        let backItem = UIBarButtonItem()
+        backItem.title = "Aizat"
+        navigationItem.backBarButtonItem = backItem
+    }
 
     override func onConfigureActions() {
 
@@ -36,10 +41,6 @@ final class ClientHomeController: VMController<ClientHomePresentable,
                                      action: #selector(nextButtonAction),
                                      for: .touchDown)
     }
-
-//    override func onConfigureController() {
-//        var image = UIImage(named: "bilimotLogo")
-//    }
 }
 
 private extension ClientHomeController {
