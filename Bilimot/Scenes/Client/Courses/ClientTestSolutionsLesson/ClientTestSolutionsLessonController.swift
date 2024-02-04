@@ -23,4 +23,10 @@ final class ClientTestSolutionsLessonController:
             }
             .store(in: &viewModel.cancellables)
     }
+
+    override func onConfigureController() {
+        let backButton = UIBarButtonItem()
+        backButton.title = ""
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+    }
 }

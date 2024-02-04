@@ -22,4 +22,10 @@ final class ClientChemTestController: VMController<ClientChemTestPresentable,
             }
             .store(in: &viewModel.cancellables)
     }
+
+    override func onConfigureController() {
+        let backButton = UIBarButtonItem()
+        backButton.title = ""
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+    }
 }

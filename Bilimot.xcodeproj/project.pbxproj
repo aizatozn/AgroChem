@@ -204,7 +204,6 @@
 		F1056E4B2B6928CD00A98341 /* ClientHome */ = {
 			isa = PBXGroup;
 			children = (
-				F1056E4E2B692B2E00A98341 /* ClientProfile */,
 				F1056E4F2B692F4F00A98341 /* ClientHomeController.swift */,
 				F1056E512B692F6200A98341 /* ClientHomeViewModel.swift */,
 				F1056E532B692F7A00A98341 /* ClientHomePresentable.swift */,
@@ -299,11 +298,12 @@
 		F145B92C2B6F7B1000D00C5F /* TabBars */ = {
 			isa = PBXGroup;
 			children = (
-				F1362FED2B656679006D7E61 /* TabBars */,
-				F1C65B672B655AC600B49A91 /* ClientGreeting */,
 				F1056E4B2B6928CD00A98341 /* ClientHome */,
 				F1056E4C2B692A0300A98341 /* ClientCourses */,
 				F1056E4D2B692A1000A98341 /* ClientExams */,
+				F1056E4E2B692B2E00A98341 /* ClientProfile */,
+				F1362FED2B656679006D7E61 /* TabBars */,
+				F1C65B672B655AC600B49A91 /* ClientGreeting */,
 			);
 			path = TabBars;
 			sourceTree = "<group>";

@@ -35,7 +35,8 @@ final class ClientChemistryLessonPresentable: BaseView {
 
     override func onSetupConstraints() {
         tableView.snp.makeConstraints { make in
-            make.top.bottom.equalToSuperview()
+            make.bottom.equalToSuperview()
+            make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(20)
             make.leading.equalTo(15)
             make.trailing.equalTo(-15)
         }

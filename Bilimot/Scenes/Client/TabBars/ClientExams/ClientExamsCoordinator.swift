@@ -39,7 +39,6 @@ final class ClientExamsCoordinator: NavigationCoordinator<ClientExamsRoute> {
             controller.hidesBottomBarWhenPushed = true
             return .push(controller)
 
-
         case .mathTest(let nameOfLesson):
             let controller = ClientMathTestController()
             controller.title = nameOfLesson

@@ -10,6 +10,7 @@ import XCoordinator
 
 final class ViewModulesAssembly: Assembly {
 
+    // swiftlint:disable function_body_length
     public func assemble(container: Swinject.Container) {
 
         container.register((any GreetingViewModel).self) {
@@ -49,7 +50,7 @@ final class ViewModulesAssembly: Assembly {
         }
 
         container.register((any ClientCriticalThinkingLessonViewModel).self) {
-            ClientCriticalThinkingLessonViewModelImpl.init(
+            ClientCriticalThinkingLesViewModelImpl.init(
                 networkManager: $0.resolve(NetworkManager.self)!
             )
         }
@@ -89,5 +90,5 @@ final class ViewModulesAssembly: Assembly {
                 networkManager: $0.resolve(NetworkManager.self)!
             )
         }
-    }
+    } // swiftlint:enable function_body_length
 }

@@ -17,7 +17,7 @@ protocol ClientCriticalThinkingLessonViewModel: BaseVMProtocol {
     var pushToLesson: CurrentValueSubject<String, Never> { get set }
 }
 
-final class ClientCriticalThinkingLessonViewModelImpl:
+final class ClientCriticalThinkingLesViewModelImpl:
                                                     BaseVM<UnownedRouter<ClientCoursesRoute>>,
                                                     ClientCriticalThinkingLessonViewModel {
 

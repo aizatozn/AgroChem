@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 final class ClientCriticalThinkingLessonController:
                                   VMController<ClientCriticalThinkingLessonPresentable,
@@ -21,5 +22,11 @@ final class ClientCriticalThinkingLessonController:
                 self.viewModel.pushToLesson.send(name)
             }
             .store(in: &viewModel.cancellables)
+    }
+
+    override func onConfigureController() {
+        let backButton = UIBarButtonItem()
+        backButton.title = ""
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
     }
 }
