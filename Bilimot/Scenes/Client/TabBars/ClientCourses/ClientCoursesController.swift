@@ -24,6 +24,6 @@ final class ClientCoursesController: VMController<ClientCoursesPresentable,
     }
 
     override func onConfigureController() {
-        title = "Courses"
+        title = "Бардык сабактар"
     }
 }

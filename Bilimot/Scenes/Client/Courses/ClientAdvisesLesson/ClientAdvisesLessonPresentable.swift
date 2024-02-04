@@ -12,7 +12,8 @@ import Combine
 final class ClientAdvisesLessonPresentable: BaseView {
 
     var pushToLesson = CurrentValueSubject<String, Never>("")
-    private var lessons: [String] = ["Окуу жана түшүнүү бөлүмүнө стратегиялар"]
+    private var lessons: [String] = ["ЖРТ туура даярдануу кеңештери",
+                                     "Окуу жана түшүнүү бөлүмүнө стратегиялар", "ЖОЖдор жана кесип тандоо"]
 
     private lazy var tableView: UITableView = {
         let table = UITableView()
