@@ -10,51 +10,63 @@ import SnapKit
 
 final class ClientHomePresentable: BaseView {
 
-    let clientHomeLabel: UILabel = {
-        let label = UILabel()
-        label.text = "0"
-        label.font = .boldSystemFont(ofSize: 100)
-        label.textColor = UIColor.red
-        return label
+    private let backgroundImageView: UIImageView = {
+        let image = UIImageView()
+        image.image = UIImage(named: "home_background")
+        image.contentMode = .scaleAspectFill
+        return image
     }()
 
-    let clientHomeButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Tap counter", for: .normal)
-        button.setTitleColor(.green, for: .normal)
-        return button
+    private let bilimotImageView: UIImageView = {
+        let image = UIImageView()
+        image.image = UIImage(named: "bilimot")
+        image.contentMode = .scaleAspectFit
+        return image
     }()
 
-    let nextButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Next controller", for: .normal)
-        button.setTitleColor(.green, for: .normal)
-        return button
+    private let whiteView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor(white: 1, alpha: 0.5)
+        view.layer.cornerRadius = 25
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOpacity = 1
+        view.layer.masksToBounds = true
+        view.layer.shadowOffset = CGSize(width: 2, height: 2)
+        view.layer.shadowRadius = 10
+        view.clipsToBounds = true
+        view.layer.rasterizationScale = 5
+        return view
     }()
 
     override func onConfigureView() {
         backgroundColor = .systemBackground
+        whiteView.layer.shadowPath = UIBezierPath(roundedRect: whiteView.bounds, cornerRadius: 10).cgPath
+
     }
 
     override func onAddSubviews() {
-        addSubviews(clientHomeLabel, clientHomeButton, nextButton)
+        addSubviews(backgroundImageView, bilimotImageView, whiteView)
     }
 
     override func onSetupConstraints() {
 
-        clientHomeLabel.snp.makeConstraints { make in
-            make.top.equalTo(100)
-            make.centerX.equalToSuperview()
+        backgroundImageView.snp.makeConstraints { make in
+            make.top.leading.trailing.equalToSuperview()
+            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
         }
 
-        clientHomeButton.snp.makeConstraints { make in
-            make.top.equalTo(clientHomeLabel.snp.bottom).offset(16)
-            make.centerX.equalToSuperview()
+        bilimotImageView.snp.makeConstraints { make in
+            make.top.equalTo(40)
+            make.leading.equalTo(-40)
+            make.height.equalTo(180)
+            make.width.equalTo(250)
         }
 
-        nextButton.snp.makeConstraints { make in
-            make.top.equalTo(clientHomeButton.snp.bottom).offset(16)
-            make.centerX.equalToSuperview()
+        whiteView.snp.makeConstraints { make in
+            make.top.equalTo(bilimotImageView.snp.bottom).offset(-30)
+            make.leading.equalTo(20)
+            make.trailing.equalTo(-20)
+            make.height.equalTo(200)
         }
     }
 }

@@ -17,7 +17,8 @@ final class ClientCoursesCell: BaseTVCell {
     }()
 
     override func onCreate() {
-        layer.cornerRadius = 10
+        layer.cornerRadius = 20
+        backgroundColor = UIColor(white: 1, alpha: 0.5)
         layer.borderWidth = 1
         layer.borderColor = UIColor.black.cgColor
 

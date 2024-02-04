@@ -19,13 +19,14 @@ final class ClientCoursesPresentable: BaseView {
         table.delegate = self
         table.dataSource = self
         table.separatorStyle = .none
-
+        table.backgroundColor = .clear
+        table.sectionHeaderHeight = 50
         return table
     }()
 
     override func onConfigureView() {
-        backgroundColor = .systemBackground
-
+        backgroundColor = .white
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "home_background")!)
     }
 
     override func onAddSubviews() {
@@ -33,9 +34,10 @@ final class ClientCoursesPresentable: BaseView {
     }
 
     override func onSetupConstraints() {
+
         tableView.snp.makeConstraints { make in
-            make.bottom.equalToSuperview()
-            make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(20)
+            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
+            make.top.equalTo(safeAreaLayoutGuide.snp.top)
             make.leading.equalTo(15)
             make.trailing.equalTo(-15)
         }
@@ -65,12 +67,23 @@ extension ClientCoursesPresentable: UITableViewDelegate, UITableViewDataSource {
         pushToLesson.send(indexPath.section)
     }
 
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let footerView =
+        UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 10))
+        return footerView
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        section == 0 ? 10 : 0
+    }
+
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 10))
+        let footerView =
+        UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 10))
         return footerView
     }
 
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 10
+        10
     }
 }
