@@ -71,5 +71,23 @@ final class ViewModulesAssembly: Assembly {
                 networkManager: $0.resolve(NetworkManager.self)!
             )
         }
+
+        container.register((any ClientMathTestViewModel).self) {
+            ClientMathTestViewModelImpl.init(
+                networkManager: $0.resolve(NetworkManager.self)!
+            )
+        }
+
+        container.register((any ClientMainMathTestViewModel).self) {
+            ClientMainMathTestViewModelImpl.init(
+                networkManager: $0.resolve(NetworkManager.self)!
+            )
+        }
+
+        container.register((any ClientChemTestViewModel).self) {
+            ClientChemTestViewModelImpl.init(
+                networkManager: $0.resolve(NetworkManager.self)!
+            )
+        }
     }
 }

@@ -29,7 +29,7 @@ final class ClientTabBarCoordinator: TabBarCoordinator<ClientTabBarRoute> {
         let homeCoordinator = ClientHomeCoordinator(appRouter: appRouter)
 
         let homeButton = UITabBarItem(
-        title: "Home",
+        title: "Башкы бет",
         image: UIImage(systemName: "house"),
         selectedImage: UIImage(systemName: "house.fill"))
 
@@ -38,7 +38,7 @@ final class ClientTabBarCoordinator: TabBarCoordinator<ClientTabBarRoute> {
         let coursesCoordinator = ClientCoursesCoordinator(appRouter: appRouter)
 
         let coursesButton = UITabBarItem(
-        title: "Courses",
+        title: "Сабактар",
         image: UIImage(systemName: "books.vertical"),
         selectedImage: UIImage(systemName: "books.vertical.fill"))
 
@@ -47,7 +47,7 @@ final class ClientTabBarCoordinator: TabBarCoordinator<ClientTabBarRoute> {
         let examsCoordinator = ClientExamsCoordinator(appRouter: appRouter)
 
         let examsButton = UITabBarItem(
-        title: "Exams",
+        title: "Сынамык",
         image: UIImage(systemName: "graduationcap"),
         selectedImage: UIImage(systemName: "graduationcap.fill"))
 
@@ -56,7 +56,7 @@ final class ClientTabBarCoordinator: TabBarCoordinator<ClientTabBarRoute> {
         let profileCoordinator = ClientProfileCoordinator(appRouter: appRouter)
 
         let profileButton = UITabBarItem(
-        title: "Profile",
+        title: "Аккаунт",
         image: UIImage(systemName: "gearshape"),
         selectedImage: UIImage(systemName: "gearshape.fill"))
 

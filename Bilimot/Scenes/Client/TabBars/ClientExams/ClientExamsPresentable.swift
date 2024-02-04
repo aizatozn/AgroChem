@@ -7,54 +7,69 @@
 
 import UIKit
 import SnapKit
+import Combine
 
 final class ClientExamsPresentable: BaseView {
 
-    let clientExamsLabel: UILabel = {
-        let label = UILabel()
-        label.text = "0"
-        label.font = .boldSystemFont(ofSize: 100)
-        label.textColor = UIColor.red
-        return label
-    }()
+    var pushToLesson = CurrentValueSubject<Int, Never>(0)
+    private var lessons: [String] = ["Математика", "Негизги тест", "Химия"]
 
-    let clientExamsButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Tap counter", for: .normal)
-        button.setTitleColor(.green, for: .normal)
-        return button
-    }()
+    private lazy var tableView: UITableView = {
+        let table = UITableView()
+        table.delegate = self
+        table.dataSource = self
+        table.separatorStyle = .none
 
-    let nextButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Next controller", for: .normal)
-        button.setTitleColor(.green, for: .normal)
-        return button
+        return table
     }()
 
     override func onConfigureView() {
         backgroundColor = .systemBackground
+
     }
 
     override func onAddSubviews() {
-        addSubviews(clientExamsLabel, clientExamsButton, nextButton)
+        addSubview(tableView)
     }
 
     override func onSetupConstraints() {
-
-        clientExamsLabel.snp.makeConstraints { make in
-            make.top.equalTo(100)
-            make.centerX.equalToSuperview()
+        tableView.snp.makeConstraints { make in
+            make.top.bottom.equalToSuperview()
+            make.leading.equalTo(15)
+            make.trailing.equalTo(-15)
         }
+    }
+}
 
-        clientExamsButton.snp.makeConstraints { make in
-            make.top.equalTo(clientExamsLabel.snp.bottom).offset(16)
-            make.centerX.equalToSuperview()
-        }
+extension ClientExamsPresentable: UITableViewDelegate, UITableViewDataSource {
 
-        nextButton.snp.makeConstraints { make in
-            make.top.equalTo(clientExamsButton.snp.bottom).offset(16)
-            make.centerX.equalToSuperview()
-        }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        1
+    }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        lessons.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        let cell: ClientCoursesCell = tableView.dequeue(for: indexPath)
+        cell.configure(name: lessons[indexPath.section])
+
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        pushToLesson.send(indexPath.section)
+    }
+
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 10))
+        return footerView
+    }
+
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 10
     }
 }

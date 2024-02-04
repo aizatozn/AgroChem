@@ -13,33 +13,17 @@ final class ClientExamsController: VMController<ClientExamsPresentable,
 
     override func onBindViewModel() {
 
-        viewModel.counter
+        content.pushToLesson
+            .dropFirst()
             .receive(on: DispatchQueue.main)
-            .sink { [weak self] value in
-            self?.content.clientExamsLabel.text = "\(value)"
-        }.store(in: &viewModel.cancellables)
+            .sink { [weak self] index in
+                guard let self = self else { return }
+                self.viewModel.pushToLesson.send(index)
+            }
+            .store(in: &viewModel.cancellables)
     }
 
-    override func onConfigureActions() {
-
-        content.clientExamsButton.addTarget(self,
-                                         action: #selector(clientExamsButtonAction),
-                                         for: .touchDown)
-
-        content.nextButton.addTarget(self,
-                                     action: #selector(nextButtonAction),
-                                     for: .touchDown)
-    }
-}
-
-private extension ClientExamsController {
-
-    @objc private func clientExamsButtonAction() {
-        let count = viewModel.counter.value
-        viewModel.counter.send(count + 1)
-    }
-
-    @objc private func nextButtonAction() {
-        viewModel.nextRoute.send()
+    override func onConfigureController() {
+        title = "Сынамык"
     }
 }

@@ -11,6 +11,9 @@ import XCoordinator
 enum ClientExamsRoute: Route {
     case home
     case next
+    case mathTest(nameOfLesson: String)
+    case mathMainTest(nameOfLesson: String)
+    case сhemTest(nameOfLesson: String)
 }
 
 final class ClientExamsCoordinator: NavigationCoordinator<ClientExamsRoute> {
@@ -34,6 +37,25 @@ final class ClientExamsCoordinator: NavigationCoordinator<ClientExamsRoute> {
         case .next:
             let controller = ClientExamsController()
             controller.hidesBottomBarWhenPushed = true
+            return .push(controller)
+
+
+        case .mathTest(let nameOfLesson):
+            let controller = ClientMathTestController()
+            controller.title = nameOfLesson
+            controller.viewModel.router = unownedRouter
+            return .push(controller)
+
+        case .mathMainTest(let nameOfLesson):
+            let controller = ClientMainMathTestController()
+            controller.title = nameOfLesson
+            controller.viewModel.router = unownedRouter
+            return .push(controller)
+
+        case .сhemTest(let nameOfLesson):
+            let controller = ClientChemTestController()
+            controller.title = nameOfLesson
+            controller.viewModel.router = unownedRouter
             return .push(controller)
         }
     }
