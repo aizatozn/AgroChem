@@ -22,7 +22,9 @@ final class ClientExamsPresentable: BaseView {
        return collectionView
     }()
 
-    private let data = [("house", "Home"), ("car", "Car"), ("star", "Favorite")]
+    private let data = [("camera.macro", "Сорные растения"), ("ladybug", "Вредители"),
+                        ("percent", "Действующие вещества"), ("ant", "Болезни культур"),
+                        ("leaf", "Культурные растения"), ("character.book.closed", "Термины")]
 
     override func onConfigureView() {
         backgroundColor = .systemBackground
@@ -70,6 +72,6 @@ extension ClientExamsPresentable: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.width / 2.5, height: 100)
+        return CGSize(width: UIScreen.main.bounds.width / 2.3, height: 80)
     }
 }
