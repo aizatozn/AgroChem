@@ -38,7 +38,7 @@ final class ClientTabBarController: UITabBarController {
         tabBarAppearance.backgroundColor = .systemBackground
         tabBar.standardAppearance = tabBarAppearance
         tabBar.itemSpacing = (UIScreen.main.bounds.width / 5.9) / 100
-        tabBar.tintColor = UIColor(red: 102/255, green: 80/255, blue: 180/255, alpha: 1.0)
+        tabBar.tintColor = UIColor(red: 0/255, green: 153/255, blue: 51/255, alpha: 1.0)
         tabBar.unselectedItemTintColor = .lightGray
     }
 }

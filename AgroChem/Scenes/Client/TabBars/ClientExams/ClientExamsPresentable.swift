@@ -11,66 +11,65 @@ import Combine
 
 final class ClientExamsPresentable: BaseView {
 
-    var pushToLesson = CurrentValueSubject<Int, Never>(0)
-    private var lessons: [String] = ["Математика", "Негизги тест", "Химия"]
-
-    private lazy var tableView: UITableView = {
-        let table = UITableView()
-        table.delegate = self
-        table.dataSource = self
-        table.separatorStyle = .none
-
-        return table
+    private let collectionView: UICollectionView = {
+       let layout = UICollectionViewFlowLayout()
+       layout.scrollDirection = .vertical
+       layout.minimumLineSpacing = 10
+       layout.minimumInteritemSpacing = 10
+       let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+       collectionView.translatesAutoresizingMaskIntoConstraints = false
+       collectionView.backgroundColor = .white
+       return collectionView
     }()
+
+    private let data = [("house", "Home"), ("car", "Car"), ("star", "Favorite")]
 
     override func onConfigureView() {
         backgroundColor = .systemBackground
 
+       collectionView.dataSource = self
+       collectionView.delegate = self
+
+       collectionView.register(ClientExamsCell.self, forCellWithReuseIdentifier: "Cell")
+
     }
 
     override func onAddSubviews() {
-        addSubview(tableView)
+        view.addSubview(collectionView)
     }
 
     override func onSetupConstraints() {
-        tableView.snp.makeConstraints { make in
-            make.bottom.equalToSuperview()
-            make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(20)
-            make.leading.equalTo(15)
-            make.trailing.equalTo(-15)
+        collectionView.backgroundColor = .yellow
+        collectionView.snp.makeConstraints { make in
+            make.top.equalTo(safeAreaLayoutGuide.snp.top)
+            make.leading.equalTo(20)
+            make.trailing.equalTo(-20)
+            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
         }
     }
 }
 
-extension ClientExamsPresentable: UITableViewDelegate, UITableViewDataSource {
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+extension ClientExamsPresentable: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return data.count
     }
 
-    func numberOfSections(in tableView: UITableView) -> Int {
-        lessons.count
-    }
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath)
+    -> UICollectionViewCell {
+        let cell: ClientExamsCell = collectionView.dequeue(for: indexPath)
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        let cell: ClientCoursesCell = tableView.dequeue(for: indexPath)
-        cell.configure(name: lessons[indexPath.section])
+        let (symbolName, text) = data[indexPath.item]
+        cell.configure(symbolName: symbolName, text: text)
 
         return cell
     }
+}
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        pushToLesson.send(indexPath.section)
-    }
-
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 10))
-        return footerView
-    }
-
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 10
+extension ClientExamsPresentable: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: UIScreen.main.bounds.width / 2.5, height: 100)
     }
 }

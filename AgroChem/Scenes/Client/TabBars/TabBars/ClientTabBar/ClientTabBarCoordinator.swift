@@ -38,18 +38,18 @@ final class ClientTabBarCoordinator: TabBarCoordinator<ClientTabBarRoute> {
         let coursesCoordinator = ClientCoursesCoordinator(appRouter: appRouter)
 
         let coursesButton = UITabBarItem(
-        title: "Сабактар",
-        image: UIImage(systemName: "books.vertical"),
-        selectedImage: UIImage(systemName: "books.vertical.fill"))
+        title: "Каталог",
+        image: UIImage(systemName: "magazine"),
+        selectedImage: UIImage(systemName: "magazine.fill"))
 
         coursesCoordinator.rootViewController.tabBarItem = coursesButton
 
         let examsCoordinator = ClientExamsCoordinator(appRouter: appRouter)
 
         let examsButton = UITabBarItem(
-        title: "Сынамык",
-        image: UIImage(systemName: "graduationcap"),
-        selectedImage: UIImage(systemName: "graduationcap.fill"))
+        title: "Справочник",
+        image: UIImage(systemName: "books.vertical"),
+        selectedImage: UIImage(systemName: "books.vertical.fill"))
 
         examsCoordinator.rootViewController.tabBarItem = examsButton
 

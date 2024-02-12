@@ -26,7 +26,7 @@ final class ClientCoursesPresentable: BaseView {
 
     override func onConfigureView() {
         backgroundColor = .white
-        view.backgroundColor = UIColor(patternImage: UIImage(named: "home_background")!)
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "katalog_background")!)
     }
 
     override func onAddSubviews() {

@@ -11,19 +11,19 @@ import Combine
 final class ClientExamsController: VMController<ClientExamsPresentable,
                                   ClientExamsViewModel> {
 
-    override func onBindViewModel() {
+//    override func onBindViewModel() {
+//
+//        content.pushToLesson
+//            .dropFirst()
+//            .receive(on: DispatchQueue.main)
+//            .sink { [weak self] index in
+//                guard let self = self else { return }
+//                self.viewModel.pushToLesson.send(index)
+//            }
+//            .store(in: &viewModel.cancellables)
+//    }
 
-        content.pushToLesson
-            .dropFirst()
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] index in
-                guard let self = self else { return }
-                self.viewModel.pushToLesson.send(index)
-            }
-            .store(in: &viewModel.cancellables)
-    }
-
-    override func onConfigureController() {
-        title = "Сынамык"
-    }
+//    override func onConfigureController() {
+//        title = "Сынамык"
+//    }
 }

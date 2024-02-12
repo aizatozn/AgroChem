@@ -94,6 +94,7 @@
 		F1C65B802B655EF100B49A91 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C65B7F2B655EF100B49A91 /* UserDefaultsService.swift */; };
 		F1C65B822B655F1000B49A91 /* UserDefaultsServiceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C65B812B655F1000B49A91 /* UserDefaultsServiceKeys.swift */; };
 		F1C65B842B655FA900B49A91 /* ClientGreetingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C65B832B655FA900B49A91 /* ClientGreetingCoordinator.swift */; };
+		F1CEB5792B7A0F1100E466DE /* ClientExamsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CEB5782B7A0F1100E466DE /* ClientExamsCell.swift */; };
 		F1EC76432B6B8E200017FCF5 /* ClientCoursesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EC76422B6B8E200017FCF5 /* ClientCoursesCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -177,6 +178,7 @@
 		F1C65B7F2B655EF100B49A91 /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		F1C65B812B655F1000B49A91 /* UserDefaultsServiceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsServiceKeys.swift; sourceTree = "<group>"; };
 		F1C65B832B655FA900B49A91 /* ClientGreetingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientGreetingCoordinator.swift; sourceTree = "<group>"; };
+		F1CEB5782B7A0F1100E466DE /* ClientExamsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientExamsCell.swift; sourceTree = "<group>"; };
 		F1EC76422B6B8E200017FCF5 /* ClientCoursesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCoursesCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -227,6 +229,7 @@
 		F1056E4D2B692A1000A98341 /* ClientExams */ = {
 			isa = PBXGroup;
 			children = (
+				F1CEB5762B7A0ED200E466DE /* Components */,
 				F1056E5F2B692FE800A98341 /* ClientExamsController.swift */,
 				F1056E612B692FF400A98341 /* ClientExamsViewModel.swift */,
 				F1056E632B692FFE00A98341 /* ClientExamsPresentable.swift */,
@@ -695,6 +698,22 @@
 			path = UserDefaultsService;
 			sourceTree = "<group>";
 		};
+		F1CEB5762B7A0ED200E466DE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F1CEB5772B7A0EDB00E466DE /* Cell */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F1CEB5772B7A0EDB00E466DE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F1CEB5782B7A0F1100E466DE /* ClientExamsCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		F1EC76402B6B8DFD0017FCF5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -825,6 +844,7 @@
 				F1C65B5F2B6559C400B49A91 /* ViewModulesAssembly.swift in Sources */,
 				F1C65B6E2B655CC000B49A91 /* UIView+Extensions.swift in Sources */,
 				F145B93E2B6F946900D00C5F /* ClientMainMathTestViewModel.swift in Sources */,
+				F1CEB5792B7A0F1100E466DE /* ClientExamsCell.swift in Sources */,
 				F1C65B512B65588100B49A91 /* BaseNavigationController.swift in Sources */,
 				F181CE1F2B6E5A17005FFAB4 /* ClientTestSolutionsLessonViewModel.swift in Sources */,
 				F145B93A2B6F818700D00C5F /* ClientMathTestCell.swift in Sources */,
