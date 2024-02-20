@@ -21,7 +21,7 @@ final class ClientTabBarCoordinator: TabBarCoordinator<ClientTabBarRoute> {
 
     private let homeRouter: StrongRouter<ClientHomeRoute>
     private let coursesRouter: StrongRouter<ClientCoursesRoute>
-    private let examsRouter: StrongRouter<ClientExamsRoute>
+    private let examsRouter: StrongRouter<ClientDirectoryRoute>
     private let profileRouter: StrongRouter<ClientProfileRoute>
 
     convenience init(appRouter: UnownedRouter<AppRoute>) {
@@ -44,7 +44,7 @@ final class ClientTabBarCoordinator: TabBarCoordinator<ClientTabBarRoute> {
 
         coursesCoordinator.rootViewController.tabBarItem = coursesButton
 
-        let examsCoordinator = ClientExamsCoordinator(appRouter: appRouter)
+        let examsCoordinator = ClientDirectoryCoordinator(appRouter: appRouter)
 
         let examsButton = UITabBarItem(
         title: "Справочник",
@@ -77,7 +77,7 @@ final class ClientTabBarCoordinator: TabBarCoordinator<ClientTabBarRoute> {
     init(
         homeRouter: StrongRouter<ClientHomeRoute>,
         coursesRouter: StrongRouter<ClientCoursesRoute>,
-        examsRouter: StrongRouter<ClientExamsRoute>,
+        examsRouter: StrongRouter<ClientDirectoryRoute>,
         profileRouter: StrongRouter<ClientProfileRoute>,
         appRouter: UnownedRouter<AppRoute>
     ) {

@@ -1,5 +1,5 @@
 //
-//  ClientExamsCoordinator.swift
+//  ClientDirectoryCoordinator.swift
 //  Bilimot
 //
 //  Created by Aizat Ozbekova on 30/1/24.
@@ -8,7 +8,7 @@
 import UIKit
 import XCoordinator
 
-enum ClientExamsRoute: Route {
+enum ClientDirectoryRoute: Route {
     case home
     case next
     case mathTest(nameOfLesson: String)
@@ -16,7 +16,7 @@ enum ClientExamsRoute: Route {
     case сhemTest(nameOfLesson: String)
 }
 
-final class ClientExamsCoordinator: NavigationCoordinator<ClientExamsRoute> {
+final class ClientDirectoryCoordinator: NavigationCoordinator<ClientDirectoryRoute> {
 
     private let appRouter: UnownedRouter<AppRoute>
 
@@ -25,17 +25,17 @@ final class ClientExamsCoordinator: NavigationCoordinator<ClientExamsRoute> {
         super.init(rootViewController: BaseNavigationController(), initialRoute: .home)
     }
 
-    override func prepareTransition(for route: ClientExamsRoute)
+    override func prepareTransition(for route: ClientDirectoryRoute)
     -> NavigationTransition {
         switch route {
 
         case .home:
-            let controller = ClientExamsController()
+            let controller = ClientDirectoryController()
             controller.viewModel.router = unownedRouter
             return .set([controller])
 
         case .next:
-            let controller = ClientExamsController()
+            let controller = ClientDirectoryController()
             controller.hidesBottomBarWhenPushed = true
             return .push(controller)
 

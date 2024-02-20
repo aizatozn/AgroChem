@@ -1,5 +1,5 @@
 //
-//  ClientExamsPresentable.swift
+//  ClientDirectoryPresentable.swift
 //  Bilimot
 //
 //  Created by Aizat Ozbekova on 30/1/24.
@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import Combine
 
-final class ClientExamsPresentable: BaseView {
+final class ClientDirectoryPresentable: BaseView {
 
     private let collectionView: UICollectionView = {
        let layout = UICollectionViewFlowLayout()
@@ -28,13 +28,11 @@ final class ClientExamsPresentable: BaseView {
 
     override func onConfigureView() {
         backgroundColor = .systemBackground
-
-       collectionView.dataSource = self
-       collectionView.delegate = self
-
-       collectionView.register(ClientExamsCell.self, forCellWithReuseIdentifier: "Cell")
-
-    }
+        
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        
+        collectionView.register(ClientDirectoryCell.self, forCellWithReuseIdentifier: "Cell")}
 
     override func onAddSubviews() {
         view.addSubview(collectionView)
@@ -51,7 +49,7 @@ final class ClientExamsPresentable: BaseView {
     }
 }
 
-extension ClientExamsPresentable: UICollectionViewDataSource {
+extension ClientDirectoryPresentable: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data.count
     }
@@ -59,7 +57,7 @@ extension ClientExamsPresentable: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath)
     -> UICollectionViewCell {
-        let cell: ClientExamsCell = collectionView.dequeue(for: indexPath)
+        let cell: ClientDirectoryCell = collectionView.dequeue(for: indexPath)
 
         let (symbolName, text) = data[indexPath.item]
         cell.configure(symbolName: symbolName, text: text)
@@ -68,7 +66,7 @@ extension ClientExamsPresentable: UICollectionViewDataSource {
     }
 }
 
-extension ClientExamsPresentable: UICollectionViewDelegateFlowLayout {
+extension ClientDirectoryPresentable: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {

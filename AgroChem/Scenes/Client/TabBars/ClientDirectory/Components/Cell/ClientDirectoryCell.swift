@@ -1,5 +1,5 @@
 //
-//  ClientExamsCell.swift
+//  ClientDirectoryCell.swift
 //  AgroChem
 //
 //  Created by Aizat Ozbekova on 12/2/24.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-final class ClientExamsCell: BaseCVCell {
+final class ClientDirectoryCell: BaseCVCell {
 
     private let symbolImageView: UIImageView = {
         let imageView = UIImageView()

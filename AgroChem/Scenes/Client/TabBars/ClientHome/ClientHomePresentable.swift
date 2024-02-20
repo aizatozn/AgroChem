@@ -7,66 +7,70 @@
 
 import UIKit
 import SnapKit
+import Combine
 
 final class ClientHomePresentable: BaseView {
 
-    private let backgroundImageView: UIImageView = {
-        let image = UIImageView()
-        image.image = UIImage(named: "home_background")
-        image.contentMode = .scaleAspectFill
-        return image
+    private let collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = 10
+        layout.minimumInteritemSpacing = 10
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.backgroundColor = .white
+        layout.scrollDirection = .horizontal
+        return collectionView
     }()
 
-    private let bilimotImageView: UIImageView = {
-        let image = UIImageView()
-        image.image = UIImage(named: "bilimot")
-        image.contentMode = .scaleAspectFit
-        return image
-    }()
-
-    private let whiteView: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor(white: 1, alpha: 0.5)
-        view.layer.cornerRadius = 25
-        view.layer.shadowColor = UIColor.black.cgColor
-        view.layer.shadowOpacity = 1
-        view.layer.masksToBounds = true
-        view.layer.shadowOffset = CGSize(width: 2, height: 2)
-        view.layer.shadowRadius = 10
-        view.clipsToBounds = true
-        view.layer.rasterizationScale = 5
-        return view
-    }()
+    private let data = [("camera.macro", "Сорные растения"), ("ladybug", "Вредители"),
+                        ("percent", "Действующие вещества"), ("ant", "Болезни культур"),
+                        ("leaf", "Культурные растения"), ("character.book.closed", "Термины")]
 
     override func onConfigureView() {
-        backgroundColor = .systemBackground
-        whiteView.layer.shadowPath = UIBezierPath(roundedRect: whiteView.bounds, cornerRadius: 10).cgPath
+        collectionView.dataSource = self
+        collectionView.delegate = self
 
-    }
+        collectionView.register(ClientHomeCell.self, forCellWithReuseIdentifier: "Cell")}
 
     override func onAddSubviews() {
-        addSubviews(backgroundImageView, bilimotImageView, whiteView)
+        view.addSubview(collectionView)
     }
 
     override func onSetupConstraints() {
 
-        backgroundImageView.snp.makeConstraints { make in
-            make.top.leading.trailing.equalToSuperview()
-            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
-        }
-
-        bilimotImageView.snp.makeConstraints { make in
-            make.top.equalTo(40)
-            make.leading.equalTo(-40)
-            make.height.equalTo(180)
-            make.width.equalTo(250)
-        }
-
-        whiteView.snp.makeConstraints { make in
-            make.top.equalTo(bilimotImageView.snp.bottom).offset(-30)
+        collectionView.backgroundColor = .yellow
+        collectionView.snp.makeConstraints { make in
+            make.top.equalTo(safeAreaLayoutGuide.snp.top)
             make.leading.equalTo(20)
             make.trailing.equalTo(-20)
-            make.height.equalTo(200)
+//            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
+            make.height.equalTo(90)
         }
     }
 }
+
+    extension ClientHomePresentable: UICollectionViewDataSource {
+        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+            return data.count
+        }
+
+        func collectionView(_ collectionView: UICollectionView,
+                            cellForItemAt indexPath: IndexPath)
+        -> UICollectionViewCell {
+            let cell: ClientHomeCell = collectionView.dequeue(for: indexPath)
+
+            let (symbolName, text) = data[indexPath.item]
+            cell.configure(symbolName: symbolName, text: text)
+
+            return cell
+        }
+    }
+
+    extension ClientHomePresentable: UICollectionViewDelegateFlowLayout {
+        func collectionView(_ collectionView: UICollectionView,
+                            layout collectionViewLayout: UICollectionViewLayout,
+                            sizeForItemAt indexPath: IndexPath) -> CGSize {
+            return CGSize(width: UIScreen.main.bounds.width / 2.3, height: 80)
+        }
+    }

@@ -1,5 +1,5 @@
 //
-//  ClientExamsViewModel.swift
+//  ClientDirectoryViewModel.swift
 //  Bilimot
 //
 //  Created by Aizat Ozbekova on 30/1/24.
@@ -9,16 +9,16 @@ import Combine
 import Foundation
 import XCoordinator
 
-protocol ClientExamsViewModel: BaseVMProtocol {
-    var router: UnownedRouter<ClientExamsRoute>? { get set }
+protocol ClientDirectoryViewModel: BaseVMProtocol {
+    var router: UnownedRouter<ClientDirectoryRoute>? { get set }
     var counter: CurrentValueSubject<Int, Never> { get set }
     var nextRoute: PassthroughSubject<Void, Never> { get set }
     var cancellables: Set<AnyCancellable> { get set }
     var pushToLesson: CurrentValueSubject<Int, Never> { get set }
 }
 
-final class ClientExamsViewModelImpl: BaseVM<UnownedRouter<ClientExamsRoute>>,
-                                     ClientExamsViewModel {
+final class ClientExamsViewModelImpl: BaseVM<UnownedRouter<ClientDirectoryRoute>>,
+                                     ClientDirectoryViewModel {
 
     var counter = CurrentValueSubject<Int, Never>(0)
     var nextRoute = PassthroughSubject<Void, Never>()

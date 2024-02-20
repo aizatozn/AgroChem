@@ -10,14 +10,14 @@ import Foundation
 import XCoordinator
 
 protocol ClientChemTestViewModel: BaseVMProtocol {
-    var router: UnownedRouter<ClientExamsRoute>? { get set }
+    var router: UnownedRouter<ClientDirectoryRoute>? { get set }
     var counter: CurrentValueSubject<Int, Never> { get set }
     var nextRoute: PassthroughSubject<Void, Never> { get set }
     var cancellables: Set<AnyCancellable> { get set }
     var pushToLesson: CurrentValueSubject<String, Never> { get set }
 }
 
-final class ClientChemTestViewModelImpl: BaseVM<UnownedRouter<ClientExamsRoute>>,
+final class ClientChemTestViewModelImpl: BaseVM<UnownedRouter<ClientDirectoryRoute>>,
                                                 ClientChemTestViewModel {
 
     var counter = CurrentValueSubject<Int, Never>(0)

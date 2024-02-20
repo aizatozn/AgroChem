@@ -31,7 +31,7 @@ final class ViewModulesAssembly: Assembly {
             )
         }
 
-        container.register((any ClientExamsViewModel).self) {
+        container.register((any ClientDirectoryViewModel).self) {
             ClientExamsViewModelImpl.init(
                 networkManager: $0.resolve(NetworkManager.self)!
             )

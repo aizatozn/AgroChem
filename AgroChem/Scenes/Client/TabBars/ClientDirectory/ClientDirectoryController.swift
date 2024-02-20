@@ -1,5 +1,5 @@
 //
-//  ClientExamsController.swift
+//  ClientDirectoryController.swift
 //  Bilimot
 //
 //  Created by Aizat Ozbekova on 30/1/24.
@@ -8,8 +8,8 @@
 import UIKit
 import Combine
 
-final class ClientExamsController: VMController<ClientExamsPresentable,
-                                  ClientExamsViewModel> {
+final class ClientDirectoryController: VMController<ClientDirectoryPresentable,
+                                  ClientDirectoryViewModel> {
 
 //    override func onBindViewModel() {
 //
