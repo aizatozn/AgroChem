@@ -28,10 +28,10 @@ final class ClientDirectoryPresentable: BaseView {
 
     override func onConfigureView() {
         backgroundColor = .systemBackground
-        
+
         collectionView.dataSource = self
         collectionView.delegate = self
-        
+
         collectionView.register(ClientDirectoryCell.self, forCellWithReuseIdentifier: "Cell")}
 
     override func onAddSubviews() {

@@ -11,11 +11,11 @@ import Combine
 
 final class ClientHomePresentable: BaseView {
 
-    private let collectionView: UICollectionView = {
+    private let newsCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.minimumLineSpacing = 10
-        layout.minimumInteritemSpacing = 10
+        layout.minimumLineSpacing = 15
+        layout.minimumInteritemSpacing = 15
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.backgroundColor = .white
@@ -28,24 +28,24 @@ final class ClientHomePresentable: BaseView {
                         ("leaf", "Культурные растения"), ("character.book.closed", "Термины")]
 
     override func onConfigureView() {
-        collectionView.dataSource = self
-        collectionView.delegate = self
+        newsCollectionView.dataSource = self
+        newsCollectionView.delegate = self
 
-        collectionView.register(ClientHomeCell.self, forCellWithReuseIdentifier: "Cell")}
+        newsCollectionView.register(ClientHomeCell.self, forCellWithReuseIdentifier: "Cell")}
 
     override func onAddSubviews() {
-        view.addSubview(collectionView)
+        view.addSubview(newsCollectionView)
     }
 
     override func onSetupConstraints() {
 
-        collectionView.backgroundColor = .yellow
-        collectionView.snp.makeConstraints { make in
+        newsCollectionView.backgroundColor = .yellow
+        newsCollectionView.snp.makeConstraints { make in
             make.top.equalTo(safeAreaLayoutGuide.snp.top)
-            make.leading.equalTo(20)
-            make.trailing.equalTo(-20)
+            make.leading.equalTo(0)
+            make.trailing.equalTo(0)
 //            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
-            make.height.equalTo(90)
+            make.height.equalTo(140)
         }
     }
 }
@@ -71,6 +71,10 @@ final class ClientHomePresentable: BaseView {
         func collectionView(_ collectionView: UICollectionView,
                             layout collectionViewLayout: UICollectionViewLayout,
                             sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width: UIScreen.main.bounds.width / 2.3, height: 80)
+            return CGSize(width: UIScreen.main.bounds.width / 1.4, height: 130)
         }
+
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+               return UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+            }
     }
