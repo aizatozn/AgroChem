@@ -42,10 +42,10 @@ final class ClientHomePresentable: BaseView {
         newsCollectionView.backgroundColor = .yellow
         newsCollectionView.snp.makeConstraints { make in
             make.top.equalTo(safeAreaLayoutGuide.snp.top)
-            make.leading.equalTo(0)
-            make.trailing.equalTo(0)
+            make.leading.equalTo(20)
+            make.trailing.equalTo(-20)
 //            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
-            make.height.equalTo(140)
+            make.height.equalTo(90)
         }
     }
 }
