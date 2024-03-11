@@ -27,7 +27,7 @@ final class ClientDirectoryPresentable: BaseView {
                         ("leaf", "Культурные растения"), ("character.book.closed", "Термины")]
 
     override func onConfigureView() {
-        backgroundColor = .systemBackground
+//        backgroundColor = .systemBackground
 
         collectionView.dataSource = self
         collectionView.delegate = self

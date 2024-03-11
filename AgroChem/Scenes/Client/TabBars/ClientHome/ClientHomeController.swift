@@ -10,4 +10,8 @@ import Combine
 
 final class ClientHomeController: VMController<ClientHomePresentable,
                                   ClientHomeViewModel> {
+
+    override func onConfigureController() {
+        title = "AgroChem"
+    }
 }
