@@ -33,9 +33,9 @@ final class ClientTabBarController: UITabBarController {
 
     private func setTabBarAppearance() {
         let tabBarAppearance = UITabBarAppearance()
-
+        tabBar.backgroundColor = .white
         tabBarAppearance.configureWithOpaqueBackground()
-        tabBarAppearance.backgroundColor = .systemBackground
+        tabBarAppearance.backgroundColor = .white
         tabBar.standardAppearance = tabBarAppearance
         tabBar.itemSpacing = (UIScreen.main.bounds.width / 5.9) / 100
         tabBar.tintColor = UIColor(red: 0/255, green: 153/255, blue: 51/255, alpha: 1.0)
