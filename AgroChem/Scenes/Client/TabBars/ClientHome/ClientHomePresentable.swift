@@ -10,11 +10,11 @@ import SnapKit
 import Combine
 
 final class ClientHomePresentable: BaseView {
-    
+
     private let data = [("camera.macro", "Сорные растения"), ("ladybug", "Вредители"),
                         ("percent", "Действующие вещества"), ("ant", "Болезни культур"),
                         ("leaf", "Культурные растения"), ("character.book.closed", "Термины")]
-    
+
     private let actualData = [("camera.macro", "Сорные растения"), ("ladybug", "Вредители"),
                         ("percent", "Действующие вещества"), ("ant", "Болезни культур"),
                         ("leaf", "Культурные растения"), ("character.book.closed", "Термины")]
@@ -59,7 +59,7 @@ final class ClientHomePresentable: BaseView {
         layout.scrollDirection = .horizontal
         return collectionView
     }()
-    
+
     private let actualTitle: UILabel = {
         let label = UILabel()
         label.text = "Актуальные препараты"
@@ -67,7 +67,7 @@ final class ClientHomePresentable: BaseView {
         label.font = .systemFont(ofSize: 23, weight: .medium)
         return label
     }()
-    
+
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.isScrollEnabled = true
@@ -104,7 +104,7 @@ final class ClientHomePresentable: BaseView {
     }
 
     override func onSetupConstraints() {
-        
+
         scrollView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
@@ -128,12 +128,12 @@ final class ClientHomePresentable: BaseView {
             make.trailing.equalTo(-25)
             make.height.equalTo(300)
         }
-    
+
         actualTitle.snp.makeConstraints { make in
             make.top.equalTo(catalogCollectionView.snp.bottom).offset(30)
             make.leading.equalTo(15)
         }
-        
+
         actualCollectionView.snp.makeConstraints { make in
             make.top.equalTo(actualTitle.snp.bottom).offset(20)
             make.leading.trailing.equalToSuperview()
@@ -158,23 +158,23 @@ extension ClientHomePresentable: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath)
     -> UICollectionViewCell {
-        
+
         if newsCollectionView == collectionView {
             let cell: ClientHomeCell = collectionView.dequeue(for: indexPath)
-            
+
             let (symbolName, text) = data[indexPath.item]
             cell.configure(symbolName: symbolName, text: text)
             return cell
         } else if catalogCollectionView == collectionView {
             let cell: ClientDirectoryCell = collectionView.dequeue(for: indexPath)
-            
+
             let (symbolName, text) = data[indexPath.item]
             cell.configure(symbolName: symbolName, text: text)
-            
+
             return cell
         } else {
             let cell: ClientHomeCell = collectionView.dequeue(for: indexPath)
-            
+
             let (symbolName, text) = data[indexPath.item]
             cell.configure(symbolName: symbolName, text: text)
             return cell
