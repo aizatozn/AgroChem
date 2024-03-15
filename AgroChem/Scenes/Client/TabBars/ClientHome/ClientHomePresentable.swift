@@ -11,17 +11,13 @@ import Combine
 
 final class ClientHomePresentable: BaseView {
 
-    private let data = [("camera.macro", "Сорные растения"), ("ladybug", "Вредители"),
-                        ("percent", "Действующие вещества"), ("ant", "Болезни культур"),
-                        ("leaf", "Культурные растения"), ("character.book.closed", "Термины")]
-
-    private let actualData = [("camera.macro", "Сорные растения"), ("ladybug", "Вредители"),
-                        ("percent", "Действующие вещества"), ("ant", "Болезни культур"),
-                        ("leaf", "Культурные растения"), ("character.book.closed", "Термины")]
+    private let newsData = ["newsImage1", "newsImage2"]
 
     private let catalogData = [("camera.macro", "Сорные растения"), ("ladybug", "Вредители"),
                         ("percent", "Действующие вещества"), ("ant", "Болезни культур"),
                         ("leaf", "Культурные растения"), ("character.book.closed", "Термины")]
+
+    private let actualData = ["newsImage1", "newsImage2"]
 
     private let newsCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -29,7 +25,7 @@ final class ClientHomePresentable: BaseView {
         layout.minimumLineSpacing = 15
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.backgroundColor = .yellow
+        collectionView.backgroundColor = .clear
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
         collectionView.showsHorizontalScrollIndicator = false
         layout.scrollDirection = .horizontal
@@ -43,7 +39,7 @@ final class ClientHomePresentable: BaseView {
        layout.minimumInteritemSpacing = 15
        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
        collectionView.translatesAutoresizingMaskIntoConstraints = false
-       collectionView.backgroundColor = .yellow
+       collectionView.backgroundColor = .clear
        return collectionView
     }()
 
@@ -53,8 +49,8 @@ final class ClientHomePresentable: BaseView {
         layout.minimumLineSpacing = 15
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.backgroundColor = .yellow
-        collectionView.contentInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+        collectionView.backgroundColor = .clear
+        collectionView.contentInset = UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15)
         collectionView.showsHorizontalScrollIndicator = false
         layout.scrollDirection = .horizontal
         return collectionView
@@ -86,6 +82,7 @@ final class ClientHomePresentable: BaseView {
 
     override func onConfigureView() {
         backgroundColor = .white
+        catalogCollectionView.contentInset = UIEdgeInsets(top: 5, left: 7, bottom: 10, right: 7)
 
         newsCollectionView.dataSource = self
         newsCollectionView.delegate = self
@@ -126,18 +123,19 @@ final class ClientHomePresentable: BaseView {
             make.top.equalTo(newsCollectionView.snp.bottom).offset(30)
             make.leading.equalTo(25)
             make.trailing.equalTo(-25)
-            make.height.equalTo(300)
+            make.height.equalTo(285)
         }
 
         actualTitle.snp.makeConstraints { make in
-            make.top.equalTo(catalogCollectionView.snp.bottom).offset(30)
+            make.top.equalTo(catalogCollectionView.snp.bottom).offset(20)
             make.leading.equalTo(15)
         }
 
         actualCollectionView.snp.makeConstraints { make in
             make.top.equalTo(actualTitle.snp.bottom).offset(20)
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(150)
+            make.height.equalTo(170)
+            make.bottom.equalTo(-40)
         }
     }
 }
@@ -147,7 +145,7 @@ extension ClientHomePresentable: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
         if newsCollectionView == collectionView {
-            return data.count
+            return newsData.count
         } else if catalogCollectionView == collectionView {
             return catalogData.count
         } else {
@@ -161,22 +159,22 @@ extension ClientHomePresentable: UICollectionViewDataSource {
 
         if newsCollectionView == collectionView {
             let cell: ClientHomeCell = collectionView.dequeue(for: indexPath)
+            cell.configure(image: newsData[indexPath.row])
 
-            let (symbolName, text) = data[indexPath.item]
-            cell.configure(symbolName: symbolName, text: text)
             return cell
+
         } else if catalogCollectionView == collectionView {
-            let cell: ClientDirectoryCell = collectionView.dequeue(for: indexPath)
+            let cell: ClientHomeCatalogCell = collectionView.dequeue(for: indexPath)
 
-            let (symbolName, text) = data[indexPath.item]
+            let (symbolName, text) = catalogData[indexPath.item]
             cell.configure(symbolName: symbolName, text: text)
 
             return cell
-        } else {
-            let cell: ClientHomeCell = collectionView.dequeue(for: indexPath)
 
-            let (symbolName, text) = data[indexPath.item]
-            cell.configure(symbolName: symbolName, text: text)
+        } else {
+            let cell: ClientHomeActualCell = collectionView.dequeue(for: indexPath)
+            cell.configure(image: actualData[indexPath.row])
+
             return cell
         }
     }
@@ -190,9 +188,9 @@ extension ClientHomePresentable: UICollectionViewDelegateFlowLayout {
         if newsCollectionView == collectionView {
             return CGSize(width: UIScreen.main.bounds.width / 1.4, height: 150)
         } else if catalogCollectionView == collectionView {
-            return CGSize(width: UIScreen.main.bounds.width / 2.4, height: 90)
+            return CGSize(width: UIScreen.main.bounds.width / 2.53, height: 80)
         } else {
-            return CGSize(width: UIScreen.main.bounds.width / 1.1, height: 150)
+            return CGSize(width: UIScreen.main.bounds.width / 1.1, height: 170)
         }
     }
 }

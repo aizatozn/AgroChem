@@ -52,6 +52,8 @@
 		F145B9482B6F98D100D00C5F /* ClientChemTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145B9472B6F98D100D00C5F /* ClientChemTestViewModel.swift */; };
 		F145B94A2B6F98DC00D00C5F /* ClientChemTestPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145B9492B6F98DC00D00C5F /* ClientChemTestPresentable.swift */; };
 		F145B94E2B6F98F300D00C5F /* ClientChemTestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145B94D2B6F98F300D00C5F /* ClientChemTestCell.swift */; };
+		F17DC8882BA4A1F700DCFC72 /* ClientHomeActualCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DC8872BA4A1F700DCFC72 /* ClientHomeActualCell.swift */; };
+		F17DC88A2BA4A33E00DCFC72 /* ClientHomeCatalogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DC8892BA4A33E00DCFC72 /* ClientHomeCatalogCell.swift */; };
 		F181CDEE2B6E2E19005FFAB4 /* ClientMathLessonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F181CDED2B6E2E19005FFAB4 /* ClientMathLessonController.swift */; };
 		F181CDF02B6E2E24005FFAB4 /* ClientMathLessonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F181CDEF2B6E2E24005FFAB4 /* ClientMathLessonViewModel.swift */; };
 		F181CDF22B6E2E33005FFAB4 /* ClientMathLessonPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F181CDF12B6E2E33005FFAB4 /* ClientMathLessonPresentable.swift */; };
@@ -137,6 +139,8 @@
 		F145B9472B6F98D100D00C5F /* ClientChemTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientChemTestViewModel.swift; sourceTree = "<group>"; };
 		F145B9492B6F98DC00D00C5F /* ClientChemTestPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientChemTestPresentable.swift; sourceTree = "<group>"; };
 		F145B94D2B6F98F300D00C5F /* ClientChemTestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientChemTestCell.swift; sourceTree = "<group>"; };
+		F17DC8872BA4A1F700DCFC72 /* ClientHomeActualCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHomeActualCell.swift; sourceTree = "<group>"; };
+		F17DC8892BA4A33E00DCFC72 /* ClientHomeCatalogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHomeCatalogCell.swift; sourceTree = "<group>"; };
 		F181CDED2B6E2E19005FFAB4 /* ClientMathLessonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientMathLessonController.swift; sourceTree = "<group>"; };
 		F181CDEF2B6E2E24005FFAB4 /* ClientMathLessonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientMathLessonViewModel.swift; sourceTree = "<group>"; };
 		F181CDF12B6E2E33005FFAB4 /* ClientMathLessonPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientMathLessonPresentable.swift; sourceTree = "<group>"; };
@@ -372,6 +376,8 @@
 			isa = PBXGroup;
 			children = (
 				F128AB0C2B84E8E70012549C /* ClientHomeCell.swift */,
+				F17DC8872BA4A1F700DCFC72 /* ClientHomeActualCell.swift */,
+				F17DC8892BA4A33E00DCFC72 /* ClientHomeCatalogCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -955,11 +961,13 @@
 				F181CE092B6E5494005FFAB4 /* ClientChemistryLessonController.swift in Sources */,
 				F181CE0F2B6E5500005FFAB4 /* ClientChemistryLessonCell.swift in Sources */,
 				F145B9482B6F98D100D00C5F /* ClientChemTestViewModel.swift in Sources */,
+				F17DC8882BA4A1F700DCFC72 /* ClientHomeActualCell.swift in Sources */,
 				F1056E6A2B69302400A98341 /* ClientProfileViewModel.swift in Sources */,
 				F1056E5A2B692FAE00A98341 /* ClientCoursesViewModel.swift in Sources */,
 				F128AB0D2B84E8E70012549C /* ClientHomeCell.swift in Sources */,
 				F181CE122B6E5874005FFAB4 /* ClientAdvisesLessonController.swift in Sources */,
 				F1C65B7A2B655E2700B49A91 /* NetworkManagerImpl.swift in Sources */,
+				F17DC88A2BA4A33E00DCFC72 /* ClientHomeCatalogCell.swift in Sources */,
 				F1C65B532B65589500B49A91 /* BaseViewModel.swift in Sources */,
 				F145B9462B6F98C800D00C5F /* ClientChemTestController.swift in Sources */,
 				F181CDF92B6E4155005FFAB4 /* ClientCriticalThinkingLessonViewModel.swift in Sources */,
