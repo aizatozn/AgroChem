@@ -10,36 +10,84 @@ import Combine
 
 final class ClientCoursesCell: BaseTVCell {
 
-    private let lessonLabel: UILabel = {
+    private let imageImageView: UIImageView = {
+        let image = UIImageView()
+        image.layer.cornerRadius = 10
+        image.layer.masksToBounds = true
+        image.image = UIImage(named: "newsImage1")
+        return image
+    }()
+
+    private let nameLabel: UILabel = {
         let label = UILabel()
-        label.textAlignment = .center
+        label.text = "Agronika Grand, MD"
+        label.textColor = .systemRed
+        label.font = .systemFont(ofSize: 12, weight: .semibold)
+        return label
+    }()
+
+    private let subNameLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Agronika Grand, MD, Agronika Grand, MD, Agronika Grand, MD"
+        label.textColor = .black
+        label.numberOfLines = 2
+        label.font = .systemFont(ofSize: 11, weight: .medium)
+        return label
+    }()
+
+    private let descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Agronika Grand, MD, Agronika Grand, MD, Agronika Grand, MD" +
+                     "gronika Grand, MD, Agronika Grand, MD, Agronika Grand, MD,," +
+        "Agronika Grand, MD, Agronika Grand, MD, Agronika Grand, MD" +
+                     "gronika Grand, MD, Agronika Grand, MD, Agronika Grand, MD,,"
+        label.textColor = .systemGray
+        label.numberOfLines = 2
+        label.font = .systemFont(ofSize: 11, weight: .regular)
+        label.numberOfLines = 5
         return label
     }()
 
     override func onCreate() {
-        layer.cornerRadius = 20
-        backgroundColor = UIColor(white: 1, alpha: 0.5)
-        layer.borderWidth = 1
-        layer.borderColor = UIColor.black.cgColor
-
         onAddSubviews()
         onSetUpConstraints()
     }
 
     private func onAddSubviews() {
-        addSubview(lessonLabel)
+        addSubviews(imageImageView, nameLabel, subNameLabel, descriptionLabel)
     }
 
     private func onSetUpConstraints() {
 
-        lessonLabel.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
-            make.leading.equalTo(15)
-            make.trailing.equalTo(-15)
+        imageImageView.snp.makeConstraints { make in
+            make.leading.equalTo(20)
+            make.top.equalTo(15)
+            make.width.height.equalTo(60)
+        }
+
+        nameLabel.snp.makeConstraints { make in
+            make.top.equalTo(15)
+            make.leading.equalTo(imageImageView.snp.trailing).offset(30)
+            make.trailing.equalTo(-20)
+        }
+
+        subNameLabel.snp.makeConstraints { make in
+            make.top.equalTo(nameLabel.snp.bottom).offset(6)
+            make.leading.equalTo(nameLabel)
+            make.trailing.equalTo(-20)
+        }
+
+        descriptionLabel.snp.makeConstraints { make in
+            make.top.equalTo(subNameLabel.snp.bottom).offset(6)
+            make.leading.equalTo(subNameLabel)
+            make.trailing.equalTo(-20)
         }
     }
 
-    func configure(name: String) {
-        lessonLabel.text = name
+    func configure(model: ClientCoursesModel) {
+        imageImageView.image = UIImage(named: model.image)
+        nameLabel.text = model.name
+        subNameLabel.text = model.subName
+        descriptionLabel.text = model.description
     }
 }

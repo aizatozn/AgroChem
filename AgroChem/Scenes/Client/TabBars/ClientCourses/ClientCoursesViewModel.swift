@@ -9,6 +9,13 @@ import Combine
 import Foundation
 import XCoordinator
 
+struct ClientCoursesModel: Codable {
+    let image: String
+    let name: String
+    let subName: String
+    let description: String
+}
+
 protocol ClientCoursesViewModel: BaseVMProtocol {
     var router: UnownedRouter<ClientCoursesRoute>? { get set }
     var counter: CurrentValueSubject<Int, Never> { get set }

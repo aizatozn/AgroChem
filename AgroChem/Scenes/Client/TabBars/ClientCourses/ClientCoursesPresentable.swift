@@ -11,22 +11,23 @@ import Combine
 
 final class ClientCoursesPresentable: BaseView {
 
-    var pushToLesson = CurrentValueSubject<Int, Never>(0)
-    private var lessons: [String] = ["Математика", "Критикалык ой жүгүртүү", "Химия", "Кеңештер", "Видео чыгарылыштар"]
+    private var medicines: [ClientCoursesModel] = [
+        ClientCoursesModel(image: "medcine", name: "First", subName: "sub first", description: "description 1"),
+        ClientCoursesModel(image: "medcine", name: "Second", subName: "sub first", description: "description 2"),
+        ClientCoursesModel(image: "newsImage1", name: "First", subName: "sub first", description: "description 3"),
+        ClientCoursesModel(image: "medcine", name: "Fourth", subName: "sub first", description: "description 4")
+    ]
 
     private lazy var tableView: UITableView = {
         let table = UITableView()
         table.delegate = self
         table.dataSource = self
-        table.separatorStyle = .none
-        table.backgroundColor = .clear
-        table.sectionHeaderHeight = 50
+        table.backgroundColor = .white
         return table
     }()
 
     override func onConfigureView() {
         backgroundColor = .white
-        view.backgroundColor = UIColor(patternImage: UIImage(named: "katalog_background")!)
     }
 
     override func onAddSubviews() {
@@ -38,8 +39,7 @@ final class ClientCoursesPresentable: BaseView {
         tableView.snp.makeConstraints { make in
             make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
             make.top.equalTo(safeAreaLayoutGuide.snp.top)
-            make.leading.equalTo(15)
-            make.trailing.equalTo(-15)
+            make.leading.trailing.equalToSuperview()
         }
     }
 }
@@ -51,39 +51,22 @@ extension ClientCoursesPresentable: UITableViewDelegate, UITableViewDataSource {
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        lessons.count
+        medicines.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell: ClientCoursesCell = tableView.dequeue(for: indexPath)
-        cell.configure(name: lessons[indexPath.section])
+        cell.configure(model: medicines[indexPath.row])
 
         return cell
     }
 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        150
+    }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        pushToLesson.send(indexPath.section)
-    }
-
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let footerView =
-        UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 10))
-        return footerView
-    }
-
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        section == 0 ? 10 : 0
-    }
-
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let footerView =
-        UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 10))
-        return footerView
-    }
-
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        10
     }
 }
