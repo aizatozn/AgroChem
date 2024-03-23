@@ -13,9 +13,9 @@ final class ClientHomePresentable: BaseView {
 
     private let newsData = ["newsImage1", "newsImage2"]
 
-    private let catalogData = [("camera.macro", "Сорные растения"), ("ladybug", "Вредители"),
-                        ("percent", "Действующие вещества"), ("ant", "Болезни культур"),
-                        ("leaf", "Культурные растения"), ("character.book.closed", "Термины")]
+    private let catalogData = [("square.split.2x2", "Каталог"), ("checkmark.shield", "Системы защиты"),
+                        ("phone.bubble.left", "Агропомощь"), ("equal.square", "Найти решение"),
+                        ("cross.vial", "Препараты в поле"), ("person.crop.rectangle", "Контакты")]
 
     private let actualData = ["newsImage1", "newsImage2"]
 

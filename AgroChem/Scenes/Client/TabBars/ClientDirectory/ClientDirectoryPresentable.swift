@@ -11,22 +11,24 @@ import Combine
 
 final class ClientDirectoryPresentable: BaseView {
 
+    private let data = [("camera.macro", "Сорные растения"), ("ant", "Болезни культур"),
+                        ("ladybug", "Вредители"), ("laurel.trailing", "Культурные растения"),
+                        ("circle.hexagonpath", "Действующие вещества"), ("character.book.closed", "Термины")]
+
     private let collectionView: UICollectionView = {
-       let layout = UICollectionViewFlowLayout()
-       layout.scrollDirection = .vertical
-       layout.minimumLineSpacing = 10
-       layout.minimumInteritemSpacing = 10
-       let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-       collectionView.translatesAutoresizingMaskIntoConstraints = false
-       collectionView.backgroundColor = .white
-       return collectionView
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = 15
+        layout.minimumInteritemSpacing = 15
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.backgroundColor = .white
+        return collectionView
     }()
 
-    private let data = [("camera.macro", "Сорные растения"), ("ladybug", "Вредители"),
-                        ("percent", "Действующие вещества"), ("ant", "Болезни культур"),
-                        ("leaf", "Культурные растения"), ("character.book.closed", "Термины")]
-
     override func onConfigureView() {
+        backgroundColor = .white
+        collectionView.contentInset = UIEdgeInsets(top: 20, left: 17, bottom: 10, right: 17)
         collectionView.dataSource = self
         collectionView.delegate = self
 
@@ -37,12 +39,12 @@ final class ClientDirectoryPresentable: BaseView {
     }
 
     override func onSetupConstraints() {
-        collectionView.backgroundColor = .yellow
+
         collectionView.snp.makeConstraints { make in
             make.top.equalTo(safeAreaLayoutGuide.snp.top)
-            make.leading.equalTo(20)
-            make.trailing.equalTo(-20)
-            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
+            make.leading.equalTo(10)
+            make.trailing.equalTo(-10)
+            make.height.equalTo(310)
         }
     }
 }
@@ -65,9 +67,10 @@ extension ClientDirectoryPresentable: UICollectionViewDataSource {
 }
 
 extension ClientDirectoryPresentable: UICollectionViewDelegateFlowLayout {
+
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.width / 2.3, height: 80)
+        return CGSize(width: UIScreen.main.bounds.width / 2.43, height: 80)
     }
 }

@@ -13,7 +13,7 @@ final class ClientDirectoryCell: BaseCVCell {
     private let symbolImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.tintColor = .black
+        imageView.tintColor = .systemGreen
         return imageView
     }()
 
@@ -21,13 +21,17 @@ final class ClientDirectoryCell: BaseCVCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont.systemFont(ofSize: 12, weight: .regular)
         return label
     }()
 
     override func onCreate() {
         layer.cornerRadius = 10
-        backgroundColor = .red
+        backgroundColor = .white
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowRadius = 3
+        layer.shadowOffset = CGSize(width: -1, height: 1)
+        layer.shadowOpacity = 0.3
 
         onAddSubviews()
         onSetupConstraints()
@@ -41,16 +45,15 @@ final class ClientDirectoryCell: BaseCVCell {
     private func onSetupConstraints() {
 
         symbolImageView.snp.makeConstraints { make in
-            make.centerX.equalTo(contentView.snp.centerX)
-            make.centerY.equalTo(contentView.snp.centerY).offset(-10)
+            make.top.equalTo(10)
+            make.centerX.equalToSuperview()
             make.height.equalTo(30)
             make.width.equalTo(30)
         }
 
         textLabel.snp.makeConstraints { make in
-            make.top.equalTo(symbolImageView.snp.bottom).offset(5)
-            make.leading.equalTo(contentView.snp.leading)
-            make.trailing.equalTo(contentView.snp.trailing)
+            make.top.equalTo(symbolImageView.snp.bottom).offset(15)
+            make.centerX.equalToSuperview()
         }
 
     }

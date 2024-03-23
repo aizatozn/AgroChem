@@ -21,7 +21,7 @@ final class ClientHomeCatalogCell: BaseCVCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
-        label.textColor = .systemGreen
+        label.textColor = .black
         label.font = .systemFont(ofSize: 12, weight: .regular)
         return label
     }()

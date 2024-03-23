@@ -11,6 +11,10 @@ import Combine
 final class ClientDirectoryController: VMController<ClientDirectoryPresentable,
                                   ClientDirectoryViewModel> {
 
+    override func onConfigureController() {
+        title = "Справочники"
+    }
+
 //    override func onBindViewModel() {
 //
 //        content.pushToLesson
