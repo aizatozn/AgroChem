@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-final class ClientCoursesCell: BaseTVCell {
+final class ClientCatalogCell: BaseTVCell {
 
     private let imageImageView: UIImageView = {
         let image = UIImageView()

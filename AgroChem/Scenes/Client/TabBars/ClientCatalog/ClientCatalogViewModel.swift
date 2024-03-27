@@ -1,5 +1,5 @@
 //
-//  ClientCoursesViewModel.swift
+//  ClientCatalogViewModel.swift
 //  Bilimot
 //
 //  Created by Aizat Ozbekova on 30/1/24.
@@ -9,14 +9,14 @@ import Combine
 import Foundation
 import XCoordinator
 
-struct ClientCoursesModel: Codable {
+struct ClientCatalogModel: Codable {
     let image: String
     let name: String
     let subName: String
     let description: String
 }
 
-protocol ClientCoursesViewModel: BaseVMProtocol {
+protocol ClientCatalogViewModel: BaseVMProtocol {
     var router: UnownedRouter<ClientCoursesRoute>? { get set }
     var counter: CurrentValueSubject<Int, Never> { get set }
     var nextRoute: PassthroughSubject<Void, Never> { get set }
@@ -25,7 +25,7 @@ protocol ClientCoursesViewModel: BaseVMProtocol {
 }
 
 final class ClientCoursesViewModelImpl: BaseVM<UnownedRouter<ClientCoursesRoute>>,
-                                     ClientCoursesViewModel {
+                                        ClientCatalogViewModel {
 
     var counter = CurrentValueSubject<Int, Never>(0)
     var nextRoute = PassthroughSubject<Void, Never>()

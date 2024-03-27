@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-final class ClientCoursesController: VMController<ClientCoursesPresentable,
+final class ClientCatalogController: VMController<ClientCoursesPresentable,
                                   ClientCoursesViewModel> {
 
     override func onConfigureController() {
