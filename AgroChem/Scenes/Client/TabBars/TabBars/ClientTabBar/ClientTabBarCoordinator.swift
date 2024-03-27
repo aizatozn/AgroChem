@@ -20,7 +20,7 @@ final class ClientTabBarCoordinator: TabBarCoordinator<ClientTabBarRoute> {
     private let appRouter: UnownedRouter<AppRoute>
 
     private let homeRouter: StrongRouter<ClientHomeRoute>
-    private let coursesRouter: StrongRouter<ClientCoursesRoute>
+    private let coursesRouter: StrongRouter<ClientCatalogRoute>
     private let examsRouter: StrongRouter<ClientDirectoryRoute>
     private let profileRouter: StrongRouter<ClientProfileRoute>
 
@@ -76,7 +76,7 @@ final class ClientTabBarCoordinator: TabBarCoordinator<ClientTabBarRoute> {
 
     init(
         homeRouter: StrongRouter<ClientHomeRoute>,
-        coursesRouter: StrongRouter<ClientCoursesRoute>,
+        coursesRouter: StrongRouter<ClientCatalogRoute>,
         examsRouter: StrongRouter<ClientDirectoryRoute>,
         profileRouter: StrongRouter<ClientProfileRoute>,
         appRouter: UnownedRouter<AppRoute>

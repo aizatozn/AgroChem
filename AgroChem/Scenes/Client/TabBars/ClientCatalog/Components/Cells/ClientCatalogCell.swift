@@ -1,5 +1,5 @@
 //
-//  ClientCoursesCell.swift
+//  ClientCatalogCell.swift
 //  Bilimot
 //
 //  Created by Aizat Ozbekova on 1/2/24.
@@ -84,7 +84,7 @@ final class ClientCatalogCell: BaseTVCell {
         }
     }
 
-    func configure(model: ClientCoursesModel) {
+    func configure(model: ClientCatalogModel) {
         imageImageView.image = UIImage(named: model.image)
         nameLabel.text = model.name
         subNameLabel.text = model.subName

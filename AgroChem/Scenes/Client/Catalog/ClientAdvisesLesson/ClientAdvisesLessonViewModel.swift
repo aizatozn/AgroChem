@@ -10,14 +10,14 @@ import Foundation
 import XCoordinator
 
 protocol ClientAdvisesLessonViewModel: BaseVMProtocol {
-    var router: UnownedRouter<ClientCoursesRoute>? { get set }
+    var router: UnownedRouter<ClientCatalogRoute>? { get set }
     var counter: CurrentValueSubject<Int, Never> { get set }
     var nextRoute: PassthroughSubject<Void, Never> { get set }
     var cancellables: Set<AnyCancellable> { get set }
     var pushToLesson: CurrentValueSubject<String, Never> { get set }
 }
 
-final class ClientAdvisesLessonViewModelImpl: BaseVM<UnownedRouter<ClientCoursesRoute>>,
+final class ClientAdvisesLessonViewModelImpl: BaseVM<UnownedRouter<ClientCatalogRoute>>,
                                                 ClientAdvisesLessonViewModel {
 
     var counter = CurrentValueSubject<Int, Never>(0)

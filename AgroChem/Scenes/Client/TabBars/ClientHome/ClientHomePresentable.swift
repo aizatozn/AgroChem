@@ -7,7 +7,6 @@
 
 import UIKit
 import SnapKit
-import Combine
 
 final class ClientHomePresentable: BaseView {
 
@@ -17,7 +16,7 @@ final class ClientHomePresentable: BaseView {
                         ("phone.bubble.left", "Агропомощь"), ("equal.square", "Найти решение"),
                         ("cross.vial", "Препараты в поле"), ("person.crop.rectangle", "Контакты")]
 
-    private let actualData = ["newsImage1", "newsImage2"]
+    private let actualData = ["actualImage1", "actualImage2"]
 
     private let newsCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -29,6 +28,10 @@ final class ClientHomePresentable: BaseView {
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
         collectionView.showsHorizontalScrollIndicator = false
         layout.scrollDirection = .horizontal
+        collectionView.layer.shadowColor = UIColor.black.cgColor
+        collectionView.layer.shadowRadius = 3
+        collectionView.layer.shadowOffset = CGSize(width: -1, height: 1)
+        collectionView.layer.shadowOpacity = 0.3
         return collectionView
     }()
 
@@ -53,6 +56,10 @@ final class ClientHomePresentable: BaseView {
         collectionView.contentInset = UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15)
         collectionView.showsHorizontalScrollIndicator = false
         layout.scrollDirection = .horizontal
+        collectionView.layer.shadowColor = UIColor.black.cgColor
+        collectionView.layer.shadowRadius = 3
+        collectionView.layer.shadowOffset = CGSize(width: -1, height: 1)
+        collectionView.layer.shadowOpacity = 0.3
         return collectionView
     }()
 
@@ -75,13 +82,26 @@ final class ClientHomePresentable: BaseView {
 
     private let contentView: UIView = {
         let view = UIView()
-        view.backgroundColor = .white
+        view.backgroundColor = .clear
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 
+    // Создаем градиентный слой
+    private let gradientLayer: CAGradientLayer = {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [
+            UIColor(red: 0/255, green: 153/255, blue: 51/255, alpha: 1.0).cgColor,
+            UIColor.white.cgColor,
+            UIColor.white.cgColor
+        ]
+        gradientLayer.locations = [0.0, NSNumber(value: 1.0 / 2.0), 1.0] // Позиции цветов
+        return gradientLayer
+    }()
+
     override func onConfigureView() {
-        backgroundColor = .white
+        super.onConfigureView()
+        backgroundColor = .clear
         catalogCollectionView.contentInset = UIEdgeInsets(top: 5, left: 7, bottom: 10, right: 7)
 
         newsCollectionView.dataSource = self
@@ -90,6 +110,9 @@ final class ClientHomePresentable: BaseView {
         catalogCollectionView.delegate = self
         actualCollectionView.dataSource = self
         actualCollectionView.delegate = self
+
+        // Добавляем градиентный слой на задний план
+        layer.insertSublayer(gradientLayer, at: 0)
     }
 
     override func onAddSubviews() {
@@ -113,14 +136,14 @@ final class ClientHomePresentable: BaseView {
         }
 
         newsCollectionView.snp.makeConstraints { make in
-            make.top.equalToSuperview()
+            make.top.equalTo(25)
             make.leading.equalTo(0)
             make.trailing.equalTo(0)
-            make.height.equalTo(150)
+            make.height.equalTo(160)
         }
 
         catalogCollectionView.snp.makeConstraints { make in
-            make.top.equalTo(newsCollectionView.snp.bottom).offset(30)
+            make.top.equalTo(newsCollectionView.snp.bottom).offset(20)
             make.leading.equalTo(25)
             make.trailing.equalTo(-25)
             make.height.equalTo(285)
@@ -132,11 +155,16 @@ final class ClientHomePresentable: BaseView {
         }
 
         actualCollectionView.snp.makeConstraints { make in
-            make.top.equalTo(actualTitle.snp.bottom).offset(20)
+            make.top.equalTo(actualTitle.snp.bottom).offset(10)
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(170)
+            make.height.equalTo(180)
             make.bottom.equalTo(-40)
         }
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        gradientLayer.frame = bounds
     }
 }
 

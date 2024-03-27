@@ -10,7 +10,7 @@ import Foundation
 import XCoordinator
 
 protocol ClientCriticalThinkingLessonViewModel: BaseVMProtocol {
-    var router: UnownedRouter<ClientCoursesRoute>? { get set }
+    var router: UnownedRouter<ClientCatalogRoute>? { get set }
     var counter: CurrentValueSubject<Int, Never> { get set }
     var nextRoute: PassthroughSubject<Void, Never> { get set }
     var cancellables: Set<AnyCancellable> { get set }
@@ -18,7 +18,7 @@ protocol ClientCriticalThinkingLessonViewModel: BaseVMProtocol {
 }
 
 final class ClientCriticalThinkingLesViewModelImpl:
-                                                    BaseVM<UnownedRouter<ClientCoursesRoute>>,
+                                                    BaseVM<UnownedRouter<ClientCatalogRoute>>,
                                                     ClientCriticalThinkingLessonViewModel {
 
     var counter = CurrentValueSubject<Int, Never>(0)

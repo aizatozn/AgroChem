@@ -21,19 +21,30 @@ final class ClientProfilePresentable: BaseView {
     let clientProfileButton: UIButton = {
         let button = UIButton()
         button.setTitle("Tap counter", for: .normal)
-        button.setTitleColor(.green, for: .normal)
+        button.setTitleColor(UIColor(red: 0/255, green: 153/255, blue: 51/255, alpha: 1.0), for: .normal)
         return button
     }()
 
     let nextButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Next controller", for: .normal)
-        button.setTitleColor(.green, for: .normal)
+        button.setTitleColor(UIColor(red: 0/255, green: 153/255, blue: 51/255, alpha: 1.0), for: .normal)
         return button
     }()
 
+    // Создаем градиентный слой
+    let gradientLayer: CAGradientLayer = {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [
+            UIColor(red: 0/255, green: 153/255, blue: 51/255, alpha: 1.0).cgColor,
+            UIColor.white.cgColor
+        ]
+        return gradientLayer
+    }()
+
     override func onConfigureView() {
-        backgroundColor = .systemBackground
+        super.onConfigureView()
+        layer.insertSublayer(gradientLayer, at: 0)
     }
 
     override func onAddSubviews() {
@@ -41,7 +52,6 @@ final class ClientProfilePresentable: BaseView {
     }
 
     override func onSetupConstraints() {
-
         clientProfileLabel.snp.makeConstraints { make in
             make.top.equalTo(100)
             make.centerX.equalToSuperview()
@@ -56,5 +66,10 @@ final class ClientProfilePresentable: BaseView {
             make.top.equalTo(clientProfileButton.snp.bottom).offset(16)
             make.centerX.equalToSuperview()
         }
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        gradientLayer.frame = bounds
     }
 }

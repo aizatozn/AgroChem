@@ -25,8 +25,8 @@ final class ViewModulesAssembly: Assembly {
             )
         }
 
-        container.register((any ClientCoursesViewModel).self) {
-            ClientCoursesViewModelImpl.init(
+        container.register((any ClientCatalogViewModel).self) {
+            ClientCatalogViewModelImpl.init(
                 networkManager: $0.resolve(NetworkManager.self)!
             )
         }

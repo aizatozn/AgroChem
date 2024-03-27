@@ -17,14 +17,14 @@ struct ClientCatalogModel: Codable {
 }
 
 protocol ClientCatalogViewModel: BaseVMProtocol {
-    var router: UnownedRouter<ClientCoursesRoute>? { get set }
+    var router: UnownedRouter<ClientCatalogRoute>? { get set }
     var counter: CurrentValueSubject<Int, Never> { get set }
     var nextRoute: PassthroughSubject<Void, Never> { get set }
     var cancellables: Set<AnyCancellable> { get set }
     var pushToLesson: CurrentValueSubject<Int, Never> { get set }
 }
 
-final class ClientCoursesViewModelImpl: BaseVM<UnownedRouter<ClientCoursesRoute>>,
+final class ClientCatalogViewModelImpl: BaseVM<UnownedRouter<ClientCatalogRoute>>,
                                         ClientCatalogViewModel {
 
     var counter = CurrentValueSubject<Int, Never>(0)

@@ -13,7 +13,7 @@ final class ClientHomeCatalogCell: BaseCVCell {
     private let catalogImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.tintColor = .systemGreen
+        imageView.tintColor = UIColor(red: 0/255, green: 153/255, blue: 51/255, alpha: 1.0)
         return imageView
     }()
 

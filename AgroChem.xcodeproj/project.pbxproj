@@ -12,9 +12,9 @@
 		F1056E522B692F6200A98341 /* ClientHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1056E512B692F6200A98341 /* ClientHomeViewModel.swift */; };
 		F1056E542B692F7A00A98341 /* ClientHomePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1056E532B692F7A00A98341 /* ClientHomePresentable.swift */; };
 		F1056E562B692F8900A98341 /* ClientHomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1056E552B692F8900A98341 /* ClientHomeCoordinator.swift */; };
-		F1056E582B692FA300A98341 /* ClientCoursesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1056E572B692FA300A98341 /* ClientCoursesController.swift */; };
-		F1056E5A2B692FAE00A98341 /* ClientCoursesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1056E592B692FAE00A98341 /* ClientCoursesViewModel.swift */; };
-		F1056E5C2B692FBC00A98341 /* ClientCoursesPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1056E5B2B692FBC00A98341 /* ClientCoursesPresentable.swift */; };
+		F1056E582B692FA300A98341 /* ClientCatalogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1056E572B692FA300A98341 /* ClientCatalogController.swift */; };
+		F1056E5A2B692FAE00A98341 /* ClientCatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1056E592B692FAE00A98341 /* ClientCatalogViewModel.swift */; };
+		F1056E5C2B692FBC00A98341 /* ClientCatalogPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1056E5B2B692FBC00A98341 /* ClientCatalogPresentable.swift */; };
 		F1056E5E2B692FCC00A98341 /* ClientCoursesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1056E5D2B692FCC00A98341 /* ClientCoursesCoordinator.swift */; };
 		F1056E602B692FE800A98341 /* ClientDirectoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1056E5F2B692FE800A98341 /* ClientDirectoryController.swift */; };
 		F1056E622B692FF400A98341 /* ClientDirectoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1056E612B692FF400A98341 /* ClientDirectoryViewModel.swift */; };
@@ -98,7 +98,7 @@
 		F1C65B822B655F1000B49A91 /* UserDefaultsServiceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C65B812B655F1000B49A91 /* UserDefaultsServiceKeys.swift */; };
 		F1C65B842B655FA900B49A91 /* ClientGreetingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C65B832B655FA900B49A91 /* ClientGreetingCoordinator.swift */; };
 		F1CEB5792B7A0F1100E466DE /* ClientDirectoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CEB5782B7A0F1100E466DE /* ClientDirectoryCell.swift */; };
-		F1EC76432B6B8E200017FCF5 /* ClientCoursesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EC76422B6B8E200017FCF5 /* ClientCoursesCell.swift */; };
+		F1EC76432B6B8E200017FCF5 /* ClientCatalogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EC76422B6B8E200017FCF5 /* ClientCatalogCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,9 +107,9 @@
 		F1056E512B692F6200A98341 /* ClientHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHomeViewModel.swift; sourceTree = "<group>"; };
 		F1056E532B692F7A00A98341 /* ClientHomePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHomePresentable.swift; sourceTree = "<group>"; };
 		F1056E552B692F8900A98341 /* ClientHomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHomeCoordinator.swift; sourceTree = "<group>"; };
-		F1056E572B692FA300A98341 /* ClientCoursesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCoursesController.swift; sourceTree = "<group>"; };
-		F1056E592B692FAE00A98341 /* ClientCoursesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCoursesViewModel.swift; sourceTree = "<group>"; };
-		F1056E5B2B692FBC00A98341 /* ClientCoursesPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCoursesPresentable.swift; sourceTree = "<group>"; };
+		F1056E572B692FA300A98341 /* ClientCatalogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCatalogController.swift; sourceTree = "<group>"; };
+		F1056E592B692FAE00A98341 /* ClientCatalogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCatalogViewModel.swift; sourceTree = "<group>"; };
+		F1056E5B2B692FBC00A98341 /* ClientCatalogPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCatalogPresentable.swift; sourceTree = "<group>"; };
 		F1056E5D2B692FCC00A98341 /* ClientCoursesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCoursesCoordinator.swift; sourceTree = "<group>"; };
 		F1056E5F2B692FE800A98341 /* ClientDirectoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDirectoryController.swift; sourceTree = "<group>"; };
 		F1056E612B692FF400A98341 /* ClientDirectoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDirectoryViewModel.swift; sourceTree = "<group>"; };
@@ -185,7 +185,7 @@
 		F1C65B812B655F1000B49A91 /* UserDefaultsServiceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsServiceKeys.swift; sourceTree = "<group>"; };
 		F1C65B832B655FA900B49A91 /* ClientGreetingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientGreetingCoordinator.swift; sourceTree = "<group>"; };
 		F1CEB5782B7A0F1100E466DE /* ClientDirectoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDirectoryCell.swift; sourceTree = "<group>"; };
-		F1EC76422B6B8E200017FCF5 /* ClientCoursesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCoursesCell.swift; sourceTree = "<group>"; };
+		F1EC76422B6B8E200017FCF5 /* ClientCatalogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCatalogCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,16 +221,16 @@
 			path = ClientHome;
 			sourceTree = "<group>";
 		};
-		F1056E4C2B692A0300A98341 /* ClientCourses */ = {
+		F1056E4C2B692A0300A98341 /* ClientCatalog */ = {
 			isa = PBXGroup;
 			children = (
 				F1EC76402B6B8DFD0017FCF5 /* Components */,
-				F1056E572B692FA300A98341 /* ClientCoursesController.swift */,
-				F1056E592B692FAE00A98341 /* ClientCoursesViewModel.swift */,
-				F1056E5B2B692FBC00A98341 /* ClientCoursesPresentable.swift */,
+				F1056E572B692FA300A98341 /* ClientCatalogController.swift */,
+				F1056E592B692FAE00A98341 /* ClientCatalogViewModel.swift */,
+				F1056E5B2B692FBC00A98341 /* ClientCatalogPresentable.swift */,
 				F1056E5D2B692FCC00A98341 /* ClientCoursesCoordinator.swift */,
 			);
-			path = ClientCourses;
+			path = ClientCatalog;
 			sourceTree = "<group>";
 		};
 		F1056E4D2B692A1000A98341 /* ClientDirectory */ = {
@@ -403,7 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				F1056E4B2B6928CD00A98341 /* ClientHome */,
-				F1056E4C2B692A0300A98341 /* ClientCourses */,
+				F1056E4C2B692A0300A98341 /* ClientCatalog */,
 				F1056E4D2B692A1000A98341 /* ClientDirectory */,
 				F1056E4E2B692B2E00A98341 /* ClientProfile */,
 				F1362FED2B656679006D7E61 /* TabBars */,
@@ -560,7 +560,7 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		F181CE042B6E4876005FFAB4 /* Courses */ = {
+		F181CE042B6E4876005FFAB4 /* Catalog */ = {
 			isa = PBXGroup;
 			children = (
 				F181CDEC2B6E2E01005FFAB4 /* ClientMathLesson */,
@@ -569,7 +569,7 @@
 				F181CE102B6E5825005FFAB4 /* ClientAdvisesLesson */,
 				F181CE1B2B6E59EE005FFAB4 /* ClientTestSolutionsLesson */,
 			);
-			path = Courses;
+			path = Catalog;
 			sourceTree = "<group>";
 		};
 		F181CE052B6E542D005FFAB4 /* ClientChemistryLesson */ = {
@@ -723,7 +723,7 @@
 			isa = PBXGroup;
 			children = (
 				F128AB092B84E6240012549C /* HomePage */,
-				F181CE042B6E4876005FFAB4 /* Courses */,
+				F181CE042B6E4876005FFAB4 /* Catalog */,
 				F145B92D2B6F7B8D00D00C5F /* Directory */,
 				F145B92C2B6F7B1000D00C5F /* TabBars */,
 			);
@@ -830,7 +830,7 @@
 		F1EC76412B6B8E020017FCF5 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				F1EC76422B6B8E200017FCF5 /* ClientCoursesCell.swift */,
+				F1EC76422B6B8E200017FCF5 /* ClientCatalogCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -963,7 +963,7 @@
 				F145B9482B6F98D100D00C5F /* ClientChemTestViewModel.swift in Sources */,
 				F17DC8882BA4A1F700DCFC72 /* ClientHomeActualCell.swift in Sources */,
 				F1056E6A2B69302400A98341 /* ClientProfileViewModel.swift in Sources */,
-				F1056E5A2B692FAE00A98341 /* ClientCoursesViewModel.swift in Sources */,
+				F1056E5A2B692FAE00A98341 /* ClientCatalogViewModel.swift in Sources */,
 				F128AB0D2B84E8E70012549C /* ClientHomeCell.swift in Sources */,
 				F181CE122B6E5874005FFAB4 /* ClientAdvisesLessonController.swift in Sources */,
 				F1C65B7A2B655E2700B49A91 /* NetworkManagerImpl.swift in Sources */,
@@ -983,7 +983,7 @@
 				F105DB3A2B6015A800851FBE /* AppDelegate.swift in Sources */,
 				F145B94A2B6F98DC00D00C5F /* ClientChemTestPresentable.swift in Sources */,
 				F1056E562B692F8900A98341 /* ClientHomeCoordinator.swift in Sources */,
-				F1056E5C2B692FBC00A98341 /* ClientCoursesPresentable.swift in Sources */,
+				F1056E5C2B692FBC00A98341 /* ClientCatalogPresentable.swift in Sources */,
 				F1362FF22B6566A6006D7E61 /* ClientTabBarCoordinator.swift in Sources */,
 				F1056E502B692F4F00A98341 /* ClientHomeController.swift in Sources */,
 				F1C65B612B6559F300B49A91 /* ServicesAssembly.swift in Sources */,
@@ -1001,11 +1001,11 @@
 				F145B93C2B6F945D00D00C5F /* ClientMainMathTestController.swift in Sources */,
 				F181CDFB2B6E4161005FFAB4 /* ClientCriticalThinkingLessonPresentable.swift in Sources */,
 				F1C65B662B655AC100B49A91 /* ClientGreetingController.swift in Sources */,
-				F1056E582B692FA300A98341 /* ClientCoursesController.swift in Sources */,
+				F1056E582B692FA300A98341 /* ClientCatalogController.swift in Sources */,
 				F145B9322B6F814E00D00C5F /* ClientMathTestController.swift in Sources */,
 				F1056E662B69300700A98341 /* ClientDirectoryCoordinator.swift in Sources */,
 				F1056E602B692FE800A98341 /* ClientDirectoryController.swift in Sources */,
-				F1EC76432B6B8E200017FCF5 /* ClientCoursesCell.swift in Sources */,
+				F1EC76432B6B8E200017FCF5 /* ClientCatalogCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

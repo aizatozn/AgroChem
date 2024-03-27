@@ -8,7 +8,7 @@
 import UIKit
 import XCoordinator
 
-enum ClientCoursesRoute: Route {
+enum ClientCatalogRoute: Route {
     case home
     case next
     case math(nameOfLesson: String)
@@ -18,7 +18,7 @@ enum ClientCoursesRoute: Route {
     case practiceTestSolutions(nameOfLesson: String)
 }
 
-final class ClientCoursesCoordinator: NavigationCoordinator<ClientCoursesRoute> {
+final class ClientCoursesCoordinator: NavigationCoordinator<ClientCatalogRoute> {
 
     private let appRouter: UnownedRouter<AppRoute>
 
@@ -27,17 +27,17 @@ final class ClientCoursesCoordinator: NavigationCoordinator<ClientCoursesRoute> 
         super.init(rootViewController: BaseNavigationController(), initialRoute: .home)
     }
 
-    override func prepareTransition(for route: ClientCoursesRoute)
+    override func prepareTransition(for route: ClientCatalogRoute)
     -> NavigationTransition {
         switch route {
 
         case .home:
-            let controller = ClientCoursesController()
+            let controller = ClientCatalogController()
             controller.viewModel.router = unownedRouter
             return .set([controller])
 
         case .next:
-            let controller = ClientCoursesController()
+            let controller = ClientCatalogController()
             controller.hidesBottomBarWhenPushed = true
             return .push(controller)
 
