@@ -653,6 +653,21 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		F1860B5F2BB429B90090A638 /* ClientHelpAndSupport */ = {
+			isa = PBXGroup;
+			children = (
+				F1860B602BB429EB0090A638 /* Components */,
+			);
+			path = ClientHelpAndSupport;
+			sourceTree = "<group>";
+		};
+		F1860B602BB429EB0090A638 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		F1C65B472B6556A500B49A91 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -722,6 +737,7 @@
 		F1C65B642B655AA200B49A91 /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				F1860B5F2BB429B90090A638 /* ClientHelpAndSupport */,
 				F128AB092B84E6240012549C /* HomePage */,
 				F181CE042B6E4876005FFAB4 /* Catalog */,
 				F145B92D2B6F7B8D00D00C5F /* Directory */,

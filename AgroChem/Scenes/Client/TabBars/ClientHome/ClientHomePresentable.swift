@@ -206,6 +206,15 @@ extension ClientHomePresentable: UICollectionViewDataSource {
             return cell
         }
     }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        didSelectItemAt indexPath: IndexPath) {
+        if catalogCollectionView == collectionView {
+            if indexPath.row == 2 {
+                
+            }
+        }
+    }
 }
 
 extension ClientHomePresentable: UICollectionViewDelegateFlowLayout {
