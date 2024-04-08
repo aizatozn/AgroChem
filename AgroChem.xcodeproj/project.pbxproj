@@ -38,6 +38,9 @@
 		F105DB652B601AB300851FBE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F105DB642B601AB300851FBE /* SnapKit */; };
 		F105DB672B601AB300851FBE /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F105DB662B601AB300851FBE /* SnapKit-Dynamic */; };
 		F128AB0D2B84E8E70012549C /* ClientHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F128AB0C2B84E8E70012549C /* ClientHomeCell.swift */; };
+		F13315332BC44911000CFEB2 /* ClientHelpAndSupportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13315322BC44911000CFEB2 /* ClientHelpAndSupportController.swift */; };
+		F13315352BC44925000CFEB2 /* ClientHelpAndSupportPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13315342BC44925000CFEB2 /* ClientHelpAndSupportPresentable.swift */; };
+		F13315372BC44957000CFEB2 /* ClientHelpAndSupportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13315362BC44957000CFEB2 /* ClientHelpAndSupportViewModel.swift */; };
 		F1362FF22B6566A6006D7E61 /* ClientTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1362FF12B6566A6006D7E61 /* ClientTabBarCoordinator.swift */; };
 		F1362FF42B6566C0006D7E61 /* ClientTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1362FF32B6566C0006D7E61 /* ClientTabBarController.swift */; };
 		F145B9322B6F814E00D00C5F /* ClientMathTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145B9312B6F814E00D00C5F /* ClientMathTestController.swift */; };
@@ -125,6 +128,9 @@
 		F105DB452B6015A900851FBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F105DB472B6015A900851FBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F128AB0C2B84E8E70012549C /* ClientHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHomeCell.swift; sourceTree = "<group>"; };
+		F13315322BC44911000CFEB2 /* ClientHelpAndSupportController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHelpAndSupportController.swift; sourceTree = "<group>"; };
+		F13315342BC44925000CFEB2 /* ClientHelpAndSupportPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHelpAndSupportPresentable.swift; sourceTree = "<group>"; };
+		F13315362BC44957000CFEB2 /* ClientHelpAndSupportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHelpAndSupportViewModel.swift; sourceTree = "<group>"; };
 		F1362FF12B6566A6006D7E61 /* ClientTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientTabBarCoordinator.swift; sourceTree = "<group>"; };
 		F1362FF32B6566C0006D7E61 /* ClientTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientTabBarController.swift; sourceTree = "<group>"; };
 		F145B9312B6F814E00D00C5F /* ClientMathTestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientMathTestController.swift; sourceTree = "<group>"; };
@@ -657,6 +663,9 @@
 			isa = PBXGroup;
 			children = (
 				F1860B602BB429EB0090A638 /* Components */,
+				F13315322BC44911000CFEB2 /* ClientHelpAndSupportController.swift */,
+				F13315342BC44925000CFEB2 /* ClientHelpAndSupportPresentable.swift */,
+				F13315362BC44957000CFEB2 /* ClientHelpAndSupportViewModel.swift */,
 			);
 			path = ClientHelpAndSupport;
 			sourceTree = "<group>";
@@ -965,6 +974,7 @@
 				F1C65B5F2B6559C400B49A91 /* ViewModulesAssembly.swift in Sources */,
 				F1C65B6E2B655CC000B49A91 /* UIView+Extensions.swift in Sources */,
 				F145B93E2B6F946900D00C5F /* ClientMainMathTestViewModel.swift in Sources */,
+				F13315352BC44925000CFEB2 /* ClientHelpAndSupportPresentable.swift in Sources */,
 				F1CEB5792B7A0F1100E466DE /* ClientDirectoryCell.swift in Sources */,
 				F1C65B512B65588100B49A91 /* BaseNavigationController.swift in Sources */,
 				F181CE1F2B6E5A17005FFAB4 /* ClientTestSolutionsLessonViewModel.swift in Sources */,
@@ -988,6 +998,7 @@
 				F145B9462B6F98C800D00C5F /* ClientChemTestController.swift in Sources */,
 				F181CDF92B6E4155005FFAB4 /* ClientCriticalThinkingLessonViewModel.swift in Sources */,
 				F1C65B802B655EF100B49A91 /* UserDefaultsService.swift in Sources */,
+				F13315372BC44957000CFEB2 /* ClientHelpAndSupportViewModel.swift in Sources */,
 				F181CDF22B6E2E33005FFAB4 /* ClientMathLessonPresentable.swift in Sources */,
 				F181CE0B2B6E54CB005FFAB4 /* ClientChemistryLessonViewModel.swift in Sources */,
 				F1056E642B692FFE00A98341 /* ClientDirectoryPresentable.swift in Sources */,
@@ -1021,6 +1032,7 @@
 				F145B9322B6F814E00D00C5F /* ClientMathTestController.swift in Sources */,
 				F1056E662B69300700A98341 /* ClientDirectoryCoordinator.swift in Sources */,
 				F1056E602B692FE800A98341 /* ClientDirectoryController.swift in Sources */,
+				F13315332BC44911000CFEB2 /* ClientHelpAndSupportController.swift in Sources */,
 				F1EC76432B6B8E200017FCF5 /* ClientCatalogCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

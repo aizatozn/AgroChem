@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Combine
 
 final class ClientHomePresentable: BaseView {
 
@@ -17,6 +18,7 @@ final class ClientHomePresentable: BaseView {
                         ("cross.vial", "Препараты в поле"), ("person.crop.rectangle", "Контакты")]
 
     private let actualData = ["actualImage1", "actualImage2"]
+    var catalogCollectionSelected = CurrentValueSubject<Int, Never>(0)
 
     private let newsCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -210,9 +212,7 @@ extension ClientHomePresentable: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
         if catalogCollectionView == collectionView {
-            if indexPath.row == 2 {
-                
-            }
+            catalogCollectionSelected.send(indexPath.row)
         }
     }
 }

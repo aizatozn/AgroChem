@@ -11,6 +11,21 @@ import Combine
 final class ClientHomeController: VMController<ClientHomePresentable,
                                   ClientHomeViewModel> {
 
+    override func onBindViewModel() {
+
+        content.catalogCollectionSelected
+            .dropFirst()
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] index in
+                guard let self = self else { return }
+                self.viewModel.catalogCollectionSelected.send(index)
+                if index == 0 {
+                    navigationController?.tabBarController?.selectedIndex = 1
+                }
+            }
+            .store(in: &viewModel.cancellables)
+    }
+
     override func onConfigureController() {
         title = "AgroChem"
     }
