@@ -41,6 +41,9 @@
 		F13315332BC44911000CFEB2 /* ClientHelpAndSupportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13315322BC44911000CFEB2 /* ClientHelpAndSupportController.swift */; };
 		F13315352BC44925000CFEB2 /* ClientHelpAndSupportPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13315342BC44925000CFEB2 /* ClientHelpAndSupportPresentable.swift */; };
 		F13315372BC44957000CFEB2 /* ClientHelpAndSupportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13315362BC44957000CFEB2 /* ClientHelpAndSupportViewModel.swift */; };
+		F133153A2BC44DF3000CFEB2 /* ClientSystemsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13315392BC44DF3000CFEB2 /* ClientSystemsController.swift */; };
+		F133153C2BC44DFE000CFEB2 /* ClientSystemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F133153B2BC44DFE000CFEB2 /* ClientSystemsViewModel.swift */; };
+		F133153E2BC44E0B000CFEB2 /* ClientSystemsPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F133153D2BC44E0B000CFEB2 /* ClientSystemsPresentable.swift */; };
 		F1362FF22B6566A6006D7E61 /* ClientTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1362FF12B6566A6006D7E61 /* ClientTabBarCoordinator.swift */; };
 		F1362FF42B6566C0006D7E61 /* ClientTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1362FF32B6566C0006D7E61 /* ClientTabBarController.swift */; };
 		F145B9322B6F814E00D00C5F /* ClientMathTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145B9312B6F814E00D00C5F /* ClientMathTestController.swift */; };
@@ -131,6 +134,9 @@
 		F13315322BC44911000CFEB2 /* ClientHelpAndSupportController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHelpAndSupportController.swift; sourceTree = "<group>"; };
 		F13315342BC44925000CFEB2 /* ClientHelpAndSupportPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHelpAndSupportPresentable.swift; sourceTree = "<group>"; };
 		F13315362BC44957000CFEB2 /* ClientHelpAndSupportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHelpAndSupportViewModel.swift; sourceTree = "<group>"; };
+		F13315392BC44DF3000CFEB2 /* ClientSystemsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSystemsController.swift; sourceTree = "<group>"; };
+		F133153B2BC44DFE000CFEB2 /* ClientSystemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSystemsViewModel.swift; sourceTree = "<group>"; };
+		F133153D2BC44E0B000CFEB2 /* ClientSystemsPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSystemsPresentable.swift; sourceTree = "<group>"; };
 		F1362FF12B6566A6006D7E61 /* ClientTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientTabBarCoordinator.swift; sourceTree = "<group>"; };
 		F1362FF32B6566C0006D7E61 /* ClientTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientTabBarController.swift; sourceTree = "<group>"; };
 		F145B9312B6F814E00D00C5F /* ClientMathTestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientMathTestController.swift; sourceTree = "<group>"; };
@@ -363,13 +369,6 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		F128AB092B84E6240012549C /* HomePage */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = HomePage;
-			sourceTree = "<group>";
-		};
 		F128AB0A2B84E8D00012549C /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -386,6 +385,16 @@
 				F17DC8892BA4A33E00DCFC72 /* ClientHomeCatalogCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		F13315382BC44D74000CFEB2 /* ClientSystems */ = {
+			isa = PBXGroup;
+			children = (
+				F13315392BC44DF3000CFEB2 /* ClientSystemsController.swift */,
+				F133153B2BC44DFE000CFEB2 /* ClientSystemsViewModel.swift */,
+				F133153D2BC44E0B000CFEB2 /* ClientSystemsPresentable.swift */,
+			);
+			path = ClientSystems;
 			sourceTree = "<group>";
 		};
 		F1362FED2B656679006D7E61 /* TabBars */ = {
@@ -746,8 +755,8 @@
 		F1C65B642B655AA200B49A91 /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				F13315382BC44D74000CFEB2 /* ClientSystems */,
 				F1860B5F2BB429B90090A638 /* ClientHelpAndSupport */,
-				F128AB092B84E6240012549C /* HomePage */,
 				F181CE042B6E4876005FFAB4 /* Catalog */,
 				F145B92D2B6F7B8D00D00C5F /* Directory */,
 				F145B92C2B6F7B1000D00C5F /* TabBars */,
@@ -974,6 +983,7 @@
 				F1C65B5F2B6559C400B49A91 /* ViewModulesAssembly.swift in Sources */,
 				F1C65B6E2B655CC000B49A91 /* UIView+Extensions.swift in Sources */,
 				F145B93E2B6F946900D00C5F /* ClientMainMathTestViewModel.swift in Sources */,
+				F133153A2BC44DF3000CFEB2 /* ClientSystemsController.swift in Sources */,
 				F13315352BC44925000CFEB2 /* ClientHelpAndSupportPresentable.swift in Sources */,
 				F1CEB5792B7A0F1100E466DE /* ClientDirectoryCell.swift in Sources */,
 				F1C65B512B65588100B49A91 /* BaseNavigationController.swift in Sources */,
@@ -997,6 +1007,7 @@
 				F1C65B532B65589500B49A91 /* BaseViewModel.swift in Sources */,
 				F145B9462B6F98C800D00C5F /* ClientChemTestController.swift in Sources */,
 				F181CDF92B6E4155005FFAB4 /* ClientCriticalThinkingLessonViewModel.swift in Sources */,
+				F133153E2BC44E0B000CFEB2 /* ClientSystemsPresentable.swift in Sources */,
 				F1C65B802B655EF100B49A91 /* UserDefaultsService.swift in Sources */,
 				F13315372BC44957000CFEB2 /* ClientHelpAndSupportViewModel.swift in Sources */,
 				F181CDF22B6E2E33005FFAB4 /* ClientMathLessonPresentable.swift in Sources */,
@@ -1027,6 +1038,7 @@
 				F181CDEE2B6E2E19005FFAB4 /* ClientMathLessonController.swift in Sources */,
 				F145B93C2B6F945D00D00C5F /* ClientMainMathTestController.swift in Sources */,
 				F181CDFB2B6E4161005FFAB4 /* ClientCriticalThinkingLessonPresentable.swift in Sources */,
+				F133153C2BC44DFE000CFEB2 /* ClientSystemsViewModel.swift in Sources */,
 				F1C65B662B655AC100B49A91 /* ClientGreetingController.swift in Sources */,
 				F1056E582B692FA300A98341 /* ClientCatalogController.swift in Sources */,
 				F145B9322B6F814E00D00C5F /* ClientMathTestController.swift in Sources */,

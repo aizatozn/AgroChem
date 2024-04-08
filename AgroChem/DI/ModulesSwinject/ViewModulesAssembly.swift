@@ -94,5 +94,11 @@ final class ViewModulesAssembly: Assembly {
         container.autoregister((any ClientHelpAndSupportViewModel).self) {
             ClientHelpAndSupportViewModelImpl.init()
         }
+
+        container.register((any ClientSystemsViewModel).self) {
+            ClientSystemsViewModelImpl.init(
+                networkManager: $0.resolve(NetworkManager.self)!
+            )
+        }
     } // swiftlint:enable function_body_length
 }

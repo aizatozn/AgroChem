@@ -39,6 +39,8 @@ final class ClientHomeViewModelImpl: BaseVM<UnownedRouter<ClientHomeRoute>>,
             .sink { [weak self] index in
                 guard let self = self else { return }
                 switch index {
+                case 1:
+                    self.router?.trigger(.protectionSystems)
                 case 2:
                     self.router?.trigger(.helpAndSupport)
                 default:

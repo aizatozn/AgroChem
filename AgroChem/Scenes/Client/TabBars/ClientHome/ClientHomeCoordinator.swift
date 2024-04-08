@@ -12,6 +12,7 @@ enum ClientHomeRoute: Route {
     case home
     case next
     case helpAndSupport
+    case protectionSystems
 }
 
 final class ClientHomeCoordinator: NavigationCoordinator<ClientHomeRoute> {
@@ -39,6 +40,11 @@ final class ClientHomeCoordinator: NavigationCoordinator<ClientHomeRoute> {
 
         case .helpAndSupport:
             let controller = ClientHelpAndSupportController()
+            controller.viewModel.router = unownedRouter
+            return .push(controller)
+
+        case .protectionSystems:
+            let controller = ClientSystemsController()
             controller.viewModel.router = unownedRouter
             return .push(controller)
         }
