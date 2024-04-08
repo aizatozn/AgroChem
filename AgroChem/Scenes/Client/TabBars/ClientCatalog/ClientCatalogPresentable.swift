@@ -14,9 +14,11 @@ final class ClientCatalogPresentable: BaseView {
     private var medicines: [ClientCatalogModel] = [
         ClientCatalogModel(image: "medcine", name: "First", subName: "sub first", description: "description 1"),
         ClientCatalogModel(image: "medcine", name: "Second", subName: "sub first", description: "description 2"),
-        ClientCatalogModel(image: "newsImage1", name: "First", subName: "sub first", description: "description 3"),
+        ClientCatalogModel(image: "newsImage1", name: "Third", subName: "sub first", description: "description 3"),
         ClientCatalogModel(image: "medcine", name: "Fourth", subName: "sub first", description: "description 4")
     ]
+
+    var selectedMedicine = CurrentValueSubject<ClientCatalogModel?, Never>(nil)
 
     private lazy var tableView: UITableView = {
         let table = UITableView()
@@ -57,8 +59,7 @@ extension ClientCatalogPresentable: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell: ClientCatalogCell = tableView.dequeue(for: indexPath)
-        cell.configure(model: medicines[indexPath.row])
-
+        cell.configure(model: medicines[indexPath.section])
         return cell
     }
 
@@ -68,5 +69,6 @@ extension ClientCatalogPresentable: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        selectedMedicine.send(medicines[indexPath.section])
     }
 }

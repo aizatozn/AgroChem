@@ -16,6 +16,7 @@ enum ClientCatalogRoute: Route {
     case сhemistry(nameOfLesson: String)
     case advises(nameOfLesson: String)
     case practiceTestSolutions(nameOfLesson: String)
+    case medicineDetails(medicine: ClientCatalogModel)
 }
 
 final class ClientCoursesCoordinator: NavigationCoordinator<ClientCatalogRoute> {
@@ -69,6 +70,11 @@ final class ClientCoursesCoordinator: NavigationCoordinator<ClientCatalogRoute> 
             let controller = ClientTestSolutionsLessonController()
             controller.title = nameOfLesson
             controller.viewModel.router = unownedRouter
+            return .push(controller)
+
+        case .medicineDetails(medicine: let medicine):
+            let controller = ClientMedicineController()
+            controller.title = medicine.name
             return .push(controller)
         }
     }

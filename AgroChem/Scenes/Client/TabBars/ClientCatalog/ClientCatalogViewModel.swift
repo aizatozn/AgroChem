@@ -22,6 +22,7 @@ protocol ClientCatalogViewModel: BaseVMProtocol {
     var nextRoute: PassthroughSubject<Void, Never> { get set }
     var cancellables: Set<AnyCancellable> { get set }
     var pushToLesson: CurrentValueSubject<Int, Never> { get set }
+    var selectedMedicine: CurrentValueSubject<ClientCatalogModel?, Never> { get set }
 }
 
 final class ClientCatalogViewModelImpl: BaseVM<UnownedRouter<ClientCatalogRoute>>,
@@ -30,6 +31,7 @@ final class ClientCatalogViewModelImpl: BaseVM<UnownedRouter<ClientCatalogRoute>
     var counter = CurrentValueSubject<Int, Never>(0)
     var nextRoute = PassthroughSubject<Void, Never>()
     var pushToLesson = CurrentValueSubject<Int, Never>(0)
+    var selectedMedicine = CurrentValueSubject<ClientCatalogModel?, Never>(nil)
 
     private var networkManager: NetworkManager
 
@@ -64,6 +66,16 @@ final class ClientCatalogViewModelImpl: BaseVM<UnownedRouter<ClientCatalogRoute>
                 }
 
                 print(index)
+            }
+            .store(in: &cancellables)
+
+        selectedMedicine
+            .dropFirst()
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] object in
+                guard let self = self,
+                      let object = object else { return }
+                self.router?.trigger(.medicineDetails(medicine: object))
             }
             .store(in: &cancellables)
     }

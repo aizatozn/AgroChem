@@ -44,6 +44,9 @@
 		F133153A2BC44DF3000CFEB2 /* ClientSystemsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13315392BC44DF3000CFEB2 /* ClientSystemsController.swift */; };
 		F133153C2BC44DFE000CFEB2 /* ClientSystemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F133153B2BC44DFE000CFEB2 /* ClientSystemsViewModel.swift */; };
 		F133153E2BC44E0B000CFEB2 /* ClientSystemsPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F133153D2BC44E0B000CFEB2 /* ClientSystemsPresentable.swift */; };
+		F13315412BC45200000CFEB2 /* ClientMedicineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13315402BC45200000CFEB2 /* ClientMedicineController.swift */; };
+		F13315432BC4520A000CFEB2 /* ClientMedicineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13315422BC4520A000CFEB2 /* ClientMedicineViewModel.swift */; };
+		F13315452BC45216000CFEB2 /* ClientMedicinePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13315442BC45216000CFEB2 /* ClientMedicinePresentable.swift */; };
 		F1362FF22B6566A6006D7E61 /* ClientTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1362FF12B6566A6006D7E61 /* ClientTabBarCoordinator.swift */; };
 		F1362FF42B6566C0006D7E61 /* ClientTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1362FF32B6566C0006D7E61 /* ClientTabBarController.swift */; };
 		F145B9322B6F814E00D00C5F /* ClientMathTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145B9312B6F814E00D00C5F /* ClientMathTestController.swift */; };
@@ -137,6 +140,9 @@
 		F13315392BC44DF3000CFEB2 /* ClientSystemsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSystemsController.swift; sourceTree = "<group>"; };
 		F133153B2BC44DFE000CFEB2 /* ClientSystemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSystemsViewModel.swift; sourceTree = "<group>"; };
 		F133153D2BC44E0B000CFEB2 /* ClientSystemsPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSystemsPresentable.swift; sourceTree = "<group>"; };
+		F13315402BC45200000CFEB2 /* ClientMedicineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientMedicineController.swift; sourceTree = "<group>"; };
+		F13315422BC4520A000CFEB2 /* ClientMedicineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientMedicineViewModel.swift; sourceTree = "<group>"; };
+		F13315442BC45216000CFEB2 /* ClientMedicinePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientMedicinePresentable.swift; sourceTree = "<group>"; };
 		F1362FF12B6566A6006D7E61 /* ClientTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientTabBarCoordinator.swift; sourceTree = "<group>"; };
 		F1362FF32B6566C0006D7E61 /* ClientTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientTabBarController.swift; sourceTree = "<group>"; };
 		F145B9312B6F814E00D00C5F /* ClientMathTestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientMathTestController.swift; sourceTree = "<group>"; };
@@ -395,6 +401,16 @@
 				F133153D2BC44E0B000CFEB2 /* ClientSystemsPresentable.swift */,
 			);
 			path = ClientSystems;
+			sourceTree = "<group>";
+		};
+		F133153F2BC451C1000CFEB2 /* ClientMedicine */ = {
+			isa = PBXGroup;
+			children = (
+				F13315402BC45200000CFEB2 /* ClientMedicineController.swift */,
+				F13315422BC4520A000CFEB2 /* ClientMedicineViewModel.swift */,
+				F13315442BC45216000CFEB2 /* ClientMedicinePresentable.swift */,
+			);
+			path = ClientMedicine;
 			sourceTree = "<group>";
 		};
 		F1362FED2B656679006D7E61 /* TabBars */ = {
@@ -755,6 +771,7 @@
 		F1C65B642B655AA200B49A91 /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				F133153F2BC451C1000CFEB2 /* ClientMedicine */,
 				F13315382BC44D74000CFEB2 /* ClientSystems */,
 				F1860B5F2BB429B90090A638 /* ClientHelpAndSupport */,
 				F181CE042B6E4876005FFAB4 /* Catalog */,
@@ -985,6 +1002,7 @@
 				F145B93E2B6F946900D00C5F /* ClientMainMathTestViewModel.swift in Sources */,
 				F133153A2BC44DF3000CFEB2 /* ClientSystemsController.swift in Sources */,
 				F13315352BC44925000CFEB2 /* ClientHelpAndSupportPresentable.swift in Sources */,
+				F13315432BC4520A000CFEB2 /* ClientMedicineViewModel.swift in Sources */,
 				F1CEB5792B7A0F1100E466DE /* ClientDirectoryCell.swift in Sources */,
 				F1C65B512B65588100B49A91 /* BaseNavigationController.swift in Sources */,
 				F181CE1F2B6E5A17005FFAB4 /* ClientTestSolutionsLessonViewModel.swift in Sources */,
@@ -1026,6 +1044,7 @@
 				F1056E502B692F4F00A98341 /* ClientHomeController.swift in Sources */,
 				F1C65B612B6559F300B49A91 /* ServicesAssembly.swift in Sources */,
 				F1C65B5D2B65598000B49A91 /* Swinjectable.swift in Sources */,
+				F13315452BC45216000CFEB2 /* ClientMedicinePresentable.swift in Sources */,
 				F1056E6E2B69303F00A98341 /* ClientProfileCoordinator.swift in Sources */,
 				F181CE1A2B6E58A9005FFAB4 /* ClientAdvisesLessonCell.swift in Sources */,
 				F181CE142B6E587F005FFAB4 /* ClientAdvisesLessonViewModel.swift in Sources */,
@@ -1033,6 +1052,7 @@
 				F145B9402B6F947400D00C5F /* ClientMainMathTestPresentable.swift in Sources */,
 				F1C65B4D2B65580C00B49A91 /* BaseView.swift in Sources */,
 				F1056E522B692F6200A98341 /* ClientHomeViewModel.swift in Sources */,
+				F13315412BC45200000CFEB2 /* ClientMedicineController.swift in Sources */,
 				F181CE0D2B6E54D7005FFAB4 /* ClientChemistryLessonPresentable.swift in Sources */,
 				F1C65B572B65590500B49A91 /* BaseCVCell.swift in Sources */,
 				F181CDEE2B6E2E19005FFAB4 /* ClientMathLessonController.swift in Sources */,
