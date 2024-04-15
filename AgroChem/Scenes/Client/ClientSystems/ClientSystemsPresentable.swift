@@ -11,10 +11,10 @@ import Combine
 
 final class ClientSystemsPresentable: BaseView {
 
-    private let data = [("camera.macro", "Бобовые"), ("ant", "Зерновые"),
-                        ("ladybug", "Картофель"), ("laurel.trailing", "Кукуруза"),
-                        ("circle.hexagonpath", "Лён"), ("character.book.closed", "Подсолнечник"),
-                        ("camera.macro", "Рапс"), ("ant", "Свёкла")]
+    private let data = [("8", "Бобовые"), ("9", "Зерновые"),
+                        ("10", "Картофель"), ("11", "Кукуруза"),
+                        ("12", "Лён"), ("13", "Подсолнечник"),
+                        ("14", "Рапс"), ("15", "Свёкла")]
 
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -32,8 +32,9 @@ final class ClientSystemsPresentable: BaseView {
         collectionView.contentInset = UIEdgeInsets(top: 20, left: 17, bottom: 10, right: 17)
         collectionView.dataSource = self
         collectionView.delegate = self
-
-        collectionView.register(ClientDirectoryCell.self, forCellWithReuseIdentifier: "Cell")}
+        
+        collectionView.register(ClientDirectoryCell.self, forCellWithReuseIdentifier: "Cell")
+    }
 
     override func onAddSubviews() {
         view.addSubview(collectionView)
@@ -58,7 +59,7 @@ extension ClientSystemsPresentable: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath)
     -> UICollectionViewCell {
-        let cell: ClientDirectoryCell = collectionView.dequeue(for: indexPath)
+        let cell: ClientSystemsCell = collectionView.dequeue(for: indexPath)
 
         let (symbolName, text) = data[indexPath.item]
         cell.configure(symbolName: symbolName, text: text)

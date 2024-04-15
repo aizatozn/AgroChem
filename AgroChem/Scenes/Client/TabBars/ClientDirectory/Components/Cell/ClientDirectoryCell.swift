@@ -47,19 +47,19 @@ final class ClientDirectoryCell: BaseCVCell {
         symbolImageView.snp.makeConstraints { make in
             make.top.equalTo(10)
             make.centerX.equalToSuperview()
-            make.height.equalTo(30)
-            make.width.equalTo(30)
+            make.height.equalTo(40)
+            make.width.equalTo(40)
         }
 
         textLabel.snp.makeConstraints { make in
-            make.top.equalTo(symbolImageView.snp.bottom).offset(15)
+            make.top.equalTo(symbolImageView.snp.bottom).offset(8)
             make.centerX.equalToSuperview()
         }
 
     }
 
     func configure(symbolName: String, text: String) {
-        symbolImageView.image = UIImage(systemName: symbolName)
+        symbolImageView.image = UIImage(named: symbolName)
         textLabel.text = text
     }
 }

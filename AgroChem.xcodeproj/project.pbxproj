@@ -61,6 +61,7 @@
 		F145B9482B6F98D100D00C5F /* ClientChemTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145B9472B6F98D100D00C5F /* ClientChemTestViewModel.swift */; };
 		F145B94A2B6F98DC00D00C5F /* ClientChemTestPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145B9492B6F98DC00D00C5F /* ClientChemTestPresentable.swift */; };
 		F145B94E2B6F98F300D00C5F /* ClientChemTestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145B94D2B6F98F300D00C5F /* ClientChemTestCell.swift */; };
+		F14B896D2BCD09180033794B /* ClientSystemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14B896C2BCD09180033794B /* ClientSystemsCell.swift */; };
 		F17DC8882BA4A1F700DCFC72 /* ClientHomeActualCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DC8872BA4A1F700DCFC72 /* ClientHomeActualCell.swift */; };
 		F17DC88A2BA4A33E00DCFC72 /* ClientHomeCatalogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DC8892BA4A33E00DCFC72 /* ClientHomeCatalogCell.swift */; };
 		F181CDEE2B6E2E19005FFAB4 /* ClientMathLessonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F181CDED2B6E2E19005FFAB4 /* ClientMathLessonController.swift */; };
@@ -157,6 +158,7 @@
 		F145B9472B6F98D100D00C5F /* ClientChemTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientChemTestViewModel.swift; sourceTree = "<group>"; };
 		F145B9492B6F98DC00D00C5F /* ClientChemTestPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientChemTestPresentable.swift; sourceTree = "<group>"; };
 		F145B94D2B6F98F300D00C5F /* ClientChemTestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientChemTestCell.swift; sourceTree = "<group>"; };
+		F14B896C2BCD09180033794B /* ClientSystemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSystemsCell.swift; sourceTree = "<group>"; };
 		F17DC8872BA4A1F700DCFC72 /* ClientHomeActualCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHomeActualCell.swift; sourceTree = "<group>"; };
 		F17DC8892BA4A33E00DCFC72 /* ClientHomeCatalogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHomeCatalogCell.swift; sourceTree = "<group>"; };
 		F181CDED2B6E2E19005FFAB4 /* ClientMathLessonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientMathLessonController.swift; sourceTree = "<group>"; };
@@ -396,6 +398,7 @@
 		F13315382BC44D74000CFEB2 /* ClientSystems */ = {
 			isa = PBXGroup;
 			children = (
+				F14B896A2BCD08D10033794B /* Components */,
 				F13315392BC44DF3000CFEB2 /* ClientSystemsController.swift */,
 				F133153B2BC44DFE000CFEB2 /* ClientSystemsViewModel.swift */,
 				F133153D2BC44E0B000CFEB2 /* ClientSystemsPresentable.swift */,
@@ -535,6 +538,22 @@
 				F145B94D2B6F98F300D00C5F /* ClientChemTestCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		F14B896A2BCD08D10033794B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F14B896B2BCD08F00033794B /* Cell */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F14B896B2BCD08F00033794B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F14B896C2BCD09180033794B /* ClientSystemsCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		F181CDEC2B6E2E01005FFAB4 /* ClientMathLesson */ = {
@@ -1002,6 +1021,7 @@
 				F145B93E2B6F946900D00C5F /* ClientMainMathTestViewModel.swift in Sources */,
 				F133153A2BC44DF3000CFEB2 /* ClientSystemsController.swift in Sources */,
 				F13315352BC44925000CFEB2 /* ClientHelpAndSupportPresentable.swift in Sources */,
+				F14B896D2BCD09180033794B /* ClientSystemsCell.swift in Sources */,
 				F13315432BC4520A000CFEB2 /* ClientMedicineViewModel.swift in Sources */,
 				F1CEB5792B7A0F1100E466DE /* ClientDirectoryCell.swift in Sources */,
 				F1C65B512B65588100B49A91 /* BaseNavigationController.swift in Sources */,

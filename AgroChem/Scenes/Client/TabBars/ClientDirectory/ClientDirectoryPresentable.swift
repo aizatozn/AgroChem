@@ -11,9 +11,9 @@ import Combine
 
 final class ClientDirectoryPresentable: BaseView {
 
-    private let data = [("camera.macro", "Сорные растения"), ("ant", "Болезни культур"),
-                        ("ladybug", "Вредители"), ("laurel.trailing", "Культурные растения"),
-                        ("circle.hexagonpath", "Действующие вещества"), ("character.book.closed", "Термины")]
+    private let data = [("1", "Сорные растения"), ("2", "Болезни культур"),
+                        ("3", "Вредители"), ("4", "Культурные растения"),
+                        ("5", "Действующие вещества"), ("6", "Термины")]
 
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
