@@ -11,12 +11,10 @@ import Combine
 
 final class ClientSystemsPresentable: BaseView {
 
-    private let data = [("camera.macro", "Сорные растения"), ("ant", "Болезни культур"),
-                        ("ladybug", "Вредители"), ("laurel.trailing", "Культурные растения"),
-                        ("circle.hexagonpath", "Действующие вещества"), ("character.book.closed", "Термины"),
-                        ("camera.macro", "Сорные растения"), ("ant", "Болезни культур"),
-                                            ("ladybug", "Вредители"), ("laurel.trailing", "Культурные растения"),
-                        ("circle.hexagonpath", "Действующие вещества"), ("character.book.closed", "Термины")]
+    private let data = [("camera.macro", "Бобовые"), ("ant", "Зерновые"),
+                        ("ladybug", "Картофель"), ("laurel.trailing", "Кукуруза"),
+                        ("circle.hexagonpath", "Лён"), ("character.book.closed", "Подсолнечник"),
+                        ("camera.macro", "Рапс"), ("ant", "Свёкла")]
 
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
