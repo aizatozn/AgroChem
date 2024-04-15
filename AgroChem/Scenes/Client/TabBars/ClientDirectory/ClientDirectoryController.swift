@@ -11,23 +11,17 @@ import Combine
 final class ClientDirectoryController: VMController<ClientDirectoryPresentable,
                                   ClientDirectoryViewModel> {
 
+    override func onBindViewModel() {
+        content.selectedDirectory
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] directory in
+                guard let self = self, let directory = directory else { return }
+                self.viewModel.selectedDirectory.send(directory)
+            }
+            .store(in: &viewModel.cancellables)
+    }
+
     override func onConfigureController() {
         title = "Справочники"
     }
-
-//    override func onBindViewModel() {
-//
-//        content.pushToLesson
-//            .dropFirst()
-//            .receive(on: DispatchQueue.main)
-//            .sink { [weak self] index in
-//                guard let self = self else { return }
-//                self.viewModel.pushToLesson.send(index)
-//            }
-//            .store(in: &viewModel.cancellables)
-//    }
-
-//    override func onConfigureController() {
-//        title = "Сынамык"
-//    }
 }

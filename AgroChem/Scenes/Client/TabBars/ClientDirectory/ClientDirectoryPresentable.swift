@@ -11,6 +11,7 @@ import Combine
 
 final class ClientDirectoryPresentable: BaseView {
 
+    var selectedDirectory = CurrentValueSubject<String?, Never>(nil)
     private let data = [("1", "Сорные растения"), ("2", "Болезни культур"),
                         ("3", "Вредители"), ("4", "Культурные растения"),
                         ("5", "Действующие вещества"), ("6", "Термины")]
@@ -63,6 +64,11 @@ extension ClientDirectoryPresentable: UICollectionViewDataSource {
         cell.configure(symbolName: symbolName, text: text)
 
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        didSelectItemAt indexPath: IndexPath) {
+        selectedDirectory.send(data[indexPath.item].1)
     }
 }
 

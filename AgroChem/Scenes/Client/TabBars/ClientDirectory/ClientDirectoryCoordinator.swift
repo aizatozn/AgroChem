@@ -14,6 +14,7 @@ enum ClientDirectoryRoute: Route {
     case mathTest(nameOfLesson: String)
     case mathMainTest(nameOfLesson: String)
     case сhemTest(nameOfLesson: String)
+    case directoryDetails(title: String, directories: [ClientDirectoryModel])
 }
 
 final class ClientDirectoryCoordinator: NavigationCoordinator<ClientDirectoryRoute> {
@@ -54,6 +55,13 @@ final class ClientDirectoryCoordinator: NavigationCoordinator<ClientDirectoryRou
         case .сhemTest(let nameOfLesson):
             let controller = ClientChemTestController()
             controller.title = nameOfLesson
+            controller.viewModel.router = unownedRouter
+            return .push(controller)
+
+        case .directoryDetails(let title, let directories):
+            let controller = ClientDirectoryDetailsController()
+            controller.title = title
+            controller.viewModel.directories.send(directories)
             controller.viewModel.router = unownedRouter
             return .push(controller)
         }

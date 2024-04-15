@@ -11,6 +11,7 @@ import Combine
 
 final class ClientSystemsPresentable: BaseView {
 
+    var selectedSystem = CurrentValueSubject<String?, Never>(nil)
     private let data = [("8", "Бобовые"), ("9", "Зерновые"),
                         ("10", "Картофель"), ("11", "Кукуруза"),
                         ("12", "Лён"), ("13", "Подсолнечник"),
@@ -32,7 +33,7 @@ final class ClientSystemsPresentable: BaseView {
         collectionView.contentInset = UIEdgeInsets(top: 20, left: 17, bottom: 10, right: 17)
         collectionView.dataSource = self
         collectionView.delegate = self
-        
+
         collectionView.register(ClientDirectoryCell.self, forCellWithReuseIdentifier: "Cell")
     }
 
@@ -65,6 +66,11 @@ extension ClientSystemsPresentable: UICollectionViewDataSource {
         cell.configure(symbolName: symbolName, text: text)
 
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        didSelectItemAt indexPath: IndexPath) {
+        selectedSystem.send(data[indexPath.row].1)
     }
 }
 
