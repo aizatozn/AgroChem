@@ -26,27 +26,27 @@ final class ClientExamsViewModelImpl: BaseVM<UnownedRouter<ClientDirectoryRoute>
     var pushToLesson = CurrentValueSubject<Int, Never>(0)
     var selectedDirectory = CurrentValueSubject<String?, Never>(nil)
     let sorniyeDirectories: [ClientDirectoryModel] = [
-        ClientDirectoryModel(image: "image1",
-                             name: "First direct",
-                             nameInEnglish: "First english"),
-        ClientDirectoryModel(image: "image2",
-                             name: "Second direct",
-                             nameInEnglish: "Second english"),
-        ClientDirectoryModel(image: "image2",
-                             name: "Third direct",
-                             nameInEnglish: "Third english"),
-        ClientDirectoryModel(image: "image3",
-                             name: "Fourth direct",
-                             nameInEnglish: "Fourth english"),
-        ClientDirectoryModel(image: "image1",
-                             name: "Fifth direct",
-                             nameInEnglish: "Fifth english"),
-        ClientDirectoryModel(image: "image4",
-                             name: "Sixth direct",
-                             nameInEnglish: "Sixth english"),
-        ClientDirectoryModel(image: "image2",
-                             name: "Seventh direct",
-                             nameInEnglish: "Seventh english")
+        ClientDirectoryModel(image: "sras1",
+                             name: "Аистик цикутовый",
+                             nameInEnglish: "Erodium cicutarium"),
+        ClientDirectoryModel(image: "sras2",
+                             name: "Акалифа южная",
+                             nameInEnglish: "Acalypha autralis L."),
+        ClientDirectoryModel(image: "sras3",
+                             name: "Аксирис щирицевый",
+                             nameInEnglish: "Axyris amaranthoides"),
+        ClientDirectoryModel(image: "sras4",
+                             name: "Амброзия голометельчатая",
+                             nameInEnglish: "Ambrosia psilostachya"),
+        ClientDirectoryModel(image: "sras5",
+                             name: "Амброзия полыннолистная",
+                             nameInEnglish: "Ambrosia artemisiifolia"),
+        ClientDirectoryModel(image: "sras6",
+                             name: "Амброзия трехраздельная",
+                             nameInEnglish: "Ambrosia trifida"),
+        ClientDirectoryModel(image: "sras7",
+                             name: "Аметистка голубая",
+                             nameInEnglish: "Amethystea caerulea L.")
     ]
 
     private var networkManager: NetworkManager
@@ -69,7 +69,7 @@ final class ClientExamsViewModelImpl: BaseVM<UnownedRouter<ClientDirectoryRoute>
             .receive(on: DispatchQueue.main)
             .sink { [weak self] directory in
                 guard let self = self, let directory = directory else { return }
-                print("--- bul jakty kara: \(directory)")
+                print("--- \(directory)")
 //                if directory = "sornuye rasteniye" {
 //                    sorniyeDirectories
 //                } /// switch case ti koldon
