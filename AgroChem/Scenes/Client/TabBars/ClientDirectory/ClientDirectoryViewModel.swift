@@ -48,6 +48,75 @@ final class ClientExamsViewModelImpl: BaseVM<UnownedRouter<ClientDirectoryRoute>
                              name: "Аметистка голубая",
                              nameInEnglish: "Amethystea caerulea L.")
     ]
+    let bolezniDirectories: [ClientDirectoryModel] = [
+        ClientDirectoryModel(image: "bolez1",
+                             name: "Альтернариоз подсолнечника",
+                             nameInEnglish: "Alternaria spp."),
+        ClientDirectoryModel(image: "bolez2",
+                             name: "Альтернариоз рапса",
+                             nameInEnglish: "Alternaria brassicae Sacc, A. brassicicola Wilts."),
+        ClientDirectoryModel(image: "bolez3",
+                             name: "Альтернариоз сои ",
+                             nameInEnglish: "Alternaria tenuis Nees"),
+        ClientDirectoryModel(image: "sras4",
+                             name: "Амброзия голометельчатая",
+                             nameInEnglish: "Ambrosia psilostachya"),
+        ClientDirectoryModel(image: "sras5",
+                             name: "Амброзия полыннолистная",
+                             nameInEnglish: "Ambrosia artemisiifolia"),
+        ClientDirectoryModel(image: "sras6",
+                             name: "Амброзия трехраздельная",
+                             nameInEnglish: "Ambrosia trifida"),
+        ClientDirectoryModel(image: "sras7",
+                             name: "Аметистка голубая",
+                             nameInEnglish: "Amethystea caerulea L.")
+    ]
+    let vrediteliDirectories: [ClientDirectoryModel] = [
+        ClientDirectoryModel(image: "vred1",
+                             name: "Акациевая ложнощитовка",
+                             nameInEnglish: "Parthenolecanium corni"),
+        ClientDirectoryModel(image: "vred2",
+                             name: "Акациевая огневка",
+                             nameInEnglish: "Etiella zenckeneila"),
+        ClientDirectoryModel(image: "vred3",
+                             name: "Амбарная моль",
+                             nameInEnglish: "Nemapogon granella"),
+        ClientDirectoryModel(image: "sras4",
+                             name: "Амброзия голометельчатая",
+                             nameInEnglish: "Ambrosia psilostachya"),
+        ClientDirectoryModel(image: "sras5",
+                             name: "Амброзия полыннолистная",
+                             nameInEnglish: "Ambrosia artemisiifolia"),
+        ClientDirectoryModel(image: "sras6",
+                             name: "Амброзия трехраздельная",
+                             nameInEnglish: "Ambrosia trifida"),
+        ClientDirectoryModel(image: "sras7",
+                             name: "Аметистка голубая",
+                             nameInEnglish: "Amethystea caerulea L.")
+    ]
+    let cultureDirectories: [ClientDirectoryModel] = [
+        ClientDirectoryModel(image: "culture1",
+                             name: "Абрикос обыкновенный",
+                             nameInEnglish: "Prunus armeniaca L."),
+        ClientDirectoryModel(image: "culture2",
+                             name: "Айва",
+                             nameInEnglish: "Cydonia"),
+        ClientDirectoryModel(image: "culture3",
+                             name: "Алыча",
+                             nameInEnglish: "Prunus cerasifera Ehrh."),
+        ClientDirectoryModel(image: "sras4",
+                             name: "Амброзия голометельчатая",
+                             nameInEnglish: "Ambrosia psilostachya"),
+        ClientDirectoryModel(image: "sras5",
+                             name: "Амброзия полыннолистная",
+                             nameInEnglish: "Ambrosia artemisiifolia"),
+        ClientDirectoryModel(image: "sras6",
+                             name: "Амброзия трехраздельная",
+                             nameInEnglish: "Ambrosia trifida"),
+        ClientDirectoryModel(image: "sras7",
+                             name: "Аметистка голубая",
+                             nameInEnglish: "Amethystea caerulea L.")
+    ]
 
     private var networkManager: NetworkManager
 
@@ -70,11 +139,23 @@ final class ClientExamsViewModelImpl: BaseVM<UnownedRouter<ClientDirectoryRoute>
             .sink { [weak self] directory in
                 guard let self = self, let directory = directory else { return }
                 print("--- \(directory)")
-//                if directory = "sornuye rasteniye" {
-//                    sorniyeDirectories
-//                } /// switch case ti koldon
-                self.router?.trigger(.directoryDetails(title: directory,
-                                                       directories: sorniyeDirectories))
+                if directory == "Сорные растения" {
+                    self.router?.trigger(
+                    .directoryDetails(title: directory,
+                     directories: sorniyeDirectories))
+                } else if directory == "Болезни культур" {
+                    self.router?.trigger(
+                    .directoryDetails(title: directory,
+                     directories: bolezniDirectories))
+                } else if directory == "Вредители" {
+                    self.router?.trigger(
+                    .directoryDetails(title: directory,
+                     directories: vrediteliDirectories))
+                } else if directory == "Культурные растения" {
+                    self.router?.trigger(
+                    .directoryDetails(title: directory,
+                     directories: cultureDirectories))
+                }
             }
             .store(in: &cancellables)
     }

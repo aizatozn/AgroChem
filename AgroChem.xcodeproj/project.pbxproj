@@ -37,6 +37,7 @@
 		F105DB622B601A9800851FBE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F105DB612B601A9800851FBE /* Alamofire */; };
 		F105DB652B601AB300851FBE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F105DB642B601AB300851FBE /* SnapKit */; };
 		F105DB672B601AB300851FBE /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F105DB662B601AB300851FBE /* SnapKit-Dynamic */; };
+		F11E67892BDA47D800AC8B81 /* ClientSecondDirectoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11E67882BDA47D800AC8B81 /* ClientSecondDirectoryCell.swift */; };
 		F128AB0D2B84E8E70012549C /* ClientHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F128AB0C2B84E8E70012549C /* ClientHomeCell.swift */; };
 		F13315332BC44911000CFEB2 /* ClientHelpAndSupportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13315322BC44911000CFEB2 /* ClientHelpAndSupportController.swift */; };
 		F13315352BC44925000CFEB2 /* ClientHelpAndSupportPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13315342BC44925000CFEB2 /* ClientHelpAndSupportPresentable.swift */; };
@@ -142,6 +143,7 @@
 		F105DB422B6015A900851FBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F105DB452B6015A900851FBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F105DB472B6015A900851FBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F11E67882BDA47D800AC8B81 /* ClientSecondDirectoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSecondDirectoryCell.swift; sourceTree = "<group>"; };
 		F128AB0C2B84E8E70012549C /* ClientHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHomeCell.swift; sourceTree = "<group>"; };
 		F13315322BC44911000CFEB2 /* ClientHelpAndSupportController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHelpAndSupportController.swift; sourceTree = "<group>"; };
 		F13315342BC44925000CFEB2 /* ClientHelpAndSupportPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHelpAndSupportPresentable.swift; sourceTree = "<group>"; };
@@ -949,6 +951,7 @@
 			isa = PBXGroup;
 			children = (
 				F1CEB5782B7A0F1100E466DE /* ClientDirectoryCell.swift */,
+				F11E67882BDA47D800AC8B81 /* ClientSecondDirectoryCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1080,6 +1083,7 @@
 				F181CE162B6E588A005FFAB4 /* ClientAdvisesLessonPresentable.swift in Sources */,
 				F1C65B6B2B655BB900B49A91 /* ClientGreetingPresentable.swift in Sources */,
 				F145B9362B6F816600D00C5F /* ClientMathTestPresentable.swift in Sources */,
+				F11E67892BDA47D800AC8B81 /* ClientSecondDirectoryCell.swift in Sources */,
 				F181CDF72B6E4149005FFAB4 /* ClientCriticalThinkingLessonController.swift in Sources */,
 				F1056E542B692F7A00A98341 /* ClientHomePresentable.swift in Sources */,
 				F1056E622B692FF400A98341 /* ClientDirectoryViewModel.swift in Sources */,
