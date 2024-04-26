@@ -138,6 +138,21 @@ final class ClientExamsViewModelImpl: BaseVM<UnownedRouter<ClientDirectoryRoute>
                              name: "Абрикос обыкновенный",
                              nameInEnglish: "Prunus armeniaca L.",
                              content: "Prunus armeniaca L.",
+                             description: "Prunus armeniaca L."),
+        ClientSecondDirectoryModel(
+                             name: "Абрикос обыкновенный",
+                             nameInEnglish: "Prunus armeniaca L.",
+                             content: "Prunus armeniaca L.",
+                             description: "Prunus armeniaca L."),
+        ClientSecondDirectoryModel(
+                             name: "Абрикос обыкновенный",
+                             nameInEnglish: "Prunus armeniaca L.",
+                             content: "Prunus armeniaca L.",
+                             description: "Prunus armeniaca L."),
+        ClientSecondDirectoryModel(
+                             name: "Абрикос обыкновенный",
+                             nameInEnglish: "Prunus armeniaca L.",
+                             content: "Prunus armeniaca L.",
                              description: "Prunus armeniaca L.")
     ]
 //    let terminDirectories: [ClientSecondDirectoryModel] = [

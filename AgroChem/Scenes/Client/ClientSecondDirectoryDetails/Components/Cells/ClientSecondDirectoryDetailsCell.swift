@@ -12,29 +12,30 @@ final class ClientSecondDirectoryDetailsCell: BaseCVCell {
 
     private let nameLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .white
-        label.font = .systemFont(ofSize: 22, weight: .semibold)
+        label.textColor = .black
+        label.font = .systemFont(ofSize: 19, weight: .semibold)
         return label
     }()
 
     private let nameInEnglishLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .white
-        label.font = .systemFont(ofSize: 19, weight: .regular)
+        label.textColor = .gray
+        label.font = .systemFont(ofSize: 16, weight: .regular)
         return label
     }()
 
     private let contentLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .white
-        label.font = .systemFont(ofSize: 17, weight: .regular)
+        label.textColor = .gray
+        label.font = .systemFont(ofSize: 16, weight: .regular)
         return label
     }()
 
     private let descriptionLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .white
-        label.font = .systemFont(ofSize: 15, weight: .light)
+        label.textColor = .black
+        label.font = .systemFont(ofSize: 16, weight: .light)
+        label.numberOfLines = 7
         return label
     }()
 
@@ -43,7 +44,6 @@ final class ClientSecondDirectoryDetailsCell: BaseCVCell {
         layer.masksToBounds = true
         layer.borderWidth = 1
         layer.borderColor = UIColor.lightGray.cgColor
-
         onAddSubviews()
         onSetUpConstraints()
     }

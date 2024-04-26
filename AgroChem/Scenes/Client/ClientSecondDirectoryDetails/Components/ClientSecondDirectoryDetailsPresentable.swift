@@ -13,6 +13,7 @@ final class ClientSecondDirectoryDetailsPresentable: BaseView {
     var directories: [ClientSecondDirectoryModel] = [] {
         didSet {
             directoryCollectionView.reloadData()
+            print(directories.count)
         }
     }
 
@@ -67,6 +68,22 @@ extension ClientSecondDirectoryDetailsPresentable: UICollectionViewDelegate,
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: UIScreen.main.bounds.width - 30, height: 150)
+      let model = directories[indexPath.item]
+
+      let expectedWidth = collectionView.frame.width - 30
+
+      let cell = ClientSecondDirectoryDetailsCell(frame: .zero)
+      cell.configure(model: model)
+
+      cell.layoutIfNeeded()
+        let size = cell.systemLayoutSizeFitting(
+            CGSize(width: expectedWidth,
+                   height: CGFloat.greatestFiniteMagnitude), withHorizontalFittingPriority: .required,
+                        verticalFittingPriority: .fittingSizeLevel)
+
+        let height = size.height + 10
+
+      return CGSize(width: expectedWidth, height: height)
     }
+
 }
