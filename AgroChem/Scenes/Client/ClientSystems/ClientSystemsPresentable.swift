@@ -35,6 +35,7 @@ final class ClientSystemsPresentable: BaseView {
         collectionView.delegate = self
 
         collectionView.register(ClientDirectoryCell.self, forCellWithReuseIdentifier: "Cell")
+        collectionView.register(ClientSecondDirectoryCell.self, forCellWithReuseIdentifier: "Cell")
     }
 
     override func onAddSubviews() {

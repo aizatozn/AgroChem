@@ -71,6 +71,11 @@
 		F14B897E2BCD222F0033794B /* ClientDirectoryDetailsPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14B897D2BCD222F0033794B /* ClientDirectoryDetailsPresentable.swift */; };
 		F14B89822BCD23FF0033794B /* ClientDirectoryDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14B89812BCD23FF0033794B /* ClientDirectoryDetailsCell.swift */; };
 		F14B89842BCD2A020033794B /* ClientDirectoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14B89832BCD2A020033794B /* ClientDirectoryModel.swift */; };
+		F15D91802BDA913E00627552 /* ClientSecondDirectoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D917F2BDA913E00627552 /* ClientSecondDirectoryModel.swift */; };
+		F15D91852BDBEECF00627552 /* ClientSecondDirectoryDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D91842BDBEECF00627552 /* ClientSecondDirectoryDetailsCell.swift */; };
+		F15D91872BDBEF2D00627552 /* ClientSecondDirectoryDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D91862BDBEF2D00627552 /* ClientSecondDirectoryDetailsController.swift */; };
+		F15D91892BDBEF3D00627552 /* ClientSecondDirectoryDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D91882BDBEF3D00627552 /* ClientSecondDirectoryDetailsViewModel.swift */; };
+		F15D918B2BDBEF4C00627552 /* ClientSecondDirectoryDetailsPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D918A2BDBEF4C00627552 /* ClientSecondDirectoryDetailsPresentable.swift */; };
 		F17DC8882BA4A1F700DCFC72 /* ClientHomeActualCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DC8872BA4A1F700DCFC72 /* ClientHomeActualCell.swift */; };
 		F17DC88A2BA4A33E00DCFC72 /* ClientHomeCatalogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DC8892BA4A33E00DCFC72 /* ClientHomeCatalogCell.swift */; };
 		F181CDEE2B6E2E19005FFAB4 /* ClientMathLessonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F181CDED2B6E2E19005FFAB4 /* ClientMathLessonController.swift */; };
@@ -177,6 +182,11 @@
 		F14B897D2BCD222F0033794B /* ClientDirectoryDetailsPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDirectoryDetailsPresentable.swift; sourceTree = "<group>"; };
 		F14B89812BCD23FF0033794B /* ClientDirectoryDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDirectoryDetailsCell.swift; sourceTree = "<group>"; };
 		F14B89832BCD2A020033794B /* ClientDirectoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClientDirectoryModel.swift; path = AgroChem/Scenes/Client/ClientDirectoryDetails/Components/Cells/ClientDirectoryModel.swift; sourceTree = SOURCE_ROOT; };
+		F15D917F2BDA913E00627552 /* ClientSecondDirectoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClientSecondDirectoryModel.swift; path = AgroChem/Models/ClientSecondDirectoryModel.swift; sourceTree = SOURCE_ROOT; };
+		F15D91842BDBEECF00627552 /* ClientSecondDirectoryDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSecondDirectoryDetailsCell.swift; sourceTree = "<group>"; };
+		F15D91862BDBEF2D00627552 /* ClientSecondDirectoryDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSecondDirectoryDetailsController.swift; sourceTree = "<group>"; };
+		F15D91882BDBEF3D00627552 /* ClientSecondDirectoryDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSecondDirectoryDetailsViewModel.swift; sourceTree = "<group>"; };
+		F15D918A2BDBEF4C00627552 /* ClientSecondDirectoryDetailsPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSecondDirectoryDetailsPresentable.swift; sourceTree = "<group>"; };
 		F17DC8872BA4A1F700DCFC72 /* ClientHomeActualCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHomeActualCell.swift; sourceTree = "<group>"; };
 		F17DC8892BA4A33E00DCFC72 /* ClientHomeCatalogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHomeCatalogCell.swift; sourceTree = "<group>"; };
 		F181CDED2B6E2E19005FFAB4 /* ClientMathLessonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientMathLessonController.swift; sourceTree = "<group>"; };
@@ -619,6 +629,33 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		F15D91812BDBEE1700627552 /* ClientSecondDirectoryDetails */ = {
+			isa = PBXGroup;
+			children = (
+				F15D91822BDBEE8200627552 /* Components */,
+			);
+			path = ClientSecondDirectoryDetails;
+			sourceTree = "<group>";
+		};
+		F15D91822BDBEE8200627552 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F15D91832BDBEE8A00627552 /* Cells */,
+				F15D91862BDBEF2D00627552 /* ClientSecondDirectoryDetailsController.swift */,
+				F15D91882BDBEF3D00627552 /* ClientSecondDirectoryDetailsViewModel.swift */,
+				F15D918A2BDBEF4C00627552 /* ClientSecondDirectoryDetailsPresentable.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F15D91832BDBEE8A00627552 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F15D91842BDBEECF00627552 /* ClientSecondDirectoryDetailsCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		F181CDEC2B6E2E01005FFAB4 /* ClientMathLesson */ = {
 			isa = PBXGroup;
 			children = (
@@ -838,21 +875,14 @@
 			isa = PBXGroup;
 			children = (
 				F1C65B642B655AA200B49A91 /* Client */,
-				F1C65B632B655A5300B49A91 /* General */,
 			);
 			path = Scenes;
-			sourceTree = "<group>";
-		};
-		F1C65B632B655A5300B49A91 /* General */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = General;
 			sourceTree = "<group>";
 		};
 		F1C65B642B655AA200B49A91 /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				F15D91812BDBEE1700627552 /* ClientSecondDirectoryDetails */,
 				F14B89782BCD1EB00033794B /* ClientDirectoryDetails */,
 				F14B896E2BCD0BF30033794B /* ClientSystemDetails */,
 				F133153F2BC451C1000CFEB2 /* ClientMedicine */,
@@ -890,6 +920,7 @@
 			children = (
 				F1C65B722B655D3A00B49A91 /* ClientModels */,
 				F14B89832BCD2A020033794B /* ClientDirectoryModel.swift */,
+				F15D917F2BDA913E00627552 /* ClientSecondDirectoryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1068,6 +1099,7 @@
 				F1C65B702B655CF100B49A91 /* UIAlertController+Extension.swift in Sources */,
 				F14B89732BCD0C300033794B /* ClientSystemDetailsPresentable.swift in Sources */,
 				F1C65B782B655D9600B49A91 /* NetworkURLs.swift in Sources */,
+				F15D91872BDBEF2D00627552 /* ClientSecondDirectoryDetailsController.swift in Sources */,
 				F181CE1D2B6E5A0C005FFAB4 /* ClientTestSolutionsLessonController.swift in Sources */,
 				F181CDF02B6E2E24005FFAB4 /* ClientMathLessonViewModel.swift in Sources */,
 				F181CDFE2B6E471C005FFAB4 /* ClientCriticalThinkingLessonCell.swift in Sources */,
@@ -1098,10 +1130,12 @@
 				F1C65B512B65588100B49A91 /* BaseNavigationController.swift in Sources */,
 				F14B897A2BCD221F0033794B /* ClientDirectoryDetailsController.swift in Sources */,
 				F181CE1F2B6E5A17005FFAB4 /* ClientTestSolutionsLessonViewModel.swift in Sources */,
+				F15D91852BDBEECF00627552 /* ClientSecondDirectoryDetailsCell.swift in Sources */,
 				F14B89822BCD23FF0033794B /* ClientDirectoryDetailsCell.swift in Sources */,
 				F145B93A2B6F818700D00C5F /* ClientMathTestCell.swift in Sources */,
 				F1C65B842B655FA900B49A91 /* ClientGreetingCoordinator.swift in Sources */,
 				F145B94E2B6F98F300D00C5F /* ClientChemTestCell.swift in Sources */,
+				F15D918B2BDBEF4C00627552 /* ClientSecondDirectoryDetailsPresentable.swift in Sources */,
 				F1C65B822B655F1000B49A91 /* UserDefaultsServiceKeys.swift in Sources */,
 				F145B9342B6F815B00D00C5F /* ClientMathTestViewModel.swift in Sources */,
 				F145B9442B6F949300D00C5F /* ClientMainMathTestCell.swift in Sources */,
@@ -1127,6 +1161,7 @@
 				F14B89842BCD2A020033794B /* ClientDirectoryModel.swift in Sources */,
 				F1056E682B69301A00A98341 /* ClientProfileController.swift in Sources */,
 				F1056E4A2B69154B00A98341 /* NetworkManager_Client.swift in Sources */,
+				F15D91892BDBEF3D00627552 /* ClientSecondDirectoryDetailsViewModel.swift in Sources */,
 				F1C65B692B655B2A00B49A91 /* ClientGreetingViewModel.swift in Sources */,
 				F1362FF42B6566C0006D7E61 /* ClientTabBarController.swift in Sources */,
 				F1C65B4F2B65583400B49A91 /* BaseController.swift in Sources */,
@@ -1151,6 +1186,7 @@
 				F13315412BC45200000CFEB2 /* ClientMedicineController.swift in Sources */,
 				F181CE0D2B6E54D7005FFAB4 /* ClientChemistryLessonPresentable.swift in Sources */,
 				F1C65B572B65590500B49A91 /* BaseCVCell.swift in Sources */,
+				F15D91802BDA913E00627552 /* ClientSecondDirectoryModel.swift in Sources */,
 				F181CDEE2B6E2E19005FFAB4 /* ClientMathLessonController.swift in Sources */,
 				F145B93C2B6F945D00D00C5F /* ClientMainMathTestController.swift in Sources */,
 				F181CDFB2B6E4161005FFAB4 /* ClientCriticalThinkingLessonPresentable.swift in Sources */,

@@ -59,11 +59,11 @@ final class ClientExamsViewModelImpl: BaseVM<UnownedRouter<ClientDirectoryRoute>
                              name: "Альтернариоз сои ",
                              nameInEnglish: "Alternaria tenuis Nees"),
         ClientDirectoryModel(image: "sras4",
-                             name: "Амброзия голометельчатая",
-                             nameInEnglish: "Ambrosia psilostachya"),
+                             name: "Альтернариоз томата",
+                             nameInEnglish: "Alternaria solani Sorauer. (=Macrosporium solani Ell.et Mart.)"),
         ClientDirectoryModel(image: "sras5",
-                             name: "Амброзия полыннолистная",
-                             nameInEnglish: "Ambrosia artemisiifolia"),
+                             name: "Антракноз гороха",
+                             nameInEnglish: "Colletotrichum pisi Pat."),
         ClientDirectoryModel(image: "sras6",
                              name: "Амброзия трехраздельная",
                              nameInEnglish: "Ambrosia trifida"),
@@ -117,6 +117,35 @@ final class ClientExamsViewModelImpl: BaseVM<UnownedRouter<ClientDirectoryRoute>
                              name: "Аметистка голубая",
                              nameInEnglish: "Amethystea caerulea L.")
     ]
+    let deistDirectories: [ClientSecondDirectoryModel] = [
+        ClientSecondDirectoryModel(
+                             name: "2,4-Д (2-этилгексиловый эфир)",
+                             nameInEnglish: "2,4-D (2-ethylhexyl)",
+                             content: "2-этилгексиловый эфир",
+                             description: "Пестицид, гербицид. Применяется в составе различных препаратов против двудольных сорняков"),
+        ClientSecondDirectoryModel(
+                             name: "Азимсульфурон",
+                             nameInEnglish: "Azimsulfuron",
+                             content: "1-(4,6-диметоксипиримидин-2-ил)-3-[1- метил-4-(2-метил-2Н-тетразол-5-ил)- "
+                             + "пиразол-5-илсульфонил] мочевина",
+                             description: "Prunus armeniaca L."),
+        ClientSecondDirectoryModel(
+                             name: "Абрикос обыкновенный",
+                             nameInEnglish: "Prunus armeniaca L.",
+                             content: "Prunus armeniaca L.",
+                             description: "Prunus armeniaca L."),
+        ClientSecondDirectoryModel(
+                             name: "Абрикос обыкновенный",
+                             nameInEnglish: "Prunus armeniaca L.",
+                             content: "Prunus armeniaca L.",
+                             description: "Prunus armeniaca L.")
+    ]
+//    let terminDirectories: [ClientSecondDirectoryModel] = [
+//        ClientSecondDirectoryModel(
+//                             name: "2,4-Д (2-этилгексиловый эфир)",
+//                             nameInEnglish: "2,4-D (2-ethylhexyl)",
+//                             content: "2-этилгексиловый эфир",
+//                             description: "Пестицид, гербицид. Применяется в составе различных препаратов против двудольных сорняков"),
 
     private var networkManager: NetworkManager
 
@@ -155,7 +184,16 @@ final class ClientExamsViewModelImpl: BaseVM<UnownedRouter<ClientDirectoryRoute>
                     self.router?.trigger(
                     .directoryDetails(title: directory,
                      directories: cultureDirectories))
+                } else if directory == "Действующие вещества" {
+                    self.router?.trigger(
+                    .secondDirectoryDetails(title: directory,
+                     directories: deistDirectories))
                 }
+//                    else if directory == "Термины" {
+//                    self.router?.trigger(
+//                    .directoryDetails(title: directory,
+//                     directories: cultureDirectories))
+//                }
             }
             .store(in: &cancellables)
     }

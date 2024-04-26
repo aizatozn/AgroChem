@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct ClientSecondDirectoryModel {
+    let name: String
+    let nameInEnglish: String
+    let content: String // Add the missing 'content' property
+    let description: String
+}

@@ -10,18 +10,41 @@ import UIKit
 
 final class ClientSecondDirectoryCell: BaseCVCell {
 
-    private let symbolImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.tintColor = UIColor(red: 0/255, green: 153/255, blue: 51/255, alpha: 1.0)
-        return imageView
-    }()
-
-    private let textLabel: UILabel = {
+    private let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        label.textColor = .black
+        return label
+    }()
+
+    private let englishTitleLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        label.textColor = UIColor(red: 128/255, green: 128/255, blue: 128/255, alpha: 1.0) // Ярко-серый цвет
+        return label
+    }()
+
+    private let descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        label.textColor = .black
+        label.numberOfLines = 0 // Разрешаем многострочный текст
+        return label
+    }()
+
+    private let additionalInfoLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        label.textColor = .black
+        label.numberOfLines = 0 // Разрешаем многострочный текст
         return label
     }()
 
@@ -38,28 +61,44 @@ final class ClientSecondDirectoryCell: BaseCVCell {
     }
 
     private func onAddSubviews() {
-        contentView.addSubview(symbolImageView)
-        contentView.addSubview(textLabel)
+        contentView.addSubview(titleLabel)
+        contentView.addSubview(englishTitleLabel)
+        contentView.addSubview(descriptionLabel)
+        contentView.addSubview(additionalInfoLabel)
     }
 
     private func onSetupConstraints() {
 
-        symbolImageView.snp.makeConstraints { make in
+        titleLabel.snp.makeConstraints { make in
             make.top.equalTo(10)
-            make.centerX.equalToSuperview()
-            make.height.equalTo(40)
-            make.width.equalTo(40)
+            make.left.equalTo(10)
+            make.right.equalTo(-10)
         }
 
-        textLabel.snp.makeConstraints { make in
-            make.top.equalTo(symbolImageView.snp.bottom).offset(8)
-            make.centerX.equalToSuperview()
+        englishTitleLabel.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottom).offset(4)
+            make.left.equalTo(10)
+            make.right.equalTo(-10)
         }
 
+        descriptionLabel.snp.makeConstraints { make in
+            make.top.equalTo(englishTitleLabel.snp.bottom).offset(8)
+            make.left.equalTo(10)
+            make.right.equalTo(-10)
+        }
+
+        additionalInfoLabel.snp.makeConstraints { make in
+            make.top.equalTo(descriptionLabel.snp.bottom).offset(8)
+            make.left.equalTo(10)
+            make.right.equalTo(-10)
+            make.bottom.equalTo(-10)
+        }
     }
 
-    func configure(symbolName: String, text: String) {
-        symbolImageView.image = UIImage(named: symbolName)
-        textLabel.text = text
+    func configure(title: String, englishTitle: String, description: String, additionalInfo: String) {
+        titleLabel.text = title
+        englishTitleLabel.text = englishTitle
+        descriptionLabel.text = description
+        additionalInfoLabel.text = additionalInfo
     }
 }
