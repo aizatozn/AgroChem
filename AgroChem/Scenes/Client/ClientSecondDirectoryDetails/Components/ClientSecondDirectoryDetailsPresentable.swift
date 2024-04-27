@@ -13,7 +13,7 @@ final class ClientSecondDirectoryDetailsPresentable: BaseView {
     var directories: [ClientSecondDirectoryModel] = [] {
         didSet {
             directoryCollectionView.reloadData()
-            print(directories.count)
+//            print(directories.count)
         }
     }
 
@@ -42,8 +42,8 @@ final class ClientSecondDirectoryDetailsPresentable: BaseView {
 
         directoryCollectionView.snp.makeConstraints { make in
             make.top.equalTo(safeAreaLayoutGuide.snp.top)
-            make.leading.equalTo(15)
-            make.trailing.equalTo(-15)
+            make.leading.equalTo(5)
+            make.trailing.equalTo(-5)
             make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
         }
     }
@@ -85,5 +85,4 @@ extension ClientSecondDirectoryDetailsPresentable: UICollectionViewDelegate,
 
       return CGSize(width: expectedWidth, height: height)
     }
-
 }

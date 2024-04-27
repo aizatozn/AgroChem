@@ -17,8 +17,9 @@ protocol ClientSecondDirectoryDetailsViewModel: BaseVMProtocol {
     var directories: CurrentValueSubject<[ClientSecondDirectoryModel], Never> { get set }
 }
 
-final class ClientSecondDirectoryDetailsViewModelImpl: BaseVM<UnownedRouter<ClientDirectoryRoute>>,
-                                                 ClientSecondDirectoryDetailsViewModel {
+final class ClientSecondDirectoryDetailsViewModelImpl: 
+                            BaseVM<UnownedRouter<ClientDirectoryRoute>>,
+                                ClientSecondDirectoryDetailsViewModel {
 
     var directories = CurrentValueSubject<[ClientSecondDirectoryModel], Never>([])
     var counter = CurrentValueSubject<Int, Never>(0)

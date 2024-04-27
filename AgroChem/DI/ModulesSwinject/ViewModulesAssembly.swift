@@ -118,5 +118,11 @@ final class ViewModulesAssembly: Assembly {
                 networkManager: $0.resolve(NetworkManager.self)!
             )
         }
+
+        container.register((any ClientThirdDirectoryDetailsViewModel).self) {
+            ClientThirdDirectoryDetailsViewModelImpl.init(
+                networkManager: $0.resolve(NetworkManager.self)!
+            )
+        }
     } // swiftlint:enable function_body_length
 }

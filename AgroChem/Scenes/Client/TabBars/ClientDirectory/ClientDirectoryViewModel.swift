@@ -122,23 +122,29 @@ final class ClientExamsViewModelImpl: BaseVM<UnownedRouter<ClientDirectoryRoute>
                              name: "2,4-Д (2-этилгексиловый эфир)",
                              nameInEnglish: "2,4-D (2-ethylhexyl)",
                              content: "2-этилгексиловый эфир",
-                             description: "Пестицид, гербицид. Применяется в составе различных препаратов против двудольных сорняков"),
+                             description: "Пестицид, гербицид. Применяется в составе различных"
+                             + " препаратов против двудольных сорняков."),
         ClientSecondDirectoryModel(
                              name: "Азимсульфурон",
                              nameInEnglish: "Azimsulfuron",
                              content: "1-(4,6-диметоксипиримидин-2-ил)-3-[1- метил-4-(2-метил-2Н-тетразол-5-ил)- "
                              + "пиразол-5-илсульфонил] мочевина",
-                             description: "Prunus armeniaca L."),
+                             description: "Пестицид, избирательный системный гербицид. Используется для борьбы с"
+                             + " осоковыми, широколистными и злаковыми сорняками на посевах риса."),
         ClientSecondDirectoryModel(
-                             name: "Абрикос обыкновенный",
-                             nameInEnglish: "Prunus armeniaca L.",
-                             content: "Prunus armeniaca L.",
-                             description: "Prunus armeniaca L."),
+                             name: "Азоксистробин",
+                             nameInEnglish: "Azoxystrobin",
+                             content: "Метил (Е)-2-(2-[6-(2-цианофенокси) пиримидин-4- илоксифенил)-3-метоксиакрилат]",
+                             description: "Фунгицид из класса стробилуринов, применяется в сельском хозяйстве"
+                             + " (в том числе в смеси с иными действующими веществами) для борьбы с различными"
+                             + " заболеваниями растений."),
         ClientSecondDirectoryModel(
-                             name: "Абрикос обыкновенный",
-                             nameInEnglish: "Prunus armeniaca L.",
-                             content: "Prunus armeniaca L.",
-                             description: "Prunus armeniaca L."),
+                             name: "Альфа-циперметрин",
+                             nameInEnglish: "Alpha-cypermethrin",
+                             content: "(S)-а-циано-3-феноксибензилового эфира (1R)- цис-3-"
+                             + "(2,2-дихлоровинил)-2,2-диметилцикло- пропанкарбоновой кислоты",
+                             description: "Химическое действующее вещество пестицидов (пиретроид),"
+                             + " используется для борьбы с вредными насекомыми и вредителями запасов."),
         ClientSecondDirectoryModel(
                              name: "Абрикос обыкновенный",
                              nameInEnglish: "Prunus armeniaca L.",
@@ -155,13 +161,44 @@ final class ClientExamsViewModelImpl: BaseVM<UnownedRouter<ClientDirectoryRoute>
                              content: "Prunus armeniaca L.",
                              description: "Prunus armeniaca L.")
     ]
-//    let terminDirectories: [ClientSecondDirectoryModel] = [
-//        ClientSecondDirectoryModel(
-//                             name: "2,4-Д (2-этилгексиловый эфир)",
-//                             nameInEnglish: "2,4-D (2-ethylhexyl)",
-//                             content: "2-этилгексиловый эфир",
-//                             description: "Пестицид, гербицид. Применяется в составе различных препаратов против двудольных сорняков"),
-
+    let terminDirectories: [ClientThirdDirectoryModel] = [
+        ClientThirdDirectoryModel(
+                             name: "Абиотические факторы",
+                             nameInEnglish: "Abiotic factores",
+                             description: "Факторы неживой природы, воздействующие на живые организмы"
+                             + " и оказывающие на них позитивное или негативное влияние."),
+        ClientThirdDirectoryModel(
+                             name: "Автоцидный пояс",
+                             nameInEnglish: "Autocidal belt",
+                             description: "Материал в виде полосы, обработанный инсектицидом и наложенный"
+                             + " на ствол или скелетные ветви дерева для уничтожения вредителей."),
+        ClientThirdDirectoryModel(
+                             name: "Акарифаг",
+                             nameInEnglish: "Acariphage",
+                             description: "Организм, питающийся клещами."),
+        ClientThirdDirectoryModel(
+                             name: "Акарицид",
+                             nameInEnglish: "Acaricide",
+                             description: "Химическое вещество для борьбы с клещами."),
+        ClientThirdDirectoryModel(
+                             name: "Акклиматизация энтомофагов",
+                             nameInEnglish: "Acclimatization of a entomophages",
+                             description: "Приспособление интродуцированных"
+                             + " энтомофагов к новым условиям существования."),
+        ClientThirdDirectoryModel(
+                             name: "Альгицид",
+                             nameInEnglish: "Algicide",
+                             description: "Химическое вещество для уничтожения водорослей."),
+        ClientThirdDirectoryModel(
+                             name: "Антагонизм пестицидаv",
+                             nameInEnglish: "Pesticide antagonism",
+                             description: "Ослабление токсического действия"
+                             + " пестицида при совместном применении его с другим."),
+        ClientThirdDirectoryModel(
+                             name: "Апикальный",
+                             nameInEnglish: "Apical",
+                             description: "Верхушечный, расположенный в верхней части какой-либо структуры, конечный.")
+    ]
     private var networkManager: NetworkManager
 
     init(networkManager: NetworkManager) {
@@ -203,12 +240,11 @@ final class ClientExamsViewModelImpl: BaseVM<UnownedRouter<ClientDirectoryRoute>
                     self.router?.trigger(
                     .secondDirectoryDetails(title: directory,
                      directories: deistDirectories))
+                } else if directory == "Термины" {
+                    self.router?.trigger(
+                    .thirdDirectoryDetails(title: directory,
+                     directories: terminDirectories))
                 }
-//                    else if directory == "Термины" {
-//                    self.router?.trigger(
-//                    .directoryDetails(title: directory,
-//                     directories: cultureDirectories))
-//                }
             }
             .store(in: &cancellables)
     }
