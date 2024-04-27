@@ -43,54 +43,6 @@ final class ViewModulesAssembly: Assembly {
             )
         }
 
-        container.register((any ClientMathLessonViewModel).self) {
-            ClientMathLessonViewModelImpl.init(
-                networkManager: $0.resolve(NetworkManager.self)!
-            )
-        }
-
-        container.register((any ClientCriticalThinkingLessonViewModel).self) {
-            ClientCriticalThinkingLesViewModelImpl.init(
-                networkManager: $0.resolve(NetworkManager.self)!
-            )
-        }
-
-        container.register((any ClientChemistryLessonViewModel).self) {
-            ClientChemistryLessonViewModelImpl.init(
-                networkManager: $0.resolve(NetworkManager.self)!
-            )
-        }
-
-        container.register((any ClientAdvisesLessonViewModel).self) {
-            ClientAdvisesLessonViewModelImpl.init(
-                networkManager: $0.resolve(NetworkManager.self)!
-            )
-        }
-
-        container.register((any ClientTestSolitionsLessonViewModel).self) {
-            ClientTestSolitionsLessonViewModelImpl.init(
-                networkManager: $0.resolve(NetworkManager.self)!
-            )
-        }
-
-        container.register((any ClientMathTestViewModel).self) {
-            ClientMathTestViewModelImpl.init(
-                networkManager: $0.resolve(NetworkManager.self)!
-            )
-        }
-
-        container.register((any ClientMainMathTestViewModel).self) {
-            ClientMainMathTestViewModelImpl.init(
-                networkManager: $0.resolve(NetworkManager.self)!
-            )
-        }
-
-        container.register((any ClientChemTestViewModel).self) {
-            ClientChemTestViewModelImpl.init(
-                networkManager: $0.resolve(NetworkManager.self)!
-            )
-        }
-
         container.autoregister((any ClientHelpAndSupportViewModel).self) {
             ClientHelpAndSupportViewModelImpl.init()
         }
