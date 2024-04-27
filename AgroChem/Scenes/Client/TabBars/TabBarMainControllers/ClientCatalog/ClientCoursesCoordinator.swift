@@ -42,40 +42,22 @@ final class ClientCoursesCoordinator: NavigationCoordinator<ClientCatalogRoute> 
             controller.hidesBottomBarWhenPushed = true
             return .push(controller)
 
-        case .math(let nameOfLesson):
-            let controller = ClientMathLessonController()
-            controller.title = nameOfLesson
-            controller.viewModel.router = unownedRouter
-            return .push(controller)
-
-        case .criticalThinking(let nameOfLesson):
-            let controller = ClientCriticalThinkingLessonController()
-            controller.title = nameOfLesson
-            controller.viewModel.router = unownedRouter
-            return .push(controller)
-
-        case .сhemistry(let nameOfLesson):
-            let controller = ClientChemistryLessonController()
-            controller.title = nameOfLesson
-            controller.viewModel.router = unownedRouter
-            return .push(controller)
-
-        case .advises(let nameOfLesson):
-            let controller = ClientAdvisesLessonController()
-            controller.title = nameOfLesson
-            controller.viewModel.router = unownedRouter
-            return .push(controller)
-
-        case .practiceTestSolutions(let nameOfLesson):
-            let controller = ClientTestSolutionsLessonController()
-            controller.title = nameOfLesson
-            controller.viewModel.router = unownedRouter
-            return .push(controller)
-
         case .medicineDetails(medicine: let medicine):
             let controller = ClientMedicineController()
             controller.title = medicine.name
             return .push(controller)
+        case .math(nameOfLesson: let nameOfLesson):
+            break
+        case .criticalThinking(nameOfLesson: let nameOfLesson):
+            break
+        case .сhemistry(nameOfLesson: let nameOfLesson):
+            break
+        case .advises(nameOfLesson: let nameOfLesson):
+            break
+        case .practiceTestSolutions(nameOfLesson: let nameOfLesson):
+            return .push(GreetingController())
         }
+        return .push(GreetingController())
+
     }
 }
