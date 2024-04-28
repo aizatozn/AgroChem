@@ -66,7 +66,7 @@ final class ViewModulesAssembly: Assembly {
         }
 
         container.register((any ClientSecondDirectoryDetailsViewModel).self) {
-            ClientSecondDirectoryDetailsViewModelImpl.init(
+            ClientSecondDirectDetailsViewModelImpl.init(
                 networkManager: $0.resolve(NetworkManager.self)!
             )
         }

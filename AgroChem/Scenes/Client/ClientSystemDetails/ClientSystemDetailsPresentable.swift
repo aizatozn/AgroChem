@@ -34,7 +34,7 @@ final class ClientSystemDetailsPresentable: BaseView {
 
     private let systemDescription: UILabel = {
         let label = UILabel()
-        label.text = "Kompleksnoe reshenie dla zashity goroha v techeniye vsego perioda rosta"
+        label.text = "Комплексное решение для защиты гороха в течение всего периода роста"
         label.textColor = .black
         label.font = .systemFont(ofSize: 14, weight: .regular)
         label.numberOfLines = 0
@@ -43,11 +43,32 @@ final class ClientSystemDetailsPresentable: BaseView {
 
     private let tableView: UITableView = {
         let tableView = UITableView()
-        tableView.rowHeight = 80
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         return tableView
     }()
-
+    private var medicines: [ClientCatalogModel] = [
+        ClientCatalogModel(image: "k1",
+                           name: "Агроника Гранд",
+                           subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
+                           description: "Послевсходовый гербицид для контроля многолетних, однолетних"
+                           + " злаковых и двудольных сорняков на кукурузе"),
+        ClientCatalogModel(image: "k1",
+                           name: "Агроника Гранд",
+                           subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
+                           description: "Послевсходовый гербицид для контроля многолетних, однолетних"
+                           + " злаковых и двудольных сорняков на кукурузе"),
+        ClientCatalogModel(image: "k1",
+                           name: "Агроника Гранд",
+                           subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
+                           description: "Послевсходовый гербицид для контроля многолетних, однолетних"
+                           + " злаковых и двудольных сорняков на кукурузе"),
+        ClientCatalogModel(image: "k1",
+                           name: "Агроника Гранд",
+                           subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
+                           description: "Послевсходовый гербицид для контроля многолетних, однолетних"
+                           + " злаковых и двудольных сорняков на кукурузе")
+        ]
     override func onConfigureView() {
         backgroundColor = .white
 
@@ -88,26 +109,30 @@ extension ClientSystemDetailsPresentable: UITableViewDelegate, UITableViewDataSo
 
         if section.isOpened {
             return section.options.count + 1
-        }
-        else {
+        } else {
             return 1
         }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: ClientSystemDetailsCell = tableView.dequeue(for: indexPath)
-        cell.backgroundColor = .clear
+        var celll = UITableViewCell()
+        celll.backgroundColor = .clear
 
         if indexPath.row == 0 {
-            cell.configure(model: ClientSystemsModel(image: "12", name: "Gerbiry"))
+            let cell: ClientSystemDetailsCell = tableView.dequeue(for: indexPath)
+            celll = cell
+            cell.configure(model: ClientSystemsModel(image: "12", name: "Гербициды"))
+
 //            cell.textLabel?.text = sections[indexPath.section].title
-        }
-        else {
-            cell.configure(model: ClientSystemsModel(image: "13", name: "Aizat"))
-            cell.backgroundColor = .yellow
+        } else {
+            let cell: ClientSystemDetailsSubCell = tableView.dequeue(for: indexPath)
+            celll = cell
+            cell.configure(model: medicines[indexPath.row])
+
+            celll.backgroundColor = .white
 //            cell.textLabel?.text = sections[indexPath.section].options[indexPath.row - 1]
         }
-        return cell
+        return celll
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -115,9 +140,15 @@ extension ClientSystemDetailsPresentable: UITableViewDelegate, UITableViewDataSo
         if indexPath.row == 0 {
             sections[indexPath.section].isOpened = !sections[indexPath.section].isOpened
             tableView.reloadSections([indexPath.section], with: .none)
-        }
-        else {
+        } else {
             print("tapped sub cell")
         }
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 70
+        }
+        return UITableView.automaticDimension
     }
 }

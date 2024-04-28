@@ -17,7 +17,7 @@ protocol ClientSecondDirectoryDetailsViewModel: BaseVMProtocol {
     var directories: CurrentValueSubject<[ClientSecondDirectoryModel], Never> { get set }
 }
 
-final class ClientSecondDirectoryDetailsViewModelImpl: 
+final class ClientSecondDirectDetailsViewModelImpl:
                             BaseVM<UnownedRouter<ClientDirectoryRoute>>,
                                 ClientSecondDirectoryDetailsViewModel {
 

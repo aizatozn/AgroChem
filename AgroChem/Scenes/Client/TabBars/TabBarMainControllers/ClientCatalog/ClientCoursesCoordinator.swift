@@ -11,11 +11,6 @@ import XCoordinator
 enum ClientCatalogRoute: Route {
     case home
     case next
-    case math(nameOfLesson: String)
-    case criticalThinking(nameOfLesson: String)
-    case сhemistry(nameOfLesson: String)
-    case advises(nameOfLesson: String)
-    case practiceTestSolutions(nameOfLesson: String)
     case medicineDetails(medicine: ClientCatalogModel)
 }
 
@@ -46,18 +41,6 @@ final class ClientCoursesCoordinator: NavigationCoordinator<ClientCatalogRoute> 
             let controller = ClientMedicineController()
             controller.title = medicine.name
             return .push(controller)
-        case .math(nameOfLesson: let nameOfLesson):
-            break
-        case .criticalThinking(nameOfLesson: let nameOfLesson):
-            break
-        case .сhemistry(nameOfLesson: let nameOfLesson):
-            break
-        case .advises(nameOfLesson: let nameOfLesson):
-            break
-        case .practiceTestSolutions(nameOfLesson: let nameOfLesson):
-            return .push(GreetingController())
         }
-        return .push(GreetingController())
-
     }
 }

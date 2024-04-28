@@ -73,6 +73,7 @@
 		F17DC8882BA4A1F700DCFC72 /* ClientHomeActualCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DC8872BA4A1F700DCFC72 /* ClientHomeActualCell.swift */; };
 		F17DC88A2BA4A33E00DCFC72 /* ClientHomeCatalogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DC8892BA4A33E00DCFC72 /* ClientHomeCatalogCell.swift */; };
 		F19C82082BDE4CC9007DCB8E /* ClientSystemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19C82072BDE4CC9007DCB8E /* ClientSystemsModel.swift */; };
+		F19C824C2BDEA648007DCB8E /* ClientSystemDetailsSubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19C824B2BDEA648007DCB8E /* ClientSystemDetailsSubCell.swift */; };
 		F1C65B4A2B65577300B49A91 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C65B492B65577300B49A91 /* AppCoordinator.swift */; };
 		F1C65B4D2B65580C00B49A91 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C65B4C2B65580C00B49A91 /* BaseView.swift */; };
 		F1C65B4F2B65583400B49A91 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C65B4E2B65583400B49A91 /* BaseController.swift */; };
@@ -159,6 +160,7 @@
 		F17DC8872BA4A1F700DCFC72 /* ClientHomeActualCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHomeActualCell.swift; sourceTree = "<group>"; };
 		F17DC8892BA4A33E00DCFC72 /* ClientHomeCatalogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHomeCatalogCell.swift; sourceTree = "<group>"; };
 		F19C82072BDE4CC9007DCB8E /* ClientSystemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSystemsModel.swift; sourceTree = "<group>"; };
+		F19C824B2BDEA648007DCB8E /* ClientSystemDetailsSubCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSystemDetailsSubCell.swift; sourceTree = "<group>"; };
 		F1C65B492B65577300B49A91 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		F1C65B4C2B65580C00B49A91 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		F1C65B4E2B65583400B49A91 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
@@ -472,6 +474,7 @@
 			isa = PBXGroup;
 			children = (
 				F16083F42BDD03F100DE30BD /* ClientSystemDetailsCell.swift */,
+				F19C824B2BDEA648007DCB8E /* ClientSystemDetailsSubCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -841,6 +844,7 @@
 				F1C65B612B6559F300B49A91 /* ServicesAssembly.swift in Sources */,
 				F14B89752BCD0C440033794B /* ClientSystemDetailsViewModel.swift in Sources */,
 				F1C65B5D2B65598000B49A91 /* Swinjectable.swift in Sources */,
+				F19C824C2BDEA648007DCB8E /* ClientSystemDetailsSubCell.swift in Sources */,
 				F13315452BC45216000CFEB2 /* ClientMedicinePresentable.swift in Sources */,
 				F1056E6E2B69303F00A98341 /* ClientProfileCoordinator.swift in Sources */,
 				F1C65B7D2B655EB600B49A91 /* SwinjectServices.swift in Sources */,

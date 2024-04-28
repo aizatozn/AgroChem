@@ -49,26 +49,6 @@ final class ClientCatalogViewModelImpl: BaseVM<UnownedRouter<ClientCatalogRoute>
             }
             .store(in: &cancellables)
 
-        pushToLesson
-            .dropFirst()
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] index in
-                if index == 0 {
-                    self?.router?.trigger(.math(nameOfLesson: "Математика курстары"))
-                } else if index == 1 {
-                    self?.router?.trigger(.criticalThinking(nameOfLesson: "Критикалык ой жүгүртүү"))
-                } else if index == 2 {
-                    self?.router?.trigger(.сhemistry(nameOfLesson: "Химия курстары"))
-                } else if index == 3 {
-                    self?.router?.trigger(.advises(nameOfLesson: "ЖРТ кеңештер, кесип тандоо жана ЖОЖдор"))
-                } else if index == 4 {
-                    self?.router?.trigger(.practiceTestSolutions(nameOfLesson: "Сынамык тесттин чыгарылыштары"))
-                }
-
-                print(index)
-            }
-            .store(in: &cancellables)
-
         selectedMedicine
             .dropFirst()
             .receive(on: DispatchQueue.main)
