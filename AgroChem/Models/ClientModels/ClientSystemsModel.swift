@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct ClientSystemsModel {
+    let image: String
+    let name: String
+}

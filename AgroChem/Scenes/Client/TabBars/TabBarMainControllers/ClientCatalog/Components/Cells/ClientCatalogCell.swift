@@ -22,7 +22,7 @@ final class ClientCatalogCell: BaseTVCell {
         let label = UILabel()
         label.text = "Agronika Grand, MD"
         label.textColor = .systemRed
-        label.font = .systemFont(ofSize: 12, weight: .semibold)
+        label.font = .systemFont(ofSize: 15, weight: .medium)
         return label
     }()
 
@@ -31,7 +31,7 @@ final class ClientCatalogCell: BaseTVCell {
         label.text = "Agronika Grand, MD, Agronika Grand, MD, Agronika Grand, MD"
         label.textColor = .black
         label.numberOfLines = 2
-        label.font = .systemFont(ofSize: 11, weight: .medium)
+        label.font = .systemFont(ofSize: 13, weight: .regular)
         return label
     }()
 
@@ -43,7 +43,7 @@ final class ClientCatalogCell: BaseTVCell {
                      "gronika Grand, MD, Agronika Grand, MD, Agronika Grand, MD,,"
         label.textColor = .systemGray
         label.numberOfLines = 2
-        label.font = .systemFont(ofSize: 11, weight: .regular)
+        label.font = .systemFont(ofSize: 13, weight: .regular)
         label.numberOfLines = 5
         return label
     }()
@@ -62,7 +62,7 @@ final class ClientCatalogCell: BaseTVCell {
         imageImageView.snp.makeConstraints { make in
             make.leading.equalTo(20)
             make.top.equalTo(15)
-            make.width.height.equalTo(60)
+            make.width.height.equalTo(80)
         }
 
         nameLabel.snp.makeConstraints { make in
@@ -79,6 +79,7 @@ final class ClientCatalogCell: BaseTVCell {
 
         descriptionLabel.snp.makeConstraints { make in
             make.top.equalTo(subNameLabel.snp.bottom).offset(6)
+            make.bottom.equalTo(-6)
             make.leading.equalTo(subNameLabel)
             make.trailing.equalTo(-20)
         }
