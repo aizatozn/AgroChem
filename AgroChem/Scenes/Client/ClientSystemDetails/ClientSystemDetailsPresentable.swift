@@ -24,6 +24,7 @@ class Section {
 }
 
 final class ClientSystemDetailsPresentable: BaseView {
+    var outIndex = 0
 
      private var sections = [
          Section(title: "Section 1", options: [1, 2, 3].compactMap({return "Cell \($0)" })),
@@ -47,6 +48,16 @@ final class ClientSystemDetailsPresentable: BaseView {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         return tableView
     }()
+
+    private var bobovyeСategories: [ClientSystemsModel] = [
+        ClientSystemsModel(image: "12",
+                           name: "Гербициды"),
+        ClientSystemsModel(image: "11",
+                           name: "Инсектициды"),
+        ClientSystemsModel(image: "10",
+                           name: "Минеральные удобрения")
+    ]
+
     private var medicines: [ClientCatalogModel] = [
         ClientCatalogModel(image: "k1",
                            name: "Агроника Гранд",
@@ -101,7 +112,7 @@ final class ClientSystemDetailsPresentable: BaseView {
 extension ClientSystemDetailsPresentable: UITableViewDelegate, UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return sections.count
+        return bobovyeСategories.count
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -117,12 +128,11 @@ extension ClientSystemDetailsPresentable: UITableViewDelegate, UITableViewDataSo
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var celll = UITableViewCell()
         celll.backgroundColor = .clear
-
         if indexPath.row == 0 {
             let cell: ClientSystemDetailsCell = tableView.dequeue(for: indexPath)
             celll = cell
-            cell.configure(model: ClientSystemsModel(image: "12", name: "Гербициды"))
-
+            cell.configure(model: bobovyeСategories[outIndex])
+            outIndex += 1
 //            cell.textLabel?.text = sections[indexPath.section].title
         } else {
             let cell: ClientSystemDetailsSubCell = tableView.dequeue(for: indexPath)
@@ -137,6 +147,7 @@ extension ClientSystemDetailsPresentable: UITableViewDelegate, UITableViewDataSo
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        outIndex = 0
         if indexPath.row == 0 {
             sections[indexPath.section].isOpened = !sections[indexPath.section].isOpened
             tableView.reloadSections([indexPath.section], with: .none)
