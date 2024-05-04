@@ -26,9 +26,8 @@ final class ClientSystemDetailsPresentable: BaseView {
         return tableView
     }()
     
-    var data: [CombinedSection] = [
-        CombinedSection(
-            title: "Гербициды",
+    var data: [Daary] = [
+        Daary(
             category: ClientSystemsModel(image: "10",
                                                      name: "Минеральные удобрения"),
             medicines: [
@@ -44,8 +43,7 @@ final class ClientSystemDetailsPresentable: BaseView {
                                    + " злаковых и двудольных сорняков на кукурузе")
             ]),
         
-        CombinedSection(
-            title: "Инсектициды",
+        Daary(
             category: ClientSystemsModel(image: "10",
                                          name: "Инсектициды"),
             medicines: [
@@ -55,8 +53,7 @@ final class ClientSystemDetailsPresentable: BaseView {
                                    description: "Послевсходовый гербицид для контроля многолетних, однолетних"
                                    + " злаковых и двудольных сорняков на кукурузе")
             ]),
-        CombinedSection(
-            title: "Инсектициды",
+        Daary(
             category: ClientSystemsModel(image: "10",
                                          name: "Aizat"),
             medicines: [
@@ -132,7 +129,7 @@ extension ClientSystemDetailsPresentable: UITableViewDelegate, UITableViewDataSo
         cell.backgroundColor = .clear
         if indexPath.row == 0 {
             let categoryIndex = indexPath.section
-            let cellModel = data[categoryIndex].category!
+            let cellModel = data[categoryIndex].category
             let cellInstance: ClientSystemDetailsCell = tableView.dequeue(for: indexPath)
             cellInstance.configure(model: cellModel)
             cell = cellInstance

@@ -20,6 +20,69 @@ struct ClientSystemСategoryModel {
 
 final class ClientSystemDetailsData {
 
+    static let bobMedicines: [Daary] = [
+        Daary(category: ClientSystemsModel(image: "12",
+                                           name: "Гербициды"),
+              medicines: [
+                ClientCatalogModel(image: "12",
+                                   name: "Гербициды1",
+                                   subName: "Гербициды subName",
+                                   description: "Гербициды description"),
+                ClientCatalogModel(image: "12",
+                                   name: "Гербициды1",
+                                   subName: "Гербициды subName",
+                                   description: "Гербициды description"),
+                ClientCatalogModel(image: "12",
+                                   name: "Гербициды1",
+                                   subName: "Гербициды subName",
+                                   description: "Гербициды description")
+              ]),
+        Daary(category: ClientSystemsModel(image: "12",
+                                           name: "Зерноаве"),
+              medicines: [
+                ClientCatalogModel(image: "12",
+                                   name: "Гербициды1",
+                                   subName: "Гербициды subName",
+                                   description: "Гербициды description"),
+                ClientCatalogModel(image: "12",
+                                   name: "Гербициды1",
+                                   subName: "Гербициды subName",
+                                   description: "Гербициды description"),
+                ClientCatalogModel(image: "12",
+                                   name: "Гербициды1",
+                                   subName: "Гербициды subName",
+                                   description: "Гербициды description")
+              ])
+    ]
+    
+    static let zerno: [Daary] = [
+        Daary(
+              category: ClientSystemsModel(image: "12",
+                                           name: "Гербициды"),
+              medicines: [
+                ClientCatalogModel(image: "12",
+                                   name: "Гербициды1",
+                                   subName: "Гербициды subName",
+                                   description: "Гербициды description"),
+                ClientCatalogModel(image: "12",
+                                   name: "Гербициды1",
+                                   subName: "Гербициды subName",
+                                   description: "Гербициды description"),
+                ClientCatalogModel(image: "12",
+                                   name: "Гербициды1",
+                                   subName: "Гербициды subName",
+                                   description: "Гербициды description")
+              ])
+    ]
+
+    
+    
+    
+    
+    
+    
+    
+    
     static let bobGerbitsidy: [ClientSystemsModel] = [
         ClientSystemsModel(image: "11",
                            name: "Гербициды")

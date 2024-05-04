@@ -9,9 +9,8 @@ import Combine
 import Foundation
 import XCoordinator
 
-struct CombinedSection {
-    let title: String
-    let category: ClientSystemsModel?
+struct Daary {
+    let category: ClientSystemsModel
     let medicines: [ClientCatalogModel]
     var isExpanded = false
 }
@@ -40,4 +39,6 @@ final class ClientSystemDetailsViewModelImpl: BaseVM<UnownedRouter<ClientHomeRou
         self.networkManager = networkManager
         super.init()
     }
+    
+    
 }
