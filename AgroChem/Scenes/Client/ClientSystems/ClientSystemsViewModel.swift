@@ -46,7 +46,18 @@ final class ClientSystemsViewModelImpl: BaseVM<UnownedRouter<ClientHomeRoute>>,
             .receive(on: DispatchQueue.main)
             .sink { [weak self] name in
                 guard let self = self, let name = name else { return }
-                self.router?.trigger(.systemDetails(title: name))
+                var systemModel = [ClientSystemsModel]()
+                let catalogModel = [ClientCatalogModel]()
+//                switch name {
+//                case "fjkdls":
+//                    systemModel = ClientSystemDetailsData.bobGerbitsidy
+//                    catalogModel = ClientSystemDetailsData.bob
+//                default:
+//                    break
+//                }
+                self.router?.trigger(.systemDetails(title: name,
+                                                    outName: [],
+                                                    inName: []))
             }
             .store(in: &cancellables)
     }

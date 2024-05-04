@@ -13,12 +13,22 @@ final class ClientSystemDetailsController: VMController<ClientSystemDetailsPrese
 
     override func onBindViewModel() {
 
-//        viewModel.directories
-//            .receive(on: DispatchQueue.main)
-//            .sink { [weak self] direcs in
-//                guard let self = self else { return }
-//                content.directories = direcs
-//            }
-//            .store(in: &viewModel.cancellables)
+        viewModel.inName
+            .dropFirst()
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] names in
+                guard let self = self else { return }
+//                self.content.medicines = names
+            }
+            .store(in: &viewModel.cancellables)
+
+        viewModel.outName
+            .dropFirst()
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] names in
+                guard let self = self else  { return }
+//                self.content.bobovyeСategories = names
+            }
+            .store(in: &viewModel.cancellables)
     }
 }

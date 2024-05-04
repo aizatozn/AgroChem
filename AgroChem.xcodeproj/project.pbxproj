@@ -70,6 +70,7 @@
 		F15D91892BDBEF3D00627552 /* ClientSecondDirectoryDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D91882BDBEF3D00627552 /* ClientSecondDirectoryDetailsViewModel.swift */; };
 		F15D918B2BDBEF4C00627552 /* ClientSecondDirectoryDetailsPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D918A2BDBEF4C00627552 /* ClientSecondDirectoryDetailsPresentable.swift */; };
 		F16083F52BDD03F100DE30BD /* ClientSystemDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16083F42BDD03F100DE30BD /* ClientSystemDetailsCell.swift */; };
+		F17753F62BE670CF0057CDD6 /* ClientSystemDetailsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17753F52BE670CF0057CDD6 /* ClientSystemDetailsData.swift */; };
 		F17DC8882BA4A1F700DCFC72 /* ClientHomeActualCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DC8872BA4A1F700DCFC72 /* ClientHomeActualCell.swift */; };
 		F17DC88A2BA4A33E00DCFC72 /* ClientHomeCatalogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DC8892BA4A33E00DCFC72 /* ClientHomeCatalogCell.swift */; };
 		F19C82082BDE4CC9007DCB8E /* ClientSystemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19C82072BDE4CC9007DCB8E /* ClientSystemsModel.swift */; };
@@ -157,6 +158,7 @@
 		F15D91882BDBEF3D00627552 /* ClientSecondDirectoryDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSecondDirectoryDetailsViewModel.swift; sourceTree = "<group>"; };
 		F15D918A2BDBEF4C00627552 /* ClientSecondDirectoryDetailsPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSecondDirectoryDetailsPresentable.swift; sourceTree = "<group>"; };
 		F16083F42BDD03F100DE30BD /* ClientSystemDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSystemDetailsCell.swift; sourceTree = "<group>"; };
+		F17753F52BE670CF0057CDD6 /* ClientSystemDetailsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSystemDetailsData.swift; sourceTree = "<group>"; };
 		F17DC8872BA4A1F700DCFC72 /* ClientHomeActualCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHomeActualCell.swift; sourceTree = "<group>"; };
 		F17DC8892BA4A33E00DCFC72 /* ClientHomeCatalogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHomeCatalogCell.swift; sourceTree = "<group>"; };
 		F19C82072BDE4CC9007DCB8E /* ClientSystemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSystemsModel.swift; sourceTree = "<group>"; };
@@ -412,6 +414,7 @@
 			isa = PBXGroup;
 			children = (
 				F16083F32BDD03CF00DE30BD /* Cells */,
+				F17753F52BE670CF0057CDD6 /* ClientSystemDetailsData.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -811,6 +814,7 @@
 				F1CEB5792B7A0F1100E466DE /* ClientDirectoryCell.swift in Sources */,
 				F1C65B512B65588100B49A91 /* BaseNavigationController.swift in Sources */,
 				F14B897A2BCD221F0033794B /* ClientDirectoryDetailsController.swift in Sources */,
+				F17753F62BE670CF0057CDD6 /* ClientSystemDetailsData.swift in Sources */,
 				F15D91852BDBEECF00627552 /* ClientSecondDirectoryDetailsCell.swift in Sources */,
 				F14B89822BCD23FF0033794B /* ClientDirectoryDetailsCell.swift in Sources */,
 				F1C65B842B655FA900B49A91 /* ClientGreetingCoordinator.swift in Sources */,
