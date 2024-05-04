@@ -8,27 +8,7 @@
 import UIKit
 import SnapKit
 
-class Section {
-    let title: String
-    let options: [String]
-    var isOpened: Bool = false
-
-    init(title: String,
-         options: [String],
-         isOpened: Bool = false
-    ) {
-        self.title = title
-        self.options = options
-        self.isOpened = isOpened
-    }
-}
-
 final class ClientSystemDetailsPresentable: BaseView {
-    private var sections = [
-         Section(title: "Section 1", options: [1, 2, 3, 4].compactMap({return "Cell \($0)" })),
-         Section(title: "Section 2", options: [1, 2].compactMap({return "Cell \($0)" })),
-         Section(title: "Section 3", options: [1, 2, 3, 4, 5].compactMap({return "Cell \($0)" }))
-     ]
 
     private let systemDescription: UILabel = {
         let label = UILabel()
@@ -45,55 +25,63 @@ final class ClientSystemDetailsPresentable: BaseView {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         return tableView
     }()
-
-    private var bobovyeСategories: [ClientSystemsModel] = [
-        ClientSystemsModel(image: "12", name: "Гербициды"),
-        ClientSystemsModel(image: "11", name: "Инсектициды"),
-        ClientSystemsModel(image: "10", name: "Минеральные удобрения")
+    
+    var data: [CombinedSection] = [
+        CombinedSection(
+            title: "Гербициды",
+            category: ClientSystemsModel(image: "10",
+                                                     name: "Минеральные удобрения"),
+            medicines: [
+                ClientCatalogModel(image: "k1",
+                                   name: "Минеральные удобрения1",
+                                   subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
+                                   description: "Послевсходовый гербицид для контроля многолетних, однолетних"
+                                   + " злаковых и двудольных сорняков на кукурузе"),
+                ClientCatalogModel(image: "k1",
+                                   name: "Минеральные удобрения2",
+                                   subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
+                                   description: "Послевсходовый гербицид для контроля многолетних, однолетних"
+                                   + " злаковых и двудольных сорняков на кукурузе")
+            ]),
+        
+        CombinedSection(
+            title: "Инсектициды",
+            category: ClientSystemsModel(image: "10",
+                                         name: "Инсектициды"),
+            medicines: [
+                ClientCatalogModel(image: "k1",
+                                   name: "Инсектициды1",
+                                   subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
+                                   description: "Послевсходовый гербицид для контроля многолетних, однолетних"
+                                   + " злаковых и двудольных сорняков на кукурузе")
+            ]),
+        CombinedSection(
+            title: "Инсектициды",
+            category: ClientSystemsModel(image: "10",
+                                         name: "Aizat"),
+            medicines: [
+                ClientCatalogModel(image: "k1",
+                                   name: "Инсектициды1",
+                                   subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
+                                   description: "Послевсходовый гербицид для контроля многолетних, однолетних"
+                                   + " злаковых и двудольных сорняков на кукурузе"),
+                ClientCatalogModel(image: "k1",
+                                   name: "Инсектициды2",
+                                   subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
+                                   description: "Послевсходовый гербицид для контроля многолетних, однолетних"
+                                   + " злаковых и двудольных сорняков на кукурузе"),
+                ClientCatalogModel(image: "k1",
+                                   name: "Инсектициды3",
+                                   subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
+                                   description: "Послевсходовый гербицид для контроля многолетних, однолетних"
+                                   + " злаковых и двудольных сорняков на кукурузе"),
+                ClientCatalogModel(image: "k1",
+                                   name: "Инсектициды4",
+                                   subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
+                                   description: "Послевсходовый гербицид для контроля многолетних, однолетних"
+                                   + " злаковых и двудольных сорняков на кукурузе")
+            ])
     ]
-
-    private var medicines: [ClientCatalogModel] = [
-        ClientCatalogModel(image: "k1",
-                           name: "Гранд",
-                           subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
-                           description: "Послевсходовый гербицид для контроля многолетних, однолетних"
-                           + " злаковых и двудольных сорняков на кукурузе"),
-        ClientCatalogModel(image: "k1",
-                           name: "Агроника",
-                           subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
-                           description: "Послевсходовый гербицид для контроля многолетних, однолетних"
-                           + " злаковых и двудольных сорняков на кукурузе"),
-        ClientCatalogModel(image: "k1",
-                           name: "Гранд",
-                           subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
-                           description: "Послевсходовый гербицид для контроля многолетних, однолетних"
-                           + " злаковых и двудольных сорняков на кукурузе"),
-        ClientCatalogModel(image: "k1",
-                           name: "Агроника",
-                           subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
-                           description: "Послевсходовый гербицид для контроля многолетних, однолетних"
-                           + " злаковых и двудольных сорняков на кукурузе"),
-        ClientCatalogModel(image: "k1",
-                           name: "Гранд",
-                           subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
-                           description: "Послевсходовый гербицид для контроля многолетних, однолетних"
-                           + " злаковых и двудольных сорняков на кукурузе"),
-        ClientCatalogModel(image: "k1",
-                           name: "Агроника",
-                           subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
-                           description: "Послевсходовый гербицид для контроля многолетних, однолетних"
-                           + " злаковых и двудольных сорняков на кукурузе"),
-        ClientCatalogModel(image: "k1",
-                           name: "Гранд",
-                           subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
-                           description: "Послевсходовый гербицид для контроля многолетних, однолетних"
-                           + " злаковых и двудольных сорняков на кукурузе"),
-        ClientCatalogModel(image: "k1",
-                           name: "Агроника",
-                           subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
-                           description: "Послевсходовый гербицид для контроля многолетних, однолетних"
-                           + " злаковых и двудольных сорняков на кукурузе")
-        ]
 
     override func onConfigureView() {
         backgroundColor = .white
@@ -127,14 +115,13 @@ final class ClientSystemDetailsPresentable: BaseView {
 extension ClientSystemDetailsPresentable: UITableViewDelegate, UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return sections.count
+        return data.count
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let section = sections[section]
-
-        if section.isOpened {
-            return section.options.count + 1
+        let currentSection = data[section]
+        if currentSection.isExpanded {
+            return currentSection.medicines.count + 1 // 1 for category cell
         } else {
             return 1
         }
@@ -145,13 +132,13 @@ extension ClientSystemDetailsPresentable: UITableViewDelegate, UITableViewDataSo
         cell.backgroundColor = .clear
         if indexPath.row == 0 {
             let categoryIndex = indexPath.section
-            let cellModel = bobovyeСategories[categoryIndex]
+            let cellModel = data[categoryIndex].category!
             let cellInstance: ClientSystemDetailsCell = tableView.dequeue(for: indexPath)
             cellInstance.configure(model: cellModel)
             cell = cellInstance
         } else {
             let medicineIndex = indexPath.row - 1 // Adjust index to match array index
-            let medicineModel = medicines[medicineIndex]
+            let medicineModel = data[indexPath.section].medicines[medicineIndex]
             let cellInstance: ClientSystemDetailsSubCell = tableView.dequeue(for: indexPath)
             cellInstance.configure(model: medicineModel)
             cell = cellInstance
@@ -163,10 +150,8 @@ extension ClientSystemDetailsPresentable: UITableViewDelegate, UITableViewDataSo
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.row == 0 {
-            sections[indexPath.section].isOpened = !sections[indexPath.section].isOpened
-            tableView.reloadSections([indexPath.section], with: .none)
-        } else {
-            print("tapped sub cell")
+            data[indexPath.section].isExpanded = !data[indexPath.section].isExpanded
+            tableView.reloadSections([indexPath.section], with: .automatic) // Animate cell expansion/collapse
         }
     }
 
@@ -176,4 +161,5 @@ extension ClientSystemDetailsPresentable: UITableViewDelegate, UITableViewDataSo
         }
         return UITableView.automaticDimension
     }
+
 }

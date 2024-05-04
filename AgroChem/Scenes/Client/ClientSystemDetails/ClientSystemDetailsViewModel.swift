@@ -9,6 +9,13 @@ import Combine
 import Foundation
 import XCoordinator
 
+struct CombinedSection {
+    let title: String
+    let category: ClientSystemsModel?
+    let medicines: [ClientCatalogModel]
+    var isExpanded = false
+}
+
 protocol ClientSystemDetailsViewModel: BaseVMProtocol {
     var router: UnownedRouter<ClientHomeRoute>? { get set }
     var counter: CurrentValueSubject<Int, Never> { get set }
