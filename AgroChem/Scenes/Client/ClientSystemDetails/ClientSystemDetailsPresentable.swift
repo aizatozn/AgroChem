@@ -24,13 +24,10 @@ class Section {
 }
 
 final class ClientSystemDetailsPresentable: BaseView {
-    var outIndex = 0
-
-     private var sections = [
-         Section(title: "Section 1", options: [1, 2, 3].compactMap({return "Cell \($0)" })),
-         Section(title: "Section 2", options: [1, 2, 3].compactMap({return "Cell \($0)" })),
-         Section(title: "Section 3", options: [1, 2, 3].compactMap({return "Cell \($0)" })),
-         Section(title: "Section 4", options: [1, 2, 3].compactMap({return "Cell \($0)" }))
+    private var sections = [
+         Section(title: "Section 1", options: [1, 2, 3, 4].compactMap({return "Cell \($0)" })),
+         Section(title: "Section 2", options: [1, 2].compactMap({return "Cell \($0)" })),
+         Section(title: "Section 3", options: [1, 2, 3, 4, 5].compactMap({return "Cell \($0)" }))
      ]
 
     private let systemDescription: UILabel = {
@@ -50,36 +47,54 @@ final class ClientSystemDetailsPresentable: BaseView {
     }()
 
     private var bobovyeСategories: [ClientSystemsModel] = [
-        ClientSystemsModel(image: "12",
-                           name: "Гербициды"),
-        ClientSystemsModel(image: "11",
-                           name: "Инсектициды"),
-        ClientSystemsModel(image: "10",
-                           name: "Минеральные удобрения")
+        ClientSystemsModel(image: "12", name: "Гербициды"),
+        ClientSystemsModel(image: "11", name: "Инсектициды"),
+        ClientSystemsModel(image: "10", name: "Минеральные удобрения")
     ]
 
     private var medicines: [ClientCatalogModel] = [
         ClientCatalogModel(image: "k1",
-                           name: "Агроника Гранд",
+                           name: "Гранд",
                            subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
                            description: "Послевсходовый гербицид для контроля многолетних, однолетних"
                            + " злаковых и двудольных сорняков на кукурузе"),
         ClientCatalogModel(image: "k1",
-                           name: "Агроника Гранд",
+                           name: "Агроника",
                            subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
                            description: "Послевсходовый гербицид для контроля многолетних, однолетних"
                            + " злаковых и двудольных сорняков на кукурузе"),
         ClientCatalogModel(image: "k1",
-                           name: "Агроника Гранд",
+                           name: "Гранд",
                            subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
                            description: "Послевсходовый гербицид для контроля многолетних, однолетних"
                            + " злаковых и двудольных сорняков на кукурузе"),
         ClientCatalogModel(image: "k1",
-                           name: "Агроника Гранд",
+                           name: "Агроника",
+                           subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
+                           description: "Послевсходовый гербицид для контроля многолетних, однолетних"
+                           + " злаковых и двудольных сорняков на кукурузе"),
+        ClientCatalogModel(image: "k1",
+                           name: "Гранд",
+                           subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
+                           description: "Послевсходовый гербицид для контроля многолетних, однолетних"
+                           + " злаковых и двудольных сорняков на кукурузе"),
+        ClientCatalogModel(image: "k1",
+                           name: "Агроника",
+                           subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
+                           description: "Послевсходовый гербицид для контроля многолетних, однолетних"
+                           + " злаковых и двудольных сорняков на кукурузе"),
+        ClientCatalogModel(image: "k1",
+                           name: "Гранд",
+                           subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
+                           description: "Послевсходовый гербицид для контроля многолетних, однолетних"
+                           + " злаковых и двудольных сорняков на кукурузе"),
+        ClientCatalogModel(image: "k1",
+                           name: "Агроника",
                            subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
                            description: "Послевсходовый гербицид для контроля многолетних, однолетних"
                            + " злаковых и двудольных сорняков на кукурузе")
         ]
+
     override func onConfigureView() {
         backgroundColor = .white
 
@@ -112,7 +127,7 @@ final class ClientSystemDetailsPresentable: BaseView {
 extension ClientSystemDetailsPresentable: UITableViewDelegate, UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return bobovyeСategories.count
+        return sections.count
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -126,28 +141,27 @@ extension ClientSystemDetailsPresentable: UITableViewDelegate, UITableViewDataSo
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var celll = UITableViewCell()
-        celll.backgroundColor = .clear
+        var cell = UITableViewCell()
+        cell.backgroundColor = .clear
         if indexPath.row == 0 {
-            let cell: ClientSystemDetailsCell = tableView.dequeue(for: indexPath)
-            celll = cell
-            cell.configure(model: bobovyeСategories[outIndex])
-            outIndex += 1
-//            cell.textLabel?.text = sections[indexPath.section].title
+            let categoryIndex = indexPath.section
+            let cellModel = bobovyeСategories[categoryIndex]
+            let cellInstance: ClientSystemDetailsCell = tableView.dequeue(for: indexPath)
+            cellInstance.configure(model: cellModel)
+            cell = cellInstance
         } else {
-            let cell: ClientSystemDetailsSubCell = tableView.dequeue(for: indexPath)
-            celll = cell
-            cell.configure(model: medicines[indexPath.row])
-
-            celll.backgroundColor = .white
-//            cell.textLabel?.text = sections[indexPath.section].options[indexPath.row - 1]
+            let medicineIndex = indexPath.row - 1 // Adjust index to match array index
+            let medicineModel = medicines[medicineIndex]
+            let cellInstance: ClientSystemDetailsSubCell = tableView.dequeue(for: indexPath)
+            cellInstance.configure(model: medicineModel)
+            cell = cellInstance
+            cell.backgroundColor = .white
         }
-        return celll
+        return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        outIndex = 0
         if indexPath.row == 0 {
             sections[indexPath.section].isOpened = !sections[indexPath.section].isOpened
             tableView.reloadSections([indexPath.section], with: .none)
