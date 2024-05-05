@@ -14,8 +14,7 @@ enum ClientHomeRoute: Route {
     case helpAndSupport
     case protectionSystems
     case systemDetails(title: String,
-                       outName: [ClientSystemCategoryModel],
-                       inName: [ClientCategoryDetailsModel])
+                       data: [SystemCategories])
 }
 
 final class ClientHomeCoordinator: NavigationCoordinator<ClientHomeRoute> {
@@ -51,11 +50,10 @@ final class ClientHomeCoordinator: NavigationCoordinator<ClientHomeRoute> {
             controller.viewModel.router = unownedRouter
             return .push(controller)
 
-        case .systemDetails(let title, let outName, let inName):
+        case .systemDetails(let title, let data):
             let controller = ClientSystemDetailsController()
             controller.title = title
-            controller.viewModel.inName.send(inName)
-            controller.viewModel.outName.send(outName)
+            controller.viewModel.inputData.send(data)
             return .push(controller)
         }
     }

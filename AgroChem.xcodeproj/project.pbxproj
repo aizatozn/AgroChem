@@ -101,6 +101,7 @@
 		F1C65B842B655FA900B49A91 /* ClientGreetingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C65B832B655FA900B49A91 /* ClientGreetingCoordinator.swift */; };
 		F1CEB5792B7A0F1100E466DE /* ClientDirectoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CEB5782B7A0F1100E466DE /* ClientDirectoryCell.swift */; };
 		F1EC76432B6B8E200017FCF5 /* ClientCatalogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EC76422B6B8E200017FCF5 /* ClientCatalogCell.swift */; };
+		F1F1C9912BE7E47D009FB166 /* ClientSystemDetailsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F1C9902BE7E47D009FB166 /* ClientSystemDetailsData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -190,6 +191,7 @@
 		F1C65B832B655FA900B49A91 /* ClientGreetingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientGreetingCoordinator.swift; sourceTree = "<group>"; };
 		F1CEB5782B7A0F1100E466DE /* ClientDirectoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDirectoryCell.swift; sourceTree = "<group>"; };
 		F1EC76422B6B8E200017FCF5 /* ClientCatalogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCatalogCell.swift; sourceTree = "<group>"; };
+		F1F1C9902BE7E47D009FB166 /* ClientSystemDetailsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSystemDetailsData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -416,6 +418,7 @@
 			isa = PBXGroup;
 			children = (
 				F16083F32BDD03CF00DE30BD /* Cells */,
+				F1F1C9902BE7E47D009FB166 /* ClientSystemDetailsData.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -806,6 +809,7 @@
 				F11E67892BDA47D800AC8B81 /* ClientSecondDirectoryCell.swift in Sources */,
 				F1056E542B692F7A00A98341 /* ClientHomePresentable.swift in Sources */,
 				F1056E622B692FF400A98341 /* ClientDirectoryViewModel.swift in Sources */,
+				F1F1C9912BE7E47D009FB166 /* ClientSystemDetailsData.swift in Sources */,
 				F1C65B5F2B6559C400B49A91 /* ViewModulesAssembly.swift in Sources */,
 				F1C65B6E2B655CC000B49A91 /* UIView+Extensions.swift in Sources */,
 				F133153A2BC44DF3000CFEB2 /* ClientSystemsController.swift in Sources */,
