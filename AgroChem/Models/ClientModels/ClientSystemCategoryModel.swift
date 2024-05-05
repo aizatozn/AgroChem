@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import UIKit
 
 struct ClientSystemCategoryModel {
     let image: String
     let name: String
+    let color: UIColor
 }

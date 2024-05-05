@@ -52,5 +52,7 @@ final class ClientSystemDetailsCell: BaseTVCell {
     func configure(model: ClientSystemCategoryModel) {
         iconImageView.image = UIImage(named: model.image)
         nameLabel.text = model.name
+        nameLabel.textColor = model.color
+//        iconImageView.tintColor = model.color
     }
 }

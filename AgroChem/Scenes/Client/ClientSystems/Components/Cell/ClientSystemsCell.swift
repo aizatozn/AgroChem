@@ -61,5 +61,6 @@ final class ClientSystemsCell: BaseCVCell {
     func configure(symbolName: String, text: String) {
         symbolImageView.image = UIImage(named: symbolName)
         textLabel.text = text
+  
     }
 }
