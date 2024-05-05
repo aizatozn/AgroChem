@@ -49,7 +49,7 @@ final class ClientSystemDetailsCell: BaseTVCell {
         }
     }
 
-    func configure(model: ClientSystemsModel) {
+    func configure(model: ClientSystemCategoryModel) {
         iconImageView.image = UIImage(named: model.image)
         nameLabel.text = model.name
     }

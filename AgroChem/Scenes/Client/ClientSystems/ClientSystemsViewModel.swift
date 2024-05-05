@@ -46,8 +46,8 @@ final class ClientSystemsViewModelImpl: BaseVM<UnownedRouter<ClientHomeRoute>>,
             .receive(on: DispatchQueue.main)
             .sink { [weak self] name in
                 guard let self = self, let name = name else { return }
-                var systemModel = [ClientSystemsModel]()
-                let catalogModel = [ClientCatalogModel]()
+                var systemModel = [ClientSystemCategoryModel]()
+                let catalogModel = [ClientCategoryDetailsModel]()
 //                switch name {
 //                case "fjkdls":
 //                    systemModel = ClientSystemDetailsData.bobGerbitsidy

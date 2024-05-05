@@ -14,8 +14,8 @@ enum ClientHomeRoute: Route {
     case helpAndSupport
     case protectionSystems
     case systemDetails(title: String,
-                       outName: [ClientSystemsModel],
-                       inName: [ClientCatalogModel])
+                       outName: [ClientSystemCategoryModel],
+                       inName: [ClientCategoryDetailsModel])
 }
 
 final class ClientHomeCoordinator: NavigationCoordinator<ClientHomeRoute> {

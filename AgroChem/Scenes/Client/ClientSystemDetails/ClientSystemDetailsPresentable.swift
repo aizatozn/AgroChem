@@ -21,58 +21,71 @@ final class ClientSystemDetailsPresentable: BaseView {
 
     private let tableView: UITableView = {
         let tableView = UITableView()
-        tableView.rowHeight = UITableView.automaticDimension
+        tableView.rowHeight = 160
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         return tableView
     }()
 
-    var data: [Daary] = [
-        Daary(category: ClientSystemsModel(image: "10",
+    var data: [SystemCategories] = [
+        SystemCategories(systemCategory: ClientSystemCategoryModel(image: "10",
                                            name: "Гербициды"),
-              medicines: [
-                ClientCatalogModel(image: "k1",
-                                   name: "Гербициды1",
-                                   subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
-                                   description: "Послевсходовый гербицид для контроля многолетних, однолетних"
-                                   + " злаковых и двудольных сорняков на кукурузе"),
-                ClientCatalogModel(image: "k1",
-                                   name: "Гербициды2",
-                                   subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
-                                   description: "Послевсходовый гербицид для контроля многолетних, однолетних"
-                                   + " злаковых и двудольных сорняков на кукурузе")
-            ]),
-        Daary(category: ClientSystemsModel(image: "10",
+                         categoryDetails: [
+                ClientCategoryDetailsModel(image: "k4",
+                                           name: "Гербициды1",
+                                           subName: "subName",
+                                           faza: "faza",
+                                           subFaza: "subFaza",
+                                           norma: "norma",
+                                           subNorma: "subNorma"),
+                ClientCategoryDetailsModel(image: "k4",
+                                           name: "Гербициды2",
+                                           subName: "subName",
+                                           faza: "faza",
+                                           subFaza: "subFaza",
+                                           norma: "norma",
+                                           subNorma: "subNorma")            ]),
+        SystemCategories(systemCategory: ClientSystemCategoryModel(image: "10",
                                            name: "Инсектициды"),
-              medicines: [
-                ClientCatalogModel(image: "k1",
-                                   name: "Инсектициды1",
-                                   subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
-                                   description: "Послевсходовый гербицид для контроля многолетних, однолетних"
-                                   + " злаковых и двудольных сорняков на кукурузе")
+                         categoryDetails: [
+                ClientCategoryDetailsModel(image: "k4",
+                                           name: "Инсектициды1",
+                                           subName: "subName",
+                                           faza: "faza",
+                                           subFaza: "subFaza",
+                                           norma: "norma",
+                                           subNorma: "subNorma")
             ]),
-        Daary(category: ClientSystemsModel(image: "10",
+        SystemCategories(systemCategory: ClientSystemCategoryModel(image: "10",
                                          name: "Минеральные удобрения"),
-              medicines: [
-                ClientCatalogModel(image: "k1",
-                                   name: "Минеральные удобрения1",
-                                   subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
-                                   description: "Послевсходовый гербицид для контроля многолетних, однолетних"
-                                   + " злаковых и двудольных сорняков на кукурузе"),
-                ClientCatalogModel(image: "k1",
-                                   name: "Минеральные удобрения2",
-                                   subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
-                                   description: "Послевсходовый гербицид для контроля многолетних, однолетних"
-                                   + " злаковых и двудольных сорняков на кукурузе"),
-                ClientCatalogModel(image: "k1",
-                                   name: "Минеральные удобрения3",
-                                   subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
-                                   description: "Послевсходовый гербицид для контроля многолетних, однолетних"
-                                   + " злаковых и двудольных сорняков на кукурузе"),
-                ClientCatalogModel(image: "k1",
-                                   name: "Минеральные удобрения4",
-                                   subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
-                                   description: "Послевсходовый гербицид для контроля многолетних, однолетних"
-                                   + " злаковых и двудольных сорняков на кукурузе")
+                         categoryDetails: [
+                ClientCategoryDetailsModel(image: "k4",
+                                           name: "Минеральные удобрения1",
+                                           subName: "subName",
+                                           faza: "faza",
+                                           subFaza: "subFaza",
+                                           norma: "norma",
+                                           subNorma: "subNorma"),
+                ClientCategoryDetailsModel(image: "k4",
+                                           name: "Минеральные удобрения2",
+                                           subName: "subName",
+                                           faza: "faza",
+                                           subFaza: "subFaza",
+                                           norma: "norma",
+                                           subNorma: "subNorma"),
+                ClientCategoryDetailsModel(image: "k4",
+                                           name: "Минеральные удобрения3",
+                                           subName: "subName",
+                                           faza: "faza",
+                                           subFaza: "subFaza",
+                                           norma: "norma",
+                                           subNorma: "subNorma"),
+                ClientCategoryDetailsModel(image: "k4",
+                                           name: "Минеральные удобрения4",
+                                           subName: "subName",
+                                           faza: "faza",
+                                           subFaza: "subFaza",
+                                           norma: "norma",
+                                           subNorma: "subNorma")
             ])
     ]
 
@@ -113,8 +126,8 @@ extension ClientSystemDetailsPresentable: UITableViewDelegate, UITableViewDataSo
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let currentSection = data[section]
-        if currentSection.isExpanded {
-            return currentSection.medicines.count + 1 // 1 for category cell
+        if currentSection.isOpened {
+            return currentSection.categoryDetails.count + 1 // 1 for category cell
         } else {
             return 1
         }
@@ -124,15 +137,15 @@ extension ClientSystemDetailsPresentable: UITableViewDelegate, UITableViewDataSo
         var cell = UITableViewCell()
         cell.backgroundColor = .clear
         if indexPath.row == 0 {
-            let categoryIndex = indexPath.section
-            let cellModel = data[categoryIndex].category
+            let systemCategoryIndex = indexPath.section
+            let cellModel = data[systemCategoryIndex].systemCategory
             let cellInstance: ClientSystemDetailsCell = tableView.dequeue(for: indexPath)
             cellInstance.configure(model: cellModel)
             cell = cellInstance
         } else {
             let medicineIndex = indexPath.row - 1 // Adjust index to match array index
-            let medicineModel = data[indexPath.section].medicines[medicineIndex]
-            let cellInstance: ClientSystemDetailsSubCell = tableView.dequeue(for: indexPath)
+            let medicineModel = data[indexPath.section].categoryDetails[medicineIndex]
+            let cellInstance: ClientSubSystemDetailsCell = tableView.dequeue(for: indexPath)
             cellInstance.configure(model: medicineModel)
             cell = cellInstance
             cell.backgroundColor = .white
@@ -143,7 +156,7 @@ extension ClientSystemDetailsPresentable: UITableViewDelegate, UITableViewDataSo
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.row == 0 {
-            data[indexPath.section].isExpanded = !data[indexPath.section].isExpanded
+            data[indexPath.section].isOpened = !data[indexPath.section].isOpened
             tableView.reloadSections([indexPath.section], with: .automatic) // Animate cell expansion/collapse
         }
     }
