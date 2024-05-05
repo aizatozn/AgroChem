@@ -83,7 +83,7 @@ final class ClientSubSystemDetailsCell: BaseTVCell {
         iconImageView.snp.makeConstraints { make in
             make.leading.equalTo(20)
             make.top.equalTo(15)
-            make.width.height.equalTo(80)
+            make.width.height.equalTo(100)
         }
 
         nameLabel.snp.makeConstraints { make in
@@ -129,5 +129,8 @@ final class ClientSubSystemDetailsCell: BaseTVCell {
         subNameLabel.text = model.subName
         subFazaLabel.text = model.subFaza
         subNormaLabel.text = model.subNorma
+        normaLabel.textColor = model.color
+        fazaLabel.textColor = model.color
+        nameLabel.textColor = model.color
     }
 }

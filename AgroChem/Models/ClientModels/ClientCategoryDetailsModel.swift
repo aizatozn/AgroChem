@@ -5,7 +5,9 @@
 //  Created by Aizat Ozbekova on 5/5/24.
 //
 
-struct ClientCategoryDetailsModel: Codable {
+import UIKit
+
+struct ClientCategoryDetailsModel {
     let image: String
     let name: String
     let subName: String
@@ -13,4 +15,5 @@ struct ClientCategoryDetailsModel: Codable {
     let subFaza: String
     let norma: String
     let subNorma: String
+    let color: UIColor
 }

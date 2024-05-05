@@ -36,14 +36,14 @@ final class ClientSystemDetailsPresentable: BaseView {
                                            faza: "faza",
                                            subFaza: "subFaza",
                                            norma: "norma",
-                                           subNorma: "subNorma"),
+                                           subNorma: "subNorma", color: .yellow),
                 ClientCategoryDetailsModel(image: "k4",
                                            name: "Гербициды2",
                                            subName: "subName",
                                            faza: "faza",
                                            subFaza: "subFaza",
                                            norma: "norma",
-                                           subNorma: "subNorma")            ]),
+                                           subNorma: "subNorma", color: .brown)            ]),
         SystemCategories(systemCategory: ClientSystemCategoryModel(image: "10",
                                            name: "Инсектициды"),
                          categoryDetails: [
@@ -53,7 +53,7 @@ final class ClientSystemDetailsPresentable: BaseView {
                                            faza: "faza",
                                            subFaza: "subFaza",
                                            norma: "norma",
-                                           subNorma: "subNorma")
+                                           subNorma: "subNorma", color: .orange)
             ]),
         SystemCategories(systemCategory: ClientSystemCategoryModel(image: "10",
                                          name: "Минеральные удобрения"),
@@ -64,28 +64,28 @@ final class ClientSystemDetailsPresentable: BaseView {
                                            faza: "faza",
                                            subFaza: "subFaza",
                                            norma: "norma",
-                                           subNorma: "subNorma"),
+                                           subNorma: "subNorma", color: .blue),
                 ClientCategoryDetailsModel(image: "k4",
                                            name: "Минеральные удобрения2",
                                            subName: "subName",
                                            faza: "faza",
                                            subFaza: "subFaza",
                                            norma: "norma",
-                                           subNorma: "subNorma"),
+                                           subNorma: "subNorma", color: .blue),
                 ClientCategoryDetailsModel(image: "k4",
                                            name: "Минеральные удобрения3",
                                            subName: "subName",
                                            faza: "faza",
                                            subFaza: "subFaza",
                                            norma: "norma",
-                                           subNorma: "subNorma"),
+                                           subNorma: "subNorma", color: .orange),
                 ClientCategoryDetailsModel(image: "k4",
                                            name: "Минеральные удобрения4",
                                            subName: "subName",
                                            faza: "faza",
                                            subFaza: "subFaza",
                                            norma: "norma",
-                                           subNorma: "subNorma")
+                                           subNorma: "subNorma", color: .red)
             ])
     ]
 
