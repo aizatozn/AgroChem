@@ -38,7 +38,5 @@ final class ClientSystemDetailsViewModelImpl: BaseVM<UnownedRouter<ClientHomeRou
     init(networkManager: NetworkManager) {
         self.networkManager = networkManager
         super.init()
-    }
-    
-    
+    }  
 }

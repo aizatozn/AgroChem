@@ -25,12 +25,34 @@ final class ClientSystemDetailsPresentable: BaseView {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         return tableView
     }()
-    
+
     var data: [Daary] = [
-        Daary(
-            category: ClientSystemsModel(image: "10",
-                                                     name: "Минеральные удобрения"),
-            medicines: [
+        Daary(category: ClientSystemsModel(image: "10",
+                                           name: "Гербициды"),
+              medicines: [
+                ClientCatalogModel(image: "k1",
+                                   name: "Гербициды1",
+                                   subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
+                                   description: "Послевсходовый гербицид для контроля многолетних, однолетних"
+                                   + " злаковых и двудольных сорняков на кукурузе"),
+                ClientCatalogModel(image: "k1",
+                                   name: "Гербициды2",
+                                   subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
+                                   description: "Послевсходовый гербицид для контроля многолетних, однолетних"
+                                   + " злаковых и двудольных сорняков на кукурузе")
+            ]),
+        Daary(category: ClientSystemsModel(image: "10",
+                                           name: "Инсектициды"),
+              medicines: [
+                ClientCatalogModel(image: "k1",
+                                   name: "Инсектициды1",
+                                   subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
+                                   description: "Послевсходовый гербицид для контроля многолетних, однолетних"
+                                   + " злаковых и двудольных сорняков на кукурузе")
+            ]),
+        Daary(category: ClientSystemsModel(image: "10",
+                                         name: "Минеральные удобрения"),
+              medicines: [
                 ClientCatalogModel(image: "k1",
                                    name: "Минеральные удобрения1",
                                    subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
@@ -40,40 +62,14 @@ final class ClientSystemDetailsPresentable: BaseView {
                                    name: "Минеральные удобрения2",
                                    subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
                                    description: "Послевсходовый гербицид для контроля многолетних, однолетних"
-                                   + " злаковых и двудольных сорняков на кукурузе")
-            ]),
-        
-        Daary(
-            category: ClientSystemsModel(image: "10",
-                                         name: "Инсектициды"),
-            medicines: [
+                                   + " злаковых и двудольных сорняков на кукурузе"),
                 ClientCatalogModel(image: "k1",
-                                   name: "Инсектициды1",
-                                   subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
-                                   description: "Послевсходовый гербицид для контроля многолетних, однолетних"
-                                   + " злаковых и двудольных сорняков на кукурузе")
-            ]),
-        Daary(
-            category: ClientSystemsModel(image: "10",
-                                         name: "Aizat"),
-            medicines: [
-                ClientCatalogModel(image: "k1",
-                                   name: "Инсектициды1",
+                                   name: "Минеральные удобрения3",
                                    subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
                                    description: "Послевсходовый гербицид для контроля многолетних, однолетних"
                                    + " злаковых и двудольных сорняков на кукурузе"),
                 ClientCatalogModel(image: "k1",
-                                   name: "Инсектициды2",
-                                   subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
-                                   description: "Послевсходовый гербицид для контроля многолетних, однолетних"
-                                   + " злаковых и двудольных сорняков на кукурузе"),
-                ClientCatalogModel(image: "k1",
-                                   name: "Инсектициды3",
-                                   subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
-                                   description: "Послевсходовый гербицид для контроля многолетних, однолетних"
-                                   + " злаковых и двудольных сорняков на кукурузе"),
-                ClientCatalogModel(image: "k1",
-                                   name: "Инсектициды4",
+                                   name: "Минеральные удобрения4",
                                    subName: "Мезотрион, 70 г/л + Никосульфурон, 40 г/л",
                                    description: "Послевсходовый гербицид для контроля многолетних, однолетних"
                                    + " злаковых и двудольных сорняков на кукурузе")

@@ -29,11 +29,11 @@ final class ClientSystemDetailsData {
                                    subName: "Гербициды subName",
                                    description: "Гербициды description"),
                 ClientCatalogModel(image: "12",
-                                   name: "Гербициды1",
+                                   name: "Гербициды2",
                                    subName: "Гербициды subName",
                                    description: "Гербициды description"),
                 ClientCatalogModel(image: "12",
-                                   name: "Гербициды1",
+                                   name: "Гербициды3",
                                    subName: "Гербициды subName",
                                    description: "Гербициды description")
               ]),
@@ -54,7 +54,7 @@ final class ClientSystemDetailsData {
                                    description: "Гербициды description")
               ])
     ]
-    
+
     static let zerno: [Daary] = [
         Daary(
               category: ClientSystemsModel(image: "12",
@@ -75,14 +75,6 @@ final class ClientSystemDetailsData {
               ])
     ]
 
-    
-    
-    
-    
-    
-    
-    
-    
     static let bobGerbitsidy: [ClientSystemsModel] = [
         ClientSystemsModel(image: "11",
                            name: "Гербициды")
