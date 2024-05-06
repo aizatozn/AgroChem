@@ -102,6 +102,7 @@
 		F1CEB5792B7A0F1100E466DE /* ClientDirectoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CEB5782B7A0F1100E466DE /* ClientDirectoryCell.swift */; };
 		F1EC76432B6B8E200017FCF5 /* ClientCatalogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EC76422B6B8E200017FCF5 /* ClientCatalogCell.swift */; };
 		F1F1C9912BE7E47D009FB166 /* ClientSystemDetailsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F1C9902BE7E47D009FB166 /* ClientSystemDetailsData.swift */; };
+		F1F1C9932BE8D799009FB166 /* ClientSystemDetailsData+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F1C9922BE8D799009FB166 /* ClientSystemDetailsData+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -192,6 +193,7 @@
 		F1CEB5782B7A0F1100E466DE /* ClientDirectoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDirectoryCell.swift; sourceTree = "<group>"; };
 		F1EC76422B6B8E200017FCF5 /* ClientCatalogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCatalogCell.swift; sourceTree = "<group>"; };
 		F1F1C9902BE7E47D009FB166 /* ClientSystemDetailsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSystemDetailsData.swift; sourceTree = "<group>"; };
+		F1F1C9922BE8D799009FB166 /* ClientSystemDetailsData+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClientSystemDetailsData+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -419,6 +421,7 @@
 			children = (
 				F16083F32BDD03CF00DE30BD /* Cells */,
 				F1F1C9902BE7E47D009FB166 /* ClientSystemDetailsData.swift */,
+				F1F1C9922BE8D799009FB166 /* ClientSystemDetailsData+Extension.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -829,6 +832,7 @@
 				F1AE8B1B2BE797B100059460 /* ClientSystemCategoryModel.swift in Sources */,
 				F17DC8882BA4A1F700DCFC72 /* ClientHomeActualCell.swift in Sources */,
 				F1056E6A2B69302400A98341 /* ClientProfileViewModel.swift in Sources */,
+				F1F1C9932BE8D799009FB166 /* ClientSystemDetailsData+Extension.swift in Sources */,
 				F1056E5A2B692FAE00A98341 /* ClientCatalogViewModel.swift in Sources */,
 				F128AB0D2B84E8E70012549C /* ClientHomeCell.swift in Sources */,
 				F1C65B7A2B655E2700B49A91 /* NetworkManagerImpl.swift in Sources */,

@@ -52,6 +52,18 @@ final class ClientSystemsViewModelImpl: BaseVM<UnownedRouter<ClientHomeRoute>>,
                     sendData = ClientSystemDetailsData.bobData
                 case "Зерновые":
                     sendData = ClientSystemDetailsData.zerData
+                case "Картофель":
+                    sendData = ClientSystemDetailsData.karData
+                case "Кукуруза":
+                    sendData = ClientSystemDetailsData.kukData
+                case "Лён":
+                    sendData = ClientSystemDetailsData.lenData
+                case "Подсолнечник":
+                    sendData = ClientSystemDetailsData.podData
+                case "Рапс":
+                    sendData = ClientSystemDetailsData.rapsData
+                case "Свёкла":
+                    sendData = ClientSystemDetailsData.svekData
                 default:
                     break
                 }
