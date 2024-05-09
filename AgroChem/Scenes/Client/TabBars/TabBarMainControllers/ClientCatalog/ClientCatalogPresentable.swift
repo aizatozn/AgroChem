@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import Combine
 
-final class ClientCatalogPresentable: BaseView {
+final class ClientCatalogPresentable: BaseView, UISearchBarDelegate {
 
     private var medicines: [ClientCatalogModel] = [
         ClientCatalogModel(image: "k1",
@@ -159,55 +159,87 @@ final class ClientCatalogPresentable: BaseView {
 
     var selectedMedicine = CurrentValueSubject<ClientCatalogModel?, Never>(nil)
 
-    private lazy var tableView: UITableView = {
-        let table = UITableView()
-        table.delegate = self
-        table.dataSource = self
-        table.backgroundColor = .white
-        return table
-    }()
+        private lazy var tableView: UITableView = {
+            let table = UITableView()
+            table.delegate = self
+            table.dataSource = self
+            table.backgroundColor = .white
+            return table
+        }()
+
+        private lazy var searchBar: UISearchBar = {
+            let searchBar = UISearchBar()
+            searchBar.delegate = self
+            return searchBar
+        }()
+
+        private var filteredMedicines: [ClientCatalogModel] = []
 
     override func onConfigureView() {
         backgroundColor = .white
+        filteredMedicines = medicines
+        tableView.reloadData()
     }
 
-    override func onAddSubviews() {
-        addSubview(tableView)
-    }
+        override func onAddSubviews() {
+            addSubview(searchBar)
+            addSubview(tableView)
+            tableView.register(ClientCatalogCell.self, forCellReuseIdentifier: "CellIdentifier")
+        }
 
-    override func onSetupConstraints() {
+        override func onSetupConstraints() {
+            searchBar.snp.makeConstraints { make in
+                make.top.equalTo(safeAreaLayoutGuide.snp.top)
+                make.leading.trailing.equalToSuperview()
+            }
 
-        tableView.snp.makeConstraints { make in
-            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
-            make.top.equalTo(safeAreaLayoutGuide.snp.top)
-            make.leading.trailing.equalToSuperview()
+            tableView.snp.makeConstraints { make in
+                make.top.equalTo(searchBar.snp.bottom)
+                make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
+                make.leading.trailing.equalToSuperview()
+            }
+        }
+
+        // MARK: - UISearchBarDelegate
+
+        func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+            if searchText.isEmpty {
+                filteredMedicines = medicines
+            } else {
+                filteredMedicines = medicines.filter { $0.name.lowercased().contains(searchText.lowercased()) }
+            }
+            tableView.reloadData()
+        }
+
+        func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+            searchBar.resignFirstResponder()
         }
     }
-}
 
-extension ClientCatalogPresentable: UITableViewDelegate, UITableViewDataSource {
+    extension ClientCatalogPresentable: UITableViewDelegate, UITableViewDataSource {
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return 1
+        }
+
+        func numberOfSections(in tableView: UITableView) -> Int {
+            return filteredMedicines.count
+        }
+
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "CellIdentifier", for: indexPath) as? ClientCatalogCell else {
+                fatalError("Unable to dequeue ClientCatalogCell")
+            }
+            cell.configure(model: filteredMedicines[indexPath.section])
+            return cell
+        }
+
+        func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+            return 150
+        }
+
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            tableView.deselectRow(at: indexPath, animated: true)
+            selectedMedicine.send(filteredMedicines[indexPath.section])
+        }
     }
-
-    func numberOfSections(in tableView: UITableView) -> Int {
-        medicines.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        let cell: ClientCatalogCell = tableView.dequeue(for: indexPath)
-        cell.configure(model: medicines[indexPath.section])
-        return cell
-    }
-
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        150
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        selectedMedicine.send(medicines[indexPath.section])
-    }
-}
