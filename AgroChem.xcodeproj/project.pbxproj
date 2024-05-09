@@ -99,7 +99,7 @@
 		F1C65B822B655F1000B49A91 /* UserDefaultsServiceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C65B812B655F1000B49A91 /* UserDefaultsServiceKeys.swift */; };
 		F1C65B842B655FA900B49A91 /* ClientGreetingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C65B832B655FA900B49A91 /* ClientGreetingCoordinator.swift */; };
 		F1CEB5792B7A0F1100E466DE /* ClientDirectoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CEB5782B7A0F1100E466DE /* ClientDirectoryCell.swift */; };
-		F1EC76432B6B8E200017FCF5 /* ClientCatalogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EC76422B6B8E200017FCF5 /* ClientCatalogCell.swift */; };
+		F1EC76432B6B8E200017FCF5 /* ClientCatalogCategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EC76422B6B8E200017FCF5 /* ClientCatalogCategoriesCell.swift */; };
 		F1F1C9912BE7E47D009FB166 /* ClientSystemDetailsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F1C9902BE7E47D009FB166 /* ClientSystemDetailsData.swift */; };
 		F1F1C9932BE8D799009FB166 /* ClientSystemDetailsData+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F1C9922BE8D799009FB166 /* ClientSystemDetailsData+Extension.swift */; };
 /* End PBXBuildFile section */
@@ -189,7 +189,7 @@
 		F1C65B812B655F1000B49A91 /* UserDefaultsServiceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsServiceKeys.swift; sourceTree = "<group>"; };
 		F1C65B832B655FA900B49A91 /* ClientGreetingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientGreetingCoordinator.swift; sourceTree = "<group>"; };
 		F1CEB5782B7A0F1100E466DE /* ClientDirectoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDirectoryCell.swift; sourceTree = "<group>"; };
-		F1EC76422B6B8E200017FCF5 /* ClientCatalogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCatalogCell.swift; sourceTree = "<group>"; };
+		F1EC76422B6B8E200017FCF5 /* ClientCatalogCategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCatalogCategoriesCell.swift; sourceTree = "<group>"; };
 		F1F1C9902BE7E47D009FB166 /* ClientSystemDetailsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSystemDetailsData.swift; sourceTree = "<group>"; };
 		F1F1C9922BE8D799009FB166 /* ClientSystemDetailsData+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClientSystemDetailsData+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -711,7 +711,7 @@
 		F1EC76412B6B8E020017FCF5 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				F1EC76422B6B8E200017FCF5 /* ClientCatalogCell.swift */,
+				F1EC76422B6B8E200017FCF5 /* ClientCatalogCategoriesCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -889,7 +889,7 @@
 				F1056E602B692FE800A98341 /* ClientDirectoryController.swift in Sources */,
 				F13315332BC44911000CFEB2 /* ClientHelpAndSupportController.swift in Sources */,
 				F12935A32BDCF2D4002079CB /* ClientThirdDirectoryDetailsViewModel.swift in Sources */,
-				F1EC76432B6B8E200017FCF5 /* ClientCatalogCell.swift in Sources */,
+				F1EC76432B6B8E200017FCF5 /* ClientCatalogCategoriesCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
