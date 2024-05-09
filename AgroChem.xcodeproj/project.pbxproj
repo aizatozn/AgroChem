@@ -72,7 +72,6 @@
 		F16083F52BDD03F100DE30BD /* ClientSystemDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16083F42BDD03F100DE30BD /* ClientSystemDetailsCell.swift */; };
 		F17DC8882BA4A1F700DCFC72 /* ClientHomeActualCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DC8872BA4A1F700DCFC72 /* ClientHomeActualCell.swift */; };
 		F17DC88A2BA4A33E00DCFC72 /* ClientHomeCatalogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DC8892BA4A33E00DCFC72 /* ClientHomeCatalogCell.swift */; };
-		F19C824C2BDEA648007DCB8E /* ClientSystemDetailsSubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19C824B2BDEA648007DCB8E /* ClientSystemDetailsSubCell.swift */; };
 		F1AE8B1B2BE797B100059460 /* ClientSystemCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AE8B1A2BE797B100059460 /* ClientSystemCategoryModel.swift */; };
 		F1AE8B1D2BE797FC00059460 /* ClientCategoryDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AE8B1C2BE797FC00059460 /* ClientCategoryDetailsModel.swift */; };
 		F1AE8B1F2BE79C4B00059460 /* ClientSubSystemDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AE8B1E2BE79C4B00059460 /* ClientSubSystemDetailsCell.swift */; };
@@ -163,7 +162,6 @@
 		F16083F42BDD03F100DE30BD /* ClientSystemDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSystemDetailsCell.swift; sourceTree = "<group>"; };
 		F17DC8872BA4A1F700DCFC72 /* ClientHomeActualCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHomeActualCell.swift; sourceTree = "<group>"; };
 		F17DC8892BA4A33E00DCFC72 /* ClientHomeCatalogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHomeCatalogCell.swift; sourceTree = "<group>"; };
-		F19C824B2BDEA648007DCB8E /* ClientSystemDetailsSubCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSystemDetailsSubCell.swift; sourceTree = "<group>"; };
 		F1AE8B1A2BE797B100059460 /* ClientSystemCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSystemCategoryModel.swift; sourceTree = "<group>"; };
 		F1AE8B1C2BE797FC00059460 /* ClientCategoryDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCategoryDetailsModel.swift; sourceTree = "<group>"; };
 		F1AE8B1E2BE79C4B00059460 /* ClientSubSystemDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSubSystemDetailsCell.swift; sourceTree = "<group>"; };
@@ -256,6 +254,7 @@
 		F1056E4E2B692B2E00A98341 /* ClientProfile */ = {
 			isa = PBXGroup;
 			children = (
+				F1B807772BEBB44900B6E31A /* Components */,
 				F1056E672B69301A00A98341 /* ClientProfileController.swift */,
 				F1056E692B69302400A98341 /* ClientProfileViewModel.swift */,
 				F1056E6B2B69303100A98341 /* ClientProfilePresentable.swift */,
@@ -484,7 +483,6 @@
 			isa = PBXGroup;
 			children = (
 				F16083F42BDD03F100DE30BD /* ClientSystemDetailsCell.swift */,
-				F19C824B2BDEA648007DCB8E /* ClientSystemDetailsSubCell.swift */,
 				F1AE8B1E2BE79C4B00059460 /* ClientSubSystemDetailsCell.swift */,
 			);
 			path = Cells;
@@ -517,6 +515,21 @@
 			children = (
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		F1B807772BEBB44900B6E31A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F1B807782BEBB45700B6E31A /* Cells */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F1B807782BEBB45700B6E31A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		F1C65B472B6556A500B49A91 /* Application */ = {
@@ -859,7 +872,6 @@
 				F1C65B612B6559F300B49A91 /* ServicesAssembly.swift in Sources */,
 				F14B89752BCD0C440033794B /* ClientSystemDetailsViewModel.swift in Sources */,
 				F1C65B5D2B65598000B49A91 /* Swinjectable.swift in Sources */,
-				F19C824C2BDEA648007DCB8E /* ClientSystemDetailsSubCell.swift in Sources */,
 				F13315452BC45216000CFEB2 /* ClientMedicinePresentable.swift in Sources */,
 				F1056E6E2B69303F00A98341 /* ClientProfileCoordinator.swift in Sources */,
 				F1C65B7D2B655EB600B49A91 /* SwinjectServices.swift in Sources */,
