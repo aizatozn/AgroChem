@@ -164,6 +164,7 @@ final class ClientCatalogPresentable: BaseView, UISearchBarDelegate {
             table.delegate = self
             table.dataSource = self
             table.backgroundColor = .white
+            searchBar.backgroundImage = UIImage()
             return table
         }()
 

@@ -33,18 +33,19 @@ final class ClientProfilePresentable: BaseView {
     }()
 
     // Создаем градиентный слой
-    let gradientLayer: CAGradientLayer = {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [
-            UIColor(red: 0/255, green: 153/255, blue: 51/255, alpha: 1.0).cgColor,
-            UIColor.white.cgColor
-        ]
-        return gradientLayer
-    }()
+//    let gradientLayer: CAGradientLayer = {
+//        let gradientLayer = CAGradientLayer()
+//        gradientLayer.colors = [
+//            UIColor(red: 0/255, green: 153/255, blue: 51/255, alpha: 1.0).cgColor,
+//            UIColor.white.cgColor
+//        ]
+//        return gradientLayer
+//    }()
 
     override func onConfigureView() {
         super.onConfigureView()
-        layer.insertSublayer(gradientLayer, at: 0)
+//        layer.insertSublayer(gradientLayer, at: 0)
+        backgroundColor = .white
     }
 
     override func onAddSubviews() {
@@ -70,6 +71,6 @@ final class ClientProfilePresentable: BaseView {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        gradientLayer.frame = bounds
+//        gradientLayer.frame = bounds
     }
 }
