@@ -8,12 +8,12 @@
 import UIKit
 import SnapKit
 
-final class ClientThirdDirectoryDetailsPresentable: BaseView {
+final class ClientThirdDirectoryDetailsPresentable: BaseView, UISearchBarDelegate {
 
     var directories: [ClientThirdDirectoryModel] = [] {
         didSet {
+            filteredDirectories = directories
             directoryCollectionView.reloadData()
-//            print(directories.count)
         }
     }
 
@@ -28,24 +28,54 @@ final class ClientThirdDirectoryDetailsPresentable: BaseView {
         return collectionView
     }()
 
+    private lazy var searchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        searchBar.delegate = self
+        return searchBar
+    }()
+
+    private var filteredDirectories: [ClientThirdDirectoryModel] = []
+
     override func onConfigureView() {
-        backgroundColor = .white
-        directoryCollectionView.delegate = self
-        directoryCollectionView.dataSource = self
+       super.onConfigureView()
+       backgroundColor = .white
+       directoryCollectionView.delegate = self
+       directoryCollectionView.dataSource = self
+
+       searchBar.backgroundImage = UIImage()
     }
 
     override func onAddSubviews() {
-        addSubviews(directoryCollectionView)
+        addSubviews(directoryCollectionView, searchBar)
+        directoryCollectionView.register(ClientThirdDirectoryDetailsCell.self,
+                                         forCellWithReuseIdentifier: "CellIdentifier")
     }
 
     override func onSetupConstraints() {
+        searchBar.snp.makeConstraints { make in
+            make.top.equalTo(safeAreaLayoutGuide.snp.top)
+            make.leading.trailing.equalToSuperview()
+        }
 
         directoryCollectionView.snp.makeConstraints { make in
-            make.top.equalTo(safeAreaLayoutGuide.snp.top)
-            make.leading.equalTo(5)
-            make.trailing.equalTo(-5)
-            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
+            make.top.equalTo(searchBar.snp.bottom)
+            make.leading.trailing.bottom.equalToSuperview()
         }
+    }
+
+    // MARK: - UISearchBarDelegate
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            filteredDirectories = directories
+        } else {
+            filteredDirectories = directories.filter { $0.name.lowercased().contains(searchText.lowercased()) }
+        }
+        directoryCollectionView.reloadData()
+    }
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 }
 
@@ -55,27 +85,29 @@ extension ClientThirdDirectoryDetailsPresentable: UICollectionViewDelegate,
 
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        directories.count
+        return filteredDirectories.count
     }
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: ClientThirdDirectoryDetailsCell = collectionView.dequeue(for: indexPath)
-        cell.configure(model: directories[indexPath.item])
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellIdentifier",
+                                                            for: indexPath) as? ClientThirdDirectoryDetailsCell else {
+            fatalError("Unable to dequeue ClientThirdDirectoryDetailsCell")
+        }
+        cell.configure(model: filteredDirectories[indexPath.item])
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-      let model = directories[indexPath.item]
+        let model = filteredDirectories[indexPath.item]
+        let expectedWidth = collectionView.frame.width - 30
 
-      let expectedWidth = collectionView.frame.width - 30
+        let cell = ClientThirdDirectoryDetailsCell(frame: .zero)
+        cell.configure(model: model)
 
-      let cell = ClientThirdDirectoryDetailsCell(frame: .zero)
-      cell.configure(model: model)
-
-      cell.layoutIfNeeded()
+        cell.layoutIfNeeded()
         let size = cell.systemLayoutSizeFitting(
             CGSize(width: expectedWidth,
                    height: CGFloat.greatestFiniteMagnitude), withHorizontalFittingPriority: .required,
@@ -83,6 +115,6 @@ extension ClientThirdDirectoryDetailsPresentable: UICollectionViewDelegate,
 
         let height = size.height + 10
 
-      return CGSize(width: expectedWidth, height: height)
+        return CGSize(width: expectedWidth, height: height)
     }
 }

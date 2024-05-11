@@ -161,7 +161,7 @@ final class ClientExamsViewModelImpl: BaseVM<UnownedRouter<ClientDirectoryRoute>
                              content: "Prunus armeniaca L.",
                              description: "Prunus armeniaca L.")
     ]
-    let terminDirectories: [ClientThirdDirectoryModel] = [
+    static let terminDirectories: [ClientThirdDirectoryModel] = [
         ClientThirdDirectoryModel(
                              name: "Абиотические факторы",
                              nameInEnglish: "Abiotic factores",
@@ -243,7 +243,7 @@ final class ClientExamsViewModelImpl: BaseVM<UnownedRouter<ClientDirectoryRoute>
                 } else if directory == "Термины" {
                     self.router?.trigger(
                     .thirdDirectoryDetails(title: directory,
-                     directories: terminDirectories))
+                                           directories: ClientExamsViewModelImpl.terminDirectories))
                 }
             }
             .store(in: &cancellables)

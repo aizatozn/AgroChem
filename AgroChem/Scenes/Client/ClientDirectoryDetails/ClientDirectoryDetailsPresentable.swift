@@ -8,10 +8,11 @@
 import UIKit
 import SnapKit
 
-final class ClientDirectoryDetailsPresentable: BaseView {
+final class ClientDirectoryDetailsPresentable: BaseView, UISearchBarDelegate {
 
-    var directories: [ClientDirectoryModel] = [] {
+    var firstDirectories: [ClientDirectoryModel] = [] {
         didSet {
+            filteredDirectories0 = firstDirectories
             directoryCollectionView.reloadData()
         }
     }
@@ -27,25 +28,56 @@ final class ClientDirectoryDetailsPresentable: BaseView {
         return collectionView
     }()
 
+    private lazy var searchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        searchBar.delegate = self
+        return searchBar
+    }()
+
+    private var filteredDirectories0: [ClientDirectoryModel] = []
+
     override func onConfigureView() {
         backgroundColor = .white
         directoryCollectionView.delegate = self
         directoryCollectionView.dataSource = self
+
+        searchBar.backgroundImage = UIImage()
     }
 
     override func onAddSubviews() {
-        addSubviews(directoryCollectionView)
+        addSubviews(directoryCollectionView, searchBar)
+        directoryCollectionView.register(ClientDirectoryDetailsCell.self,
+                                         forCellWithReuseIdentifier: "CellIdentifier")
+
     }
 
     override func onSetupConstraints() {
+        searchBar.snp.makeConstraints { make in
+            make.top.equalTo(safeAreaLayoutGuide.snp.top)
+            make.leading.trailing.equalToSuperview()
+        }
 
         directoryCollectionView.snp.makeConstraints { make in
-            make.top.equalTo(safeAreaLayoutGuide.snp.top)
-            make.leading.equalTo(15)
-            make.trailing.equalTo(-15)
-            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
+            make.top.equalTo(searchBar.snp.bottom)
+            make.leading.trailing.bottom.equalToSuperview()
         }
     }
+
+    // MARK: - UISearchBarDelegate
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            filteredDirectories0 = firstDirectories
+        } else {
+            filteredDirectories0 = firstDirectories.filter { $0.name.lowercased().contains(searchText.lowercased()) }
+        }
+        directoryCollectionView.reloadData()
+    }
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+
 }
 
 extension ClientDirectoryDetailsPresentable: UICollectionViewDelegate,
@@ -54,13 +86,13 @@ extension ClientDirectoryDetailsPresentable: UICollectionViewDelegate,
 
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        directories.count
+        filteredDirectories0.count
     }
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: ClientDirectoryDetailsCell = collectionView.dequeue(for: indexPath)
-        cell.configure(model: directories[indexPath.item])
+        cell.configure(model: filteredDirectories0[indexPath.item])
         return cell
     }
 

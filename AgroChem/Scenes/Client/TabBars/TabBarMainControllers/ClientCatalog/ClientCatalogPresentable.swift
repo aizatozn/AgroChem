@@ -227,7 +227,8 @@ final class ClientCatalogPresentable: BaseView, UISearchBarDelegate {
         }
 
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "CellIdentifier", for: indexPath) as? ClientCatalogCell else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "CellIdentifier",
+                                                           for: indexPath) as? ClientCatalogCell else {
                 fatalError("Unable to dequeue ClientCatalogCell")
             }
             cell.configure(model: filteredMedicines[indexPath.section])

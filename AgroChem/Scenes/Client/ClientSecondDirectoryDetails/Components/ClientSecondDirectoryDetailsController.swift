@@ -16,7 +16,7 @@ final class ClientSecondDirectoryDetailsController: VMController<ClientSecondDir
             .receive(on: DispatchQueue.main)
             .sink { [weak self] direcs in
                 guard let self = self else { return }
-                content.directories = direcs
+                content.deistDirectories = direcs
             }
             .store(in: &viewModel.cancellables)
     }

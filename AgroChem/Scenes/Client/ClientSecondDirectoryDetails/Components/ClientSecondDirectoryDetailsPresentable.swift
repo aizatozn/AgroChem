@@ -8,20 +8,15 @@
 import UIKit
 import SnapKit
 
-final class ClientSecondDirectoryDetailsPresentable: BaseView {
+final class ClientSecondDirectoryDetailsPresentable: BaseView, UISearchBarDelegate {
 
-    var directories: [ClientSecondDirectoryModel] = [] {
+    var deistDirectories: [ClientSecondDirectoryModel] = [] {
         didSet {
+            filteredDirectories1 = deistDirectories
             directoryCollectionView.reloadData()
 //            print(directories.count)
         }
     }
-
-    private let searchBar: UISearchBar = {
-        let searchBar = UISearchBar()
-        searchBar.translatesAutoresizingMaskIntoConstraints = false
-        return searchBar
-    }()
 
     private let directoryCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -34,84 +29,93 @@ final class ClientSecondDirectoryDetailsPresentable: BaseView {
         return collectionView
     }()
 
+    private lazy var searchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        searchBar.delegate = self
+        return searchBar
+    }()
+
+    private var filteredDirectories1: [ClientSecondDirectoryModel] = []
+
     override func onConfigureView() {
         backgroundColor = .white
         directoryCollectionView.delegate = self
         directoryCollectionView.dataSource = self
-        searchBar.delegate = self
+
+        searchBar.backgroundImage = UIImage()
     }
 
     override func onAddSubviews() {
         addSubviews(directoryCollectionView, searchBar)
+        directoryCollectionView.register(ClientSecondDirectoryDetailsCell.self,
+                                         forCellWithReuseIdentifier: "CellIdentifier")
     }
 
     override func onSetupConstraints() {
-
         searchBar.snp.makeConstraints { make in
             make.top.equalTo(safeAreaLayoutGuide.snp.top)
-            make.leading.equalTo(5)
-            make.trailing.equalTo(-5)
+            make.leading.trailing.equalToSuperview()
         }
 
         directoryCollectionView.snp.makeConstraints { make in
-            make.top.equalTo(safeAreaLayoutGuide.snp.top)
-            make.leading.equalTo(5)
-            make.trailing.equalTo(-5)
-            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
+            make.top.equalTo(searchBar.snp.bottom)
+            make.leading.trailing.bottom.equalToSuperview()
         }
+    }
+
+    // MARK: - UISearchBarDelegate
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            filteredDirectories1 = deistDirectories
+        } else {
+            filteredDirectories1 = deistDirectories.filter { $0.name.lowercased().contains(searchText.lowercased()) }
+        }
+        directoryCollectionView.reloadData()
+    }
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 }
 
 extension ClientSecondDirectoryDetailsPresentable: UICollectionViewDelegate,
                                              UICollectionViewDataSource,
-                                                   UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+                                             UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView,
+                        numberOfItemsInSection section: Int) -> Int {
+        filteredDirectories1.count
     }
 
-func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellIdentifier",
+                                                            for: indexPath) as? ClientSecondDirectoryDetailsCell else {
+            fatalError("Unable to dequeue ClientThirdDirectoryDetailsCell")
+        }
+        cell.configure(model: filteredDirectories1[indexPath.item])
+        return cell
     }
 
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        // Фильтрация данных по поисковому запросу
-        let filteredDirectories = directories.filter { directory in
-            // Здесь вы можете настроить фильтрацию по требованию.
-            // Например, используйте directory.name или directory.nameInEnglish
-            return directory.name.contains(searchText)
-        }
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+      let model = filteredDirectories1[indexPath.item]
 
-        func collectionView(_ collectionView: UICollectionView,
-                            numberOfItemsInSection section: Int) -> Int {
-            directories.count
-        }
+      let expectedWidth = collectionView.frame.width - 30
 
-        func collectionView(_ collectionView: UICollectionView,
-                            cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell: ClientSecondDirectoryDetailsCell = collectionView.dequeue(for: indexPath)
-            cell.configure(model: directories[indexPath.item])
-            return cell
-        }
-        func collectionView(_ collectionView: UICollectionView,
-                            layout collectionViewLayout: UICollectionViewLayout,
-                            sizeForItemAt indexPath: IndexPath) -> CGSize {
-            let model = directories[indexPath.item]
+      let cell = ClientSecondDirectoryDetailsCell(frame: .zero)
+      cell.configure(model: model)
 
-            let expectedWidth = collectionView.frame.width - 30
+      cell.layoutIfNeeded()
+        let size = cell.systemLayoutSizeFitting(
+            CGSize(width: expectedWidth,
+                   height: CGFloat.greatestFiniteMagnitude), withHorizontalFittingPriority: .required,
+                        verticalFittingPriority: .fittingSizeLevel)
 
-            let cell = ClientSecondDirectoryDetailsCell(frame: .zero)
-            cell.configure(model: model)
+        let height = size.height + 10
 
-            cell.layoutIfNeeded()
-            let size = cell.systemLayoutSizeFitting(
-                CGSize(width: expectedWidth,
-                       height: CGFloat.greatestFiniteMagnitude), withHorizontalFittingPriority: .required,
-                verticalFittingPriority: .fittingSizeLevel)
-
-            let height = size.height + 10
-
-            return CGSize(width: expectedWidth, height: height)
-        }
-        directoryCollectionView.reloadData()
+      return CGSize(width: expectedWidth, height: height)
     }
 }
