@@ -98,6 +98,8 @@
 		F1C65B802B655EF100B49A91 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C65B7F2B655EF100B49A91 /* UserDefaultsService.swift */; };
 		F1C65B822B655F1000B49A91 /* UserDefaultsServiceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C65B812B655F1000B49A91 /* UserDefaultsServiceKeys.swift */; };
 		F1C65B842B655FA900B49A91 /* ClientGreetingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C65B832B655FA900B49A91 /* ClientGreetingCoordinator.swift */; };
+		F1C8B0E02BF228E8003C43E7 /* Medicines.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1C8B0DF2BF228E8003C43E7 /* Medicines.plist */; };
+		F1C8B0E22BF236DB003C43E7 /* Directories.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1C8B0E12BF236DB003C43E7 /* Directories.plist */; };
 		F1CEB5792B7A0F1100E466DE /* ClientDirectoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CEB5782B7A0F1100E466DE /* ClientDirectoryCell.swift */; };
 		F1EC76432B6B8E200017FCF5 /* ClientCatalogCategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EC76422B6B8E200017FCF5 /* ClientCatalogCategoriesCell.swift */; };
 		F1F1C9912BE7E47D009FB166 /* ClientSystemDetailsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F1C9902BE7E47D009FB166 /* ClientSystemDetailsData.swift */; };
@@ -188,6 +190,8 @@
 		F1C65B7F2B655EF100B49A91 /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		F1C65B812B655F1000B49A91 /* UserDefaultsServiceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsServiceKeys.swift; sourceTree = "<group>"; };
 		F1C65B832B655FA900B49A91 /* ClientGreetingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientGreetingCoordinator.swift; sourceTree = "<group>"; };
+		F1C8B0DF2BF228E8003C43E7 /* Medicines.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Medicines.plist; sourceTree = "<group>"; };
+		F1C8B0E12BF236DB003C43E7 /* Directories.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Directories.plist; sourceTree = "<group>"; };
 		F1CEB5782B7A0F1100E466DE /* ClientDirectoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDirectoryCell.swift; sourceTree = "<group>"; };
 		F1EC76422B6B8E200017FCF5 /* ClientCatalogCategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCatalogCategoriesCell.swift; sourceTree = "<group>"; };
 		F1F1C9902BE7E47D009FB166 /* ClientSystemDetailsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSystemDetailsData.swift; sourceTree = "<group>"; };
@@ -291,6 +295,8 @@
 				F1C65B732B655D4600B49A91 /* Services */,
 				F1C65B482B6556B000B49A91 /* Resources */,
 				F105DB472B6015A900851FBE /* Info.plist */,
+				F1C8B0DF2BF228E8003C43E7 /* Medicines.plist */,
+				F1C8B0E12BF236DB003C43E7 /* Directories.plist */,
 			);
 			path = AgroChem;
 			sourceTree = "<group>";
@@ -795,6 +801,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1C8B0E22BF236DB003C43E7 /* Directories.plist in Resources */,
+				F1C8B0E02BF228E8003C43E7 /* Medicines.plist in Resources */,
 				F105DB462B6015A900851FBE /* LaunchScreen.storyboard in Resources */,
 				F105DB432B6015A900851FBE /* Assets.xcassets in Resources */,
 			);
